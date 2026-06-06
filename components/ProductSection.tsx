@@ -51,53 +51,72 @@ export default function ProductSection({ title }: Props) {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {products.map((product) => (
-          <a
-            href={`/product/${product.slug}`}
-            key={product.name}
-            className="bg-white rounded-2xl overflow-hidden shadow-md border border-[#E8E1D6] block hover:shadow-xl transition"
-          >
-            {/* Image */}
-            <div className="relative">
-              <img
-                src={product.image}
-                alt=""
-                className="w-full h-44 object-cover"
-              />
+        {products.map((product) => {
+          const message = `Hello JC Gift Gallery,
 
-              <button className="absolute top-2 right-2 bg-white rounded-full p-2 shadow">
-                🤍
-              </button>
+I would like to order:
+Product: ${product.name}
+Price: ${product.price}
+Quantity: 1
+
+Please confirm availability and payment details.`;
+
+          const whatsappLink = `https://wa.me/917760761963?text=${encodeURIComponent(
+            message
+          )}`;
+
+          return (
+            <div
+              key={product.name}
+              className="bg-white rounded-2xl overflow-hidden shadow-md border border-[#E8E1D6] block hover:shadow-xl transition"
+            >
+              <a href={`/product/${product.slug}`}>
+                <div className="relative">
+                  <img
+                    src={product.image}
+                    alt=""
+                    className="w-full h-44 object-cover"
+                  />
+
+                  <button className="absolute top-2 right-2 bg-white rounded-full p-2 shadow">
+                    🤍
+                  </button>
+                </div>
+
+                <div className="p-3 pb-0">
+                  <h3 className="font-semibold text-sm">
+                    {product.name}
+                  </h3>
+
+                  <div className="flex items-center gap-2 mt-2">
+                    <p className="text-[#1C1C1C] font-bold">
+                      {product.price}
+                    </p>
+
+                    <p className="text-gray-400 line-through text-sm">
+                      {product.oldPrice}
+                    </p>
+                  </div>
+
+                  <div className="mt-2 inline-block bg-[#F3E8D2] text-[#B8860B] text-xs px-2 py-1 rounded-lg">
+                    {product.offer}
+                  </div>
+                </div>
+              </a>
+
+              <div className="p-3">
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center bg-[#25D366] text-white py-2 rounded-xl font-semibold"
+                >
+                  Buy on WhatsApp
+                </a>
+              </div>
             </div>
-
-            {/* Content */}
-            <div className="p-3">
-              <h3 className="font-semibold text-sm">
-                {product.name}
-              </h3>
-
-              <div className="flex items-center gap-2 mt-2">
-                <p className="text-[#1C1C1C] font-bold">
-                  {product.price}
-                </p>
-
-                <p className="text-gray-400 line-through text-sm">
-                  {product.oldPrice}
-                </p>
-              </div>
-
-              <div className="mt-2 inline-block bg-[#F3E8D2] text-[#B8860B] text-xs px-2 py-1 rounded-lg">
-                {product.offer}
-              </div>
-
-              <div
-                className="block text-center mt-4 bg-[#25D366] text-white py-2 rounded-xl font-semibold"
-              >
-                Buy on WhatsApp
-              </div>
-            </div>
-          </a>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

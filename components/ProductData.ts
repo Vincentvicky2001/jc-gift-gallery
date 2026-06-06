@@ -1,0 +1,38 @@
+export const products = [
+  {
+    slug: "led-photo-frame",
+    name: "LED Photo Frame",
+    category: "Frame",
+    price: "₹599",
+    oldPrice: "₹999",
+    offer: "40% OFF",
+    image: "/images/gift1.jpg",
+  },
+  {
+    slug: "premium-gift-combo",
+    name: "Premium Gift Combo",
+    category: "Combo",
+    price: "₹999",
+    oldPrice: "₹1599",
+    offer: "38% OFF",
+    image: "/images/gift2.jpg",
+  },
+  {
+    slug: "couple-mug",
+    name: "Couple Mug",
+    category: "Mug",
+    price: "₹299",
+    oldPrice: "₹499",
+    offer: "40% OFF",
+    image: "/images/gift3.jpg",
+  },
+  {
+    slug: "led-name-lamp",
+    name: "LED Name Lamp",
+    category: "Birthday",
+    price: "₹799",
+    oldPrice: "₹1299",
+    offer: "38% OFF",
+    image: "/images/gift4.jpg",
+  },
+];

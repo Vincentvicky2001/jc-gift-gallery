@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const products = {
   "led-photo-frame": {
     name: "LED Photo Frame",
@@ -38,15 +42,43 @@ const products = {
 };
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default function ProductDetailsPage({ params }: Props) {
+export default async function ProductDetailsPage({ params }: Props) {
+  const { slug } = await params;
+  return <ProductClient slug={slug} />;
+}
+
+function ProductClient({ slug }: { slug: string }) {
+  const [quantity, setQuantity] = useState(1);
+  const [customerName, setCustomerName] = useState("");
+  const [customerPhone, setCustomerPhone] = useState("");
+  const [customerAddress, setCustomerAddress] = useState("");
+
   const product =
-    products[params.slug as keyof typeof products] ||
+    products[slug as keyof typeof products] ||
     products["led-photo-frame"];
+
+  const whatsappMessage = `Hello JC Gift Gallery,
+
+I would like to order:
+
+Product: ${product.name}
+Price: ${product.price}
+Quantity: ${quantity}
+
+Customer Name: ${customerName}
+Customer Phone: ${customerPhone}
+Delivery Address: ${customerAddress}
+
+Please confirm availability and payment details.`;
+
+  const whatsappLink = `https://wa.me/917760761963?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
 
   return (
     <main className="min-h-screen bg-[#FAF7F0] p-4 pb-24">
@@ -80,18 +112,54 @@ export default function ProductDetailsPage({ params }: Props) {
             {product.description}
           </p>
 
-          <div className="mt-6">
-            <label className="font-semibold">Quantity</label>
-            <input
-              type="number"
-              defaultValue={1}
-              min={1}
-              className="w-full mt-2 border border-[#E8E1D6] rounded-xl p-3"
-            />
+          <div className="mt-6 space-y-4">
+            <div>
+              <label className="font-semibold text-black">Quantity</label>
+              <input
+                type="number"
+                value={quantity}
+                min={1}
+                onChange={(e) => setQuantity(Number(e.target.value))}
+                className="w-full mt-2 border border-[#E8E1D6] rounded-xl p-3 text-black bg-white"
+              />
+            </div>
+
+            <div>
+              <label className="font-semibold text-black">Customer Name</label>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                value={customerName}
+                onChange={(e) => setCustomerName(e.target.value)}
+                className="w-full mt-2 border border-[#E8E1D6] rounded-xl p-3 text-black bg-white placeholder:text-gray-500"
+              />
+            </div>
+
+            <div>
+              <label className="font-semibold text-black">Phone Number</label>
+              <input
+                type="text"
+                placeholder="Enter your phone number"
+                value={customerPhone}
+                onChange={(e) => setCustomerPhone(e.target.value)}
+                className="w-full mt-2 border border-[#E8E1D6] rounded-xl p-3 text-black bg-white placeholder:text-gray-500"
+              />
+            </div>
+
+            <div>
+              <label className="font-semibold text-black">Delivery Address</label>
+              <textarea
+                placeholder="Enter delivery address"
+                value={customerAddress}
+                onChange={(e) => setCustomerAddress(e.target.value)}
+                rows={4}
+                className="w-full mt-2 border border-[#E8E1D6] rounded-xl p-3 text-black bg-white placeholder:text-gray-500"
+              ></textarea>
+            </div>
           </div>
 
           <a
-            href={`https://wa.me/917760761963?text=Hello JC Gift Gallery,%0A%0AI would like to order:%0AProduct: ${product.name}%0APrice: ${product.price}`}
+            href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             className="block text-center mt-6 bg-[#25D366] text-white py-4 rounded-xl font-bold"
