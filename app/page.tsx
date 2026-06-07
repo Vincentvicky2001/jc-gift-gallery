@@ -1,10 +1,13 @@
+import TopMarquee from "../components/TopMarquee";
 import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import HeroBanner from "../components/HeroBanner";
+import ImageCarousel from "../components/ImageCarousel";
 import Categories from "../components/Categories";
 import ProductSection from "../components/ProductSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import CustomGiftBanner from "../components/CustomGiftBanner";
+import TestimonialSlider from "../components/TestimonialSlider";
 import WhatsAppButton from "../components/WhatsAppButton";
 import Footer from "../components/Footer";
 import BottomNav from "../components/BottomNav";
@@ -12,11 +15,16 @@ import BottomNav from "../components/BottomNav";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white pb-28">
+
+      <TopMarquee />
+
       <Header />
 
       <SearchBar />
 
       <HeroBanner />
+
+      <ImageCarousel />
 
       <Categories />
 
@@ -27,6 +35,8 @@ export default function Home() {
       <WhyChooseUs />
 
       <CustomGiftBanner />
+
+      <TestimonialSlider />
 
       <Footer />
 
