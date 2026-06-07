@@ -1,24 +1,22 @@
 import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import HeroBanner from "../components/HeroBanner";
-import OfferSlider from "../components/OfferSlider";
 import Categories from "../components/Categories";
 import ProductSection from "../components/ProductSection";
 import WhyChooseUs from "../components/WhyChooseUs";
+import CustomGiftBanner from "../components/CustomGiftBanner";
 import WhatsAppButton from "../components/WhatsAppButton";
 import Footer from "../components/Footer";
 import BottomNav from "../components/BottomNav";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FAF7F0] pb-32">
+    <main className="min-h-screen bg-white pb-28">
       <Header />
 
       <SearchBar />
 
       <HeroBanner />
-
-      <OfferSlider />
 
       <Categories />
 
@@ -27,6 +25,8 @@ export default function Home() {
       <ProductSection title="New Arrivals" />
 
       <WhyChooseUs />
+
+      <CustomGiftBanner />
 
       <Footer />
 

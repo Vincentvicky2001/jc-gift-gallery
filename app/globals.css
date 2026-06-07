@@ -62,5 +62,46 @@ textarea::placeholder {
 
 /* Footer */
 footer {
+  color: #111111;
+}
+
+/* Premium Gold Theme */
+
+.gold-border {
+  border: 2px solid #D4A017;
+}
+
+.gold-shadow {
+  box-shadow: 0 4px 15px rgba(212, 160, 23, 0.25);
+}
+
+.gold-gradient {
+  background: linear-gradient(
+    135deg,
+    #FFF8E7,
+    #F7E1A0,
+    #FFF8E7
+  );
+}
+
+.gold-text {
+  color: #B8860B;
+}
+
+.premium-card {
+  background: white;
+  border: 1px solid #F3D27A;
+  box-shadow: 0 4px 15px rgba(212,160,23,0.12);
+  border-radius: 20px;
+}
+
+.premium-button {
+  background: linear-gradient(
+    135deg,
+    #D4A017,
+    #B8860B
+  );
   color: white;
+  border-radius: 14px;
+  font-weight: bold;
 }
