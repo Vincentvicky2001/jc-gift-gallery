@@ -24,27 +24,13 @@ export default function Header() {
           className="w-[260px] md:w-[380px] object-contain"
         />
 
-        {/* Right Icons */}
-        <div className="flex items-center gap-4 text-2xl">
-
-          <a href="/wishlist" className="relative">
-            ❤️
-
+        {/* Notification Only */}
+        <div className="flex items-center text-3xl">
+          <a href="/track-order" className="relative">
+            🔔
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center">
               2
             </span>
-          </a>
-
-          <a href="/cart" className="relative">
-            🛒
-
-            <span className="absolute -top-2 -right-2 bg-black text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center">
-              3
-            </span>
-          </a>
-
-          <a href="/account">
-            👤
           </a>
         </div>
       </div>

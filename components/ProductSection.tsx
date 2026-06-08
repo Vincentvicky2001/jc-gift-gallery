@@ -11,6 +11,8 @@ export default function ProductSection({ title }: Props) {
       oldPrice: "₹999",
       offer: "40% OFF",
       image: "/images/gift1.jpg",
+      rating: "⭐⭐⭐⭐⭐",
+      review: "(5.0)",
     },
     {
       slug: "premium-gift-combo",
@@ -19,6 +21,8 @@ export default function ProductSection({ title }: Props) {
       oldPrice: "₹1599",
       offer: "38% OFF",
       image: "/images/gift2.jpg",
+      rating: "⭐⭐⭐⭐",
+      review: "(4.0)",
     },
     {
       slug: "couple-mug",
@@ -27,6 +31,8 @@ export default function ProductSection({ title }: Props) {
       oldPrice: "₹499",
       offer: "40% OFF",
       image: "/images/gift3.jpg",
+      rating: "⭐⭐⭐⭐⭐",
+      review: "(4.8)",
     },
     {
       slug: "led-name-lamp",
@@ -35,6 +41,8 @@ export default function ProductSection({ title }: Props) {
       oldPrice: "₹1299",
       offer: "38% OFF",
       image: "/images/gift4.jpg",
+      rating: "⭐⭐⭐⭐",
+      review: "(4.3)",
     },
   ];
 
@@ -52,19 +60,6 @@ export default function ProductSection({ title }: Props) {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {products.map((product) => {
-          const message = `Hello JC Gift Gallery,
-
-I would like to order:
-Product: ${product.name}
-Price: ${product.price}
-Quantity: 1
-
-Please confirm availability and payment details.`;
-
-          const whatsappLink = `https://wa.me/919538952178?text=${encodeURIComponent(
-            message
-          )}`;
-
           return (
             <div
               key={product.name}
@@ -81,25 +76,22 @@ Please confirm availability and payment details.`;
                   <button className="absolute top-2 right-2 bg-white rounded-full p-2 shadow">
                     🤍
                   </button>
+
+                  <div className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded-lg font-bold">
+                    {product.offer}
+                  </div>
                 </div>
 
-                <div className="p-3 pb-0">
+                <div className="p-3 pb-3">
                   <h3 className="font-semibold text-sm text-black">
                     {product.name}
                   </h3>
 
-                  <p className="text-green-600 text-xs mt-1 font-semibold">
-                    👀 12 people viewing this now
-                  </p>
-
-                  <p className="text-blue-600 text-xs mt-1 font-semibold">
-                    🛒 24 orders placed today
-                  </p>
-
                   <div className="flex items-center gap-1 mt-2 text-yellow-500 text-sm">
-                    ⭐⭐⭐⭐⭐
+                    {product.rating}
+
                     <span className="text-gray-600 text-xs">
-                      (4.9)
+                      {product.review}
                     </span>
                   </div>
 
@@ -127,10 +119,6 @@ Please confirm availability and payment details.`;
                     </div>
                   </div>
 
-                  <div className="mt-2 inline-block bg-[#F3E8D2] text-[#B8860B] text-xs px-2 py-1 rounded-lg">
-                    {product.offer}
-                  </div>
-
                   <div className="flex gap-2 flex-wrap mt-2">
                     <div className="inline-block bg-red-100 text-red-600 text-xs px-2 py-1 rounded-lg font-semibold">
                       🔥 Trending
@@ -142,17 +130,6 @@ Please confirm availability and payment details.`;
                   </div>
                 </div>
               </a>
-
-              <div className="p-3">
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center bg-[#25D366] text-white py-2 rounded-xl font-semibold"
-                >
-                  Buy on WhatsApp
-                </a>
-              </div>
             </div>
           );
         })}
