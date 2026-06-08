@@ -1,8 +1,7 @@
-type Props = {
-  params: {
-    slug: string;
-  };
-};
+"use client";
+
+import { useState } from "react";
+import { useParams } from "next/navigation";
 
 const products = [
   {
@@ -47,14 +46,21 @@ const products = [
   },
 ];
 
-export default function ProductPage({ params }: Props) {
-  const product = products.find(
-    (p) => p.slug === params.slug
-  );
+export default function ProductPage() {
+  const params = useParams();
+
+  const slug = params.slug as string;
+
+  const [name, setName] = useState("");
+  const [quantity, setQuantity] = useState("1");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+
+  const product = products.find((p) => p.slug === slug);
 
   if (!product) {
     return (
-      <div className="p-10 text-center text-2xl">
+      <div className="p-10 text-center text-2xl font-bold">
         Product Not Found
       </div>
     );
@@ -62,31 +68,32 @@ export default function ProductPage({ params }: Props) {
 
   const whatsappMessage = `Hello JC Gift Gallery,
 
-I would like to order:
+I want to order this product:
 
-Product: ${product.name}
+Product Name: ${product.name}
 Price: ${product.price}
+Quantity: ${quantity}
 
 Customer Details:
-Name:
-Phone:
-Address:
+Name: ${name}
+Phone Number: ${phone}
+Address: ${address}
 
-Please confirm availability.`;
+Please confirm my order.`;
 
   const whatsappLink = `https://wa.me/919538952178?text=${encodeURIComponent(
     whatsappMessage
   )}`;
 
   return (
-    <main className="min-h-screen bg-white p-5">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
-
+    <main className="min-h-screen bg-[#fffaf0] px-4 py-8 pb-28">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 bg-white p-5 rounded-3xl shadow-lg">
+        
         <div>
           <img
             src={product.image}
-            alt=""
-            className="w-full rounded-3xl shadow-lg"
+            alt={product.name}
+            className="w-full rounded-3xl shadow-md object-cover"
           />
         </div>
 
@@ -96,7 +103,7 @@ Please confirm availability.`;
           </h1>
 
           <div className="flex items-center gap-2 mt-3 text-yellow-500">
-            {product.rating}
+            <span>{product.rating}</span>
 
             <span className="text-gray-600">
               {product.review}
@@ -111,10 +118,10 @@ Please confirm availability.`;
             <p className="line-through text-gray-400">
               {product.oldPrice}
             </p>
-          </div>
 
-          <div className="mt-4 inline-block bg-red-500 text-white px-3 py-1 rounded-lg font-bold">
-            {product.offer}
+            <span className="bg-red-500 text-white px-3 py-1 rounded-lg text-sm font-bold">
+              {product.offer}
+            </span>
           </div>
 
           <div className="mt-6 space-y-4">
@@ -122,26 +129,43 @@ Please confirm availability.`;
             <input
               type="text"
               placeholder="Enter Your Name"
-              className="w-full border p-3 rounded-xl"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full border p-3 rounded-xl outline-none"
             />
 
             <input
-              type="text"
+              type="number"
+              min="1"
+              placeholder="Quantity"
+              value={quantity}
+              onChange={(e) => setQuantity(e.target.value)}
+              className="w-full border p-3 rounded-xl outline-none"
+            />
+
+            <input
+              type="tel"
               placeholder="Enter Phone Number"
-              className="w-full border p-3 rounded-xl"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="w-full border p-3 rounded-xl outline-none"
             />
 
             <textarea
               placeholder="Enter Delivery Address"
-              className="w-full border p-3 rounded-xl h-32"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              className="w-full border p-3 rounded-xl h-28 outline-none"
             />
 
             <a
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center bg-[#25D366] text-white py-4 rounded-2xl font-bold text-lg"
+              className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 rounded-2xl font-bold text-lg shadow-md hover:bg-green-600 transition"
             >
+              <span className="text-2xl">🟢</span>
+
               Order on WhatsApp
             </a>
           </div>
