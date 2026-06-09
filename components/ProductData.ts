@@ -60,216 +60,638 @@ export const products = [
   // BIRTHDAY
   // =========================
 
-  { slug: "birthday-customized-photo-frame", name: "Customized Photo Frame", category: "birthday", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "birthday-customized-photo-frame",
+    name: "Customized Photo Frame",
+    category: "birthday",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "birthday-collage-photo-frame", name: "Collage Photo Frame", category: "birthday", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "birthday-collage-photo-frame",
+    name: "Collage Photo Frame",
+    category: "birthday",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "birthday-acrylic-photo-frame", name: "Acrylic Photo Frame", category: "birthday", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "birthday-acrylic-photo-frame",
+    name: "Acrylic Photo Frame",
+    category: "birthday",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "birthday-photo-clock", name: "Photo Clock", category: "birthday", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "birthday-photo-clock",
+    name: "Photo Clock",
+    category: "birthday",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "birthday-photo-calendar", name: "Photo Calendar", category: "birthday", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "birthday-photo-calendar",
+    name: "Photo Calendar",
+    category: "birthday",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "birthday-customized-mugs", name: "Birthday Customized Mugs", category: "birthday", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "birthday-customized-mugs",
+    name: "Birthday Customized Mugs",
+    category: "birthday",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "birthday-custom-keychains", name: "Birthday Custom Keychains", category: "birthday", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "birthday-custom-keychains",
+    name: "Birthday Custom Keychains",
+    category: "birthday",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "birthday-magazines", name: "Birthday Magazines", category: "birthday", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "birthday-magazines",
+    name: "Birthday Magazines",
+    category: "birthday",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "birthday-custom-photo-book", name: "Custom Photo Book", category: "birthday", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "birthday-custom-photo-book",
+    name: "Custom Photo Book",
+    category: "birthday",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
   // =========================
   // ANNIVERSARY
   // =========================
 
-  { slug: "anniversary-photo-frame", name: "Anniversary Photo Frame", category: "anniversary", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "anniversary-photo-frame",
+    name: "Anniversary Photo Frame",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "anniversary-collage-photo-frame", name: "Collage Photo Frame", category: "anniversary", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "anniversary-collage-photo-frame",
+    name: "Collage Photo Frame",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "anniversary-mosaic-photo-frame", name: "Mosaic Photo Frame", category: "anniversary", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "anniversary-mosaic-photo-frame",
+    name: "Mosaic Photo Frame",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "anniversary-acrylic-photo-frame", name: "Acrylic Photo Frame", category: "anniversary", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "anniversary-acrylic-photo-frame",
+    name: "Acrylic Photo Frame",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "photo-wall-collage", name: "Photo Wall Collage", category: "anniversary", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "photo-wall-collage",
+    name: "Photo Wall Collage",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "anniversary-mugs", name: "Anniversary Mugs", category: "anniversary", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "anniversary-mugs",
+    name: "Anniversary Mugs",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "anniversary-keychains", name: "Anniversary Keychains", category: "anniversary", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "anniversary-keychains",
+    name: "Anniversary Keychains",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "anniversary-custom-photo-book", name: "Custom Photo Book", category: "anniversary", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "anniversary-custom-photo-book",
+    name: "Custom Photo Book",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "love-message-frame", name: "Love Message Frame", category: "anniversary", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "love-message-frame",
+    name: "Love Message Frame",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
   // =========================
   // COUPLE
   // =========================
 
-  { slug: "couple-photo-frame", name: "Couple Photo Frame", category: "couple", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "couple-photo-frame",
+    name: "Couple Photo Frame",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "customized-couple-mugs", name: "Customized Couple Mugs", category: "couple", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "customized-couple-mugs",
+    name: "Customized Couple Mugs",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "couple-customized-keychains", name: "Customized Keychains", category: "couple", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "couple-customized-keychains",
+    name: "Customized Keychains",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "love-message-photo-frame", name: "Love Message Photo Frame", category: "couple", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "love-message-photo-frame",
+    name: "Love Message Photo Frame",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "couple-acrylic-photo-frame", name: "Acrylic Photo Frame", category: "couple", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "couple-acrylic-photo-frame",
+    name: "Acrylic Photo Frame",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "couple-collage-photo-frame", name: "Collage Photo Frame", category: "couple", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "couple-collage-photo-frame",
+    name: "Collage Photo Frame",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "couple-mosaic-photo-frame", name: "Mosaic Photo Frame", category: "couple", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "couple-mosaic-photo-frame",
+    name: "Mosaic Photo Frame",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "customized-photo-album", name: "Customized Photo Album", category: "couple", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "customized-photo-album",
+    name: "Customized Photo Album",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "couple-customized-photo-book", name: "Customized Photo Book", category: "couple", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "couple-customized-photo-book",
+    name: "Customized Photo Book",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "customized-magazines", name: "Customized Magazines", category: "couple", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "customized-magazines",
+    name: "Customized Magazines",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
   // =========================
   // CORPORATE
   // =========================
 
-  { slug: "corporate-customized-mug", name: "Customized Mug", category: "corporate", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "corporate-customized-mug",
+    name: "Customized Mug",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "corporate-customized-keychains", name: "Customized Keychains", category: "corporate", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "corporate-customized-keychains",
+    name: "Customized Keychains",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "customized-water-bottle", name: "Customized Water Bottle", category: "corporate", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "customized-water-bottle",
+    name: "Customized Water Bottle",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "corporate-photo-frame", name: "Photo Frame", category: "corporate", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "corporate-photo-frame",
+    name: "Photo Frame",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "logo-printed-keychains", name: "Logo Printed Keychains", category: "corporate", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "logo-printed-keychains",
+    name: "Logo Printed Keychains",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "customized-calendar", name: "Customized Calendar", category: "corporate", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "customized-calendar",
+    name: "Customized Calendar",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "corporate-gift-set", name: "Corporate Gift Set", category: "corporate", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "corporate-gift-set",
+    name: "Corporate Gift Set",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "motivational-photo-frame", name: "Motivational Photo Frame", category: "corporate", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "motivational-photo-frame",
+    name: "Motivational Photo Frame",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "wall-frames", name: "Wall Frames", category: "corporate", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "wall-frames",
+    name: "Wall Frames",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "event-runs-gift", name: "Event Runs Gift", category: "corporate", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "event-runs-gift",
+    name: "Event Runs Gift",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
   // =========================
   // COMBO
   // =========================
 
-  { slug: "photo-frame-mug-combo", name: "Photo Frame + Mug", category: "combo", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "photo-frame-mug-combo",
+    name: "Photo Frame + Mug",
+    category: "combo",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "mug-keychains-combo", name: "Mug + Keychains", category: "combo", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "mug-keychains-combo",
+    name: "Mug + Keychains",
+    category: "combo",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "photo-frame-keychains-combo", name: "Photo Frame + Keychains", category: "combo", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "photo-frame-keychains-combo",
+    name: "Photo Frame + Keychains",
+    category: "combo",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "mug-greeting-card-combo", name: "Mug + Greeting Card", category: "combo", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "mug-greeting-card-combo",
+    name: "Mug + Greeting Card",
+    category: "combo",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
   // =========================
   // MUGS
   // =========================
 
-  { slug: "photo-mug", name: "Photo Mug", category: "mugs", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "photo-mug",
+    name: "Photo Mug",
+    category: "mugs",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "mugs-couple-mug", name: "Couple Mug", category: "mugs", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "couple-mug-item",
+    name: "Couple Mug",
+    category: "mugs",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "magic-mug", name: "Magic Mug", category: "mugs", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "magic-mug",
+    name: "Magic Mug",
+    category: "mugs",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "name-printed-mugs", name: "Name Printed Mugs", category: "mugs", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "name-printed-mugs",
+    name: "Name Printed Mugs",
+    category: "mugs",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "birthday-mug", name: "Birthday Mug", category: "mugs", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "birthday-mug",
+    name: "Birthday Mug",
+    category: "mugs",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "best-friends-mug", name: "Best Friends Mug", category: "mugs", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "best-friends-mug",
+    name: "Best Friends Mug",
+    category: "mugs",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "anniversary-mug", name: "Anniversary Mug", category: "mugs", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "anniversary-mug",
+    name: "Anniversary Mug",
+    category: "mugs",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "magic-mirror", name: "Magic Mirror", category: "mugs", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  // =========================
-  // KEYCHAINS
-  // =========================
-
-  { slug: "customized-keychain", name: "Customized Keychain", category: "keychains", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "name-keychain", name: "Name Keychain", category: "keychains", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "photo-keychain", name: "Photo Keychain", category: "keychains", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "couple-keychain", name: "Couple Keychain", category: "keychains", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "logo-keychain", name: "Logo Keychain", category: "keychains", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "magic-mirror",
+    name: "Magic Mirror",
+    category: "mugs",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
   // =========================
   // FRAMES
   // =========================
 
-  { slug: "customized-photo-frame-main", name: "Customized Photo Frame", category: "frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "frames-customized-photo-frame",
+    name: "Customized Photo Frame",
+    category: "frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "single-photo-frame", name: "Single Photo Frame", category: "frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "single-photo-frame",
+    name: "Single Photo Frame",
+    category: "frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "frames-couple-photo-frame", name: "Couple Photo Frame", category: "frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "frames-couple-photo-frame",
+    name: "Couple Photo Frame",
+    category: "frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "family-photo-frame", name: "Family Photo Frame", category: "frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "family-photo-frame",
+    name: "Family Photo Frame",
+    category: "frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "kids-photo-frame", name: "Kids Photo Frame", category: "frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "kids-photo-frame",
+    name: "Kids Photo Frame",
+    category: "frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "friendship-photo-frame", name: "Friendship Photo Frame", category: "frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "friendship-photo-frame",
+    name: "Friendship Photo Frame",
+    category: "frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "birthday-photo-frame-main", name: "Birthday Photo Frame", category: "frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "birthday-photo-frame",
+    name: "Birthday Photo Frame",
+    category: "frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "anniversary-photo-frame-main", name: "Anniversary Photo Frame", category: "frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "frames-anniversary-photo-frame",
+    name: "Anniversary Photo Frame",
+    category: "frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "collage-photo-frame-main", name: "Collage Photo Frame", category: "frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "frames-collage-photo-frame",
+    name: "Collage Photo Frame",
+    category: "frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "mosaic-photo-frame-main", name: "Mosaic Photo Frame", category: "frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "frames-mosaic-photo-frame",
+    name: "Mosaic Photo Frame",
+    category: "frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
-  { slug: "acrylic-photo-frame-main", name: "Acrylic Photo Frame", category: "frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  // =========================
-  // CUSTOMIZED T SHIRT
-  // =========================
-
-  { slug: "personalized-tshirt", name: "Personalized T Shirt", category: "customized-t-shirt", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "name-printed-tshirt", name: "Name Printed T Shirt", category: "customized-t-shirt", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "couple-tshirt", name: "Couple T Shirt", category: "customized-t-shirt", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "birthday-tshirt", name: "Birthday T Shirt", category: "customized-t-shirt", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "family-tshirt", name: "Family T Shirt", category: "customized-t-shirt", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "friendship-tshirt", name: "Friendship T Shirt", category: "customized-t-shirt", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  // =========================
-  // ACRYLIC FRAMES
-  // =========================
-
-  { slug: "customized-acrylic-frame", name: "Customized Acrylic Frame", category: "acrylic-frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "birthday-acrylic-frame", name: "Birthday Acrylic Frame", category: "acrylic-frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "anniversary-acrylic-frame", name: "Anniversary Acrylic Frame", category: "acrylic-frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "couple-acrylic-frame", name: "Couple Acrylic Frame", category: "acrylic-frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "family-acrylic-frame", name: "Family Acrylic Frame", category: "acrylic-frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "friends-acrylic-frame", name: "Friends Acrylic Frame", category: "acrylic-frames", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  // =========================
-  // STICKERS AND LABELS
-  // =========================
-
-  { slug: "customized-sticker", name: "Customized Sticker", category: "stickers-and-labels", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "customized-sticker-chocolates", name: "Customized Sticker Chocolates", category: "stickers-and-labels", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "customized-notebook-name-label", name: "Customized Notebook Name Label", category: "stickers-and-labels", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "business-branding-labels", name: "Business And Branding Labels", category: "stickers-and-labels", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "gift-stickers", name: "Gift Stickers", category: "stickers-and-labels", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "event-stickers", name: "Event Stickers", category: "stickers-and-labels", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "home-personal-label", name: "Home And Personal Label", category: "stickers-and-labels", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
-
-  { slug: "packaging-labels", name: "Packaging Labels", category: "stickers-and-labels", price: "Updating Soon", oldPrice: "", offer: "", image: "/images/placeholder.jpg" },
+  {
+    slug: "frames-acrylic-photo-frame",
+    name: "Acrylic Photo Frame",
+    category: "frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 
 ];
