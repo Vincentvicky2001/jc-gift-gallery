@@ -57,6 +57,9 @@ export const categories = [
 ];
 
 export const products = [
+
+  // FEATURED PRODUCTS
+
   {
     slug: "led-photo-frame",
     name: "LED Photo Frame",
@@ -97,7 +100,9 @@ export const products = [
     image: "/images/gift4.jpg",
   },
 
+  // =========================
   // BIRTHDAY PRODUCTS
+  // =========================
 
   {
     slug: "customized-photo-frame",
@@ -188,4 +193,229 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
+
+  // =========================
+  // ANNIVERSARY PRODUCTS
+  // =========================
+
+  {
+    slug: "anniversary-photo-frame",
+    name: "Anniversary Photo Frame",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "anniversary-collage-frame",
+    name: "Collage Photo Frame",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "mosaic-photo-frame",
+    name: "Mosaic Photo Frame",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "photo-wall-collage",
+    name: "Photo Wall Collage",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "anniversary-mugs",
+    name: "Anniversary Mugs",
+    category: "anniversary",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  // =========================
+  // COUPLE PRODUCTS
+  // =========================
+
+  {
+    slug: "couple-photo-frame",
+    name: "Couple Photo Frame",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "customized-couple-mugs",
+    name: "Customized Couple Mugs",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "love-message-frame",
+    name: "Love Message Photo Frame",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "customized-photo-album",
+    name: "Customized Photo Album",
+    category: "couple",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  // =========================
+  // CORPORATE PRODUCTS
+  // =========================
+
+  {
+    slug: "corporate-customized-mug",
+    name: "Customized Mug",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "customized-water-bottle",
+    name: "Customized Water Bottle",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "corporate-gift-set",
+    name: "Corporate Gift Set",
+    category: "corporate",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  // =========================
+  // COMBO PRODUCTS
+  // =========================
+
+  {
+    slug: "photo-frame-mug-combo",
+    name: "Photo Frame + Mug",
+    category: "combo",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "mug-keychain-combo",
+    name: "Mug + Keychains",
+    category: "combo",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  // =========================
+  // MUG PRODUCTS
+  // =========================
+
+  {
+    slug: "photo-mug",
+    name: "Photo Mug",
+    category: "mugs",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "magic-mug",
+    name: "Magic Mug",
+    category: "mugs",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "name-printed-mug",
+    name: "Name Printed Mug",
+    category: "mugs",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  // =========================
+  // KEYCHAIN PRODUCTS
+  // =========================
+
+  {
+    slug: "customized-keychain",
+    name: "Customized Keychain",
+    category: "keychains",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "photo-keychain",
+    name: "Photo Keychain",
+    category: "keychains",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  {
+    slug: "logo-keychain",
+    name: "Logo Keychain",
+    category: "keychains",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
 ];
