@@ -7,7 +7,7 @@ export default function ContactPage() {
         </h1>
 
         <div className="space-y-5 text-black">
-          <p>📞 Phone / WhatsApp: +91 7760761963</p>
+          <p>📞 Phone / WhatsApp: +91 9538952178</p>
           <p>📧 Email: jcgiftgallery@gmail.com</p>
           <p>
             📍 Address: 4th Main, 2nd Cross, Palasandra Layout,
@@ -16,7 +16,7 @@ export default function ContactPage() {
         </div>
 
         <a
-          href="https://wa.me/917760761963"
+          href="https://wa.me/9538952178"
           target="_blank"
           rel="noopener noreferrer"
           className="block text-center mt-8 bg-[#25D366] text-white py-4 rounded-xl font-bold"
