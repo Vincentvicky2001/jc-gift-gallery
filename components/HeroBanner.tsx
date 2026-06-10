@@ -1,45 +1,54 @@
 export default function HeroBanner() {
   return (
-    <section className="px-4 py-4">
-      <div className="rounded-3xl overflow-hidden bg-[#FFF3E0] shadow-md max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 items-center h-[360px]">
-          
-          {/* Left Content */}
-          <div className="p-8">
-            <p className="inline-block border border-[#D4A017] text-[#B8860B] px-3 py-1 rounded-full text-xs font-bold">
-              SPECIAL OFFER
-            </p>
+    <section className="px-4 py-5">
+      <div className="rounded-[35px] overflow-hidden bg-[#FDF6EC] shadow-lg max-w-7xl mx-auto border border-[#F3E5C8]">
 
-            <h1 className="text-4xl md:text-5xl font-bold text-black mt-4 leading-tight">
-              Make Every Occasion
+        <div className="grid md:grid-cols-2 items-center min-h-[520px]">
+
+          {/* LEFT CONTENT */}
+          <div className="p-8 md:p-14">
+
+            <div className="inline-block border-2 border-[#C89B3C] text-black px-6 py-3 rounded-full text-lg font-bold tracking-wide">
+              SPECIAL OFFER
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-black text-black leading-tight mt-6">
+              Make Every
               <br />
-              <span className="text-[#B8860B]">Extra Special</span>
+              Occasion
+              <br />
+              <span className="text-[#B8860B]">
+                Extra Special
+              </span>
             </h1>
 
-            <p className="text-black mt-5 text-lg">
+            <p className="mt-8 text-2xl text-black font-medium">
               Flat
             </p>
 
-            <h2 className="text-6xl md:text-7xl font-bold text-black leading-none">
+            <h2 className="text-6xl md:text-8xl font-black text-black leading-none mt-2">
               50% OFF
             </h2>
 
-            <p className="text-gray-700 mt-3 text-base">
+            <p className="text-gray-700 mt-5 text-lg">
               On Selected Gift Collection
             </p>
 
-            <button className="mt-6 bg-black text-white px-7 py-3 rounded-full font-bold">
+            <button className="mt-8 bg-black hover:bg-[#B8860B] transition text-white px-8 py-4 rounded-full font-bold text-lg shadow-md">
               Shop Now →
             </button>
+
           </div>
 
-          {/* Right Image */}
-          <div className="h-full p-5 flex items-center justify-center">
+          {/* RIGHT IMAGE */}
+          <div className="h-full p-5 md:p-8 flex items-center justify-center">
+
             <img
               src="/images/gift1.jpg"
-              alt=""
-              className="w-full h-[320px] object-cover rounded-3xl"
+              alt="Gift Banner"
+              className="w-full h-[480px] object-cover rounded-[30px] shadow-xl"
             />
+
           </div>
         </div>
       </div>
