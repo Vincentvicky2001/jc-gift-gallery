@@ -1,7 +1,7 @@
 export default function TopMarquee() {
   return (
     <div className="bg-[#B8860B] text-white py-2 overflow-hidden whitespace-nowrap">
-      <marquee>
+      <div className="animate-marquee inline-block">
         🚚 Free Delivery Above ₹499 &nbsp;&nbsp;&nbsp;
         🎁 Customized Gifts Available &nbsp;&nbsp;&nbsp;
         💝 Personalized Gifts for Every Occasion &nbsp;&nbsp;&nbsp;
@@ -9,7 +9,7 @@ export default function TopMarquee() {
         ❤️ Made with Love & Care &nbsp;&nbsp;&nbsp;
         💬 Easy Ordering on WhatsApp &nbsp;&nbsp;&nbsp;
         ⭐ Trusted by Thousands of Customers
-      </marquee>
+      </div>
     </div>
   );
 }

@@ -9,9 +9,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 /* Better Text Visibility */
+
 h1,
 h2,
 h3,
@@ -29,6 +31,7 @@ label {
 }
 
 /* Input Fields */
+
 input,
 textarea,
 select {
@@ -37,6 +40,7 @@ select {
 }
 
 /* Placeholder */
+
 input::placeholder,
 textarea::placeholder {
   color: #555555;
@@ -44,23 +48,27 @@ textarea::placeholder {
 }
 
 /* Product Price */
+
 .price-text {
   color: #b8860b;
   font-weight: bold;
 }
 
 /* Old Price */
+
 .old-price {
   color: #666666;
 }
 
 /* Section Titles */
+
 .section-title {
   color: #111111;
   font-weight: bold;
 }
 
 /* Footer */
+
 footer {
   color: #111111;
 }
@@ -119,5 +127,8 @@ footer {
 }
 
 .animate-marquee {
-  animation: marquee 15s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 22s linear infinite;
+  padding-left: 100%;
 }
