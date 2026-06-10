@@ -1,12 +1,27 @@
 const categories = [
-  { name: "Birthday", icon: "🎁", link: "/category/Birthday" },
-  { name: "Anniversary", icon: "♡", link: "/category/Couple" },
-  { name: "Couple", icon: "👥", link: "/category/Couple" },
-  { name: "Corporate", icon: "💼", link: "/category/Corporate" },
-  { name: "Combo", icon: "🎁", link: "/category/Combo" },
-  { name: "Mugs", icon: "☕", link: "/category/Mug" },
-  { name: "Frames", icon: "▣", link: "/category/Frame" },
-  { name: "Festival", icon: "🎉", link: "/category/Festival" },
+  { name: "Birthday", icon: "🎁", link: "/category/birthday" },
+  { name: "Anniversary", icon: "♡", link: "/category/anniversary" },
+  { name: "Couple", icon: "👥", link: "/category/couple" },
+  { name: "Corporate", icon: "💼", link: "/category/corporate" },
+  { name: "Combo", icon: "🎁", link: "/category/combo" },
+  { name: "Mugs", icon: "☕", link: "/category/mugs" },
+  { name: "Frames", icon: "▣", link: "/category/frames" },
+  { name: "Keychains", icon: "🔑", link: "/category/keychains" },
+  {
+    name: "Customized T Shirt",
+    icon: "👕",
+    link: "/category/customized-t-shirt",
+  },
+  {
+    name: "Acrylic Frames",
+    icon: "✨",
+    link: "/category/acrylic-frames",
+  },
+  {
+    name: "Stickers and Labels",
+    icon: "🏷️",
+    link: "/category/stickers-and-labels",
+  },
 ];
 
 export default function Categories() {
@@ -22,18 +37,18 @@ export default function Categories() {
         </a>
       </div>
 
-      <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {categories.map((category) => (
           <a
             key={category.name}
             href={category.link}
-            className="bg-white rounded-2xl border border-[#E8E1D6] shadow-sm p-4 text-center hover:shadow-md transition"
+            className="bg-white rounded-2xl border border-[#E8E1D6] shadow-sm p-4 text-center hover:shadow-md transition min-h-[120px] flex flex-col items-center justify-center"
           >
-            <div className="text-4xl text-[#B8860B] mb-3">
+            <div className="text-3xl text-[#B8860B] mb-3">
               {category.icon}
             </div>
 
-            <p className="text-sm font-semibold text-black">
+            <p className="text-sm font-semibold text-black leading-tight text-center">
               {category.name}
             </p>
           </a>

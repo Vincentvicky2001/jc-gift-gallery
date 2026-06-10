@@ -11,11 +11,6 @@ export default function WhyChooseUs() {
       desc: "100% safe transactions",
     },
     {
-      icon: "↩",
-      title: "Easy Returns",
-      desc: "7-day hassle-free returns",
-    },
-    {
       icon: "⭐",
       title: "Premium Quality",
       desc: "Carefully curated items",
@@ -28,7 +23,7 @@ export default function WhyChooseUs() {
     {
       icon: "📦",
       title: "Fast Shipping",
-      desc: "Quick pan-India delivery",
+      desc: "Quick delivery service",
     },
   ];
 
@@ -42,9 +37,9 @@ export default function WhyChooseUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-          {features.map((item, index) => (
+          {features.map((item) => (
             <div
-              key={index}
+              key={item.title}
               className="bg-white border border-[#EFE6D8] rounded-3xl p-6 shadow-sm"
             >
               <div className="w-14 h-14 rounded-full bg-[#D4A017] text-white flex items-center justify-center text-2xl mb-5">
