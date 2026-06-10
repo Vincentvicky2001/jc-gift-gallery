@@ -6,7 +6,7 @@ export default function Footer() {
         {/* LOGO */}
         <div className="flex justify-center mb-5">
           <img
-            src="/logo.jpg"
+            src="/images/logo.jpg"
             alt="JC Gift Gallery"
             className="w-[280px] md:w-[360px] object-contain"
           />
