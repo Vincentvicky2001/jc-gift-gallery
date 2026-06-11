@@ -1,16 +1,64 @@
 const categories = [
-  { name: "Birthday", icon: "🎁", link: "/category/birthday" },
-  { name: "Anniversary", icon: "♡", link: "/category/anniversary" },
-  { name: "Couple", icon: "👥", link: "/category/couple" },
-  { name: "Corporate", icon: "💼", link: "/category/corporate" },
-  { name: "Combo", icon: "🎁", link: "/category/combo" },
-  { name: "Mugs", icon: "☕", link: "/category/mugs" },
-  { name: "Frames", icon: "▣", link: "/category/frames" },
-  { name: "Keychains", icon: "🔑", link: "/category/keychains" },
-  { name: "Customized T Shirt", icon: "👕", link: "/category/customized-t-shirt" },
-  { name: "Acrylic Frames", icon: "✨", link: "/category/acrylic-frames" },
-  { name: "Stickers and Labels", icon: "🏷️", link: "/category/stickers-and-labels" },
-  { name: "Resin Art", icon: "🌊", link: "/category/resin-art" },
+  {
+    name: "Birthday",
+    image: "/images/categories/birthday.jpg",
+    link: "/category/Birthday",
+  },
+  {
+    name: "Anniversary",
+    image: "/images/categories/anniversary.jpg",
+    link: "/category/Couple",
+  },
+  {
+    name: "Couple",
+    image: "/images/categories/couple.jpg",
+    link: "/category/Couple",
+  },
+  {
+    name: "Corporate",
+    image: "/images/categories/corporate.jpg",
+    link: "/category/Corporate",
+  },
+  {
+    name: "Combo",
+    image: "/images/categories/combo.jpg",
+    link: "/category/Combo",
+  },
+  {
+    name: "Mugs",
+    image: "/images/categories/mugs.jpg",
+    link: "/category/Mug",
+  },
+  {
+    name: "Frames",
+    image: "/images/categories/frames.jpg",
+    link: "/category/Frame",
+  },
+  {
+    name: "Keychains",
+    image: "/images/categories/keychains.jpg",
+    link: "/category/Keychain",
+  },
+  {
+    name: "Customized T Shirt",
+    image: "/images/categories/tshirt.jpg",
+    link: "/category/Tshirt",
+  },
+  {
+    name: "Acrylic Frames",
+    image: "/images/categories/acrylic.jpg",
+    link: "/category/Acrylic",
+  },
+  {
+    name: "Stickers and Labels",
+    image: "/images/categories/stickers.jpg",
+    link: "/category/Stickers",
+  },
+  {
+    name: "Resin Art",
+    image: "/images/categories/resin.jpg",
+    link: "/category/Resin",
+  },
 ];
 
 export default function Categories() {
@@ -26,20 +74,26 @@ export default function Categories() {
         </a>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {categories.map((category) => (
           <a
             key={category.name}
             href={category.link}
-            className="bg-white rounded-2xl border border-[#E8E1D6] shadow-sm p-4 text-center hover:shadow-md transition min-h-[120px] flex flex-col items-center justify-center"
+            className="bg-white rounded-2xl overflow-hidden border border-[#E8E1D6] shadow-sm hover:shadow-lg transition"
           >
-            <div className="text-3xl text-[#B8860B] mb-3">
-              {category.icon}
+
+            <img
+              src={category.image}
+              alt={category.name}
+              className="w-full h-40 object-cover"
+            />
+
+            <div className="p-3">
+              <p className="text-lg font-bold text-center text-black">
+                {category.name}
+              </p>
             </div>
 
-            <p className="text-sm font-semibold text-black leading-tight text-center">
-              {category.name}
-            </p>
           </a>
         ))}
       </div>

@@ -41,16 +41,14 @@ export default function HeroBanner() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="h-full p-4 md:p-8 flex items-center justify-center">
+          <div className="p-4 md:p-6">
 
             <img
               src="/images/hero-banner.jpg"
               alt="Gift Banner"
               className="
                 w-full
-                h-[260px]
-                sm:h-[420px]
-                md:h-[620px]
+                h-auto
                 object-cover
                 rounded-[30px]
                 shadow-xl
@@ -58,6 +56,7 @@ export default function HeroBanner() {
             />
 
           </div>
+
         </div>
       </div>
     </section>
