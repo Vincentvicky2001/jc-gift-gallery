@@ -11,11 +11,11 @@ export default function Footer() {
         </p>
 
         <div className="mt-6 space-y-3 text-[#1C1C1C] text-lg">
-          <p>📞 +91 9538952178</p>
-          <p>📞 +91 7760761963</p>
-          <p>jcgiftgallery@gmail.com</p>
+          <p>Phone: +91 9538952178</p>
+          <p>Phone: +91 7760761963</p>
+          <p>Email: jcgiftgallery@gmail.com</p>
           <p>
-            📍 4th Main, 2nd Cross, Palasandra Layout,
+            Address: 4th Main, 2nd Cross, Palasandra Layout,
             Kolar - 563101, Karnataka
           </p>
         </div>

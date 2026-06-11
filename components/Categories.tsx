@@ -7,21 +7,10 @@ const categories = [
   { name: "Mugs", icon: "☕", link: "/category/mugs" },
   { name: "Frames", icon: "▣", link: "/category/frames" },
   { name: "Keychains", icon: "🔑", link: "/category/keychains" },
-  {
-    name: "Customized T Shirt",
-    icon: "👕",
-    link: "/category/customized-t-shirt",
-  },
-  {
-    name: "Acrylic Frames",
-    icon: "✨",
-    link: "/category/acrylic-frames",
-  },
-  {
-    name: "Stickers and Labels",
-    icon: "🏷️",
-    link: "/category/stickers-and-labels",
-  },
+  { name: "Customized T Shirt", icon: "👕", link: "/category/customized-t-shirt" },
+  { name: "Acrylic Frames", icon: "✨", link: "/category/acrylic-frames" },
+  { name: "Stickers and Labels", icon: "🏷️", link: "/category/stickers-and-labels" },
+  { name: "Resin Art", icon: "🌊", link: "/category/resin-art" },
 ];
 
 export default function Categories() {
