@@ -22,6 +22,8 @@ h5,
 h6,
 p,
 span,
+a,
+button,
 input,
 textarea,
 label {
@@ -127,6 +129,10 @@ footer {
 .animate-marquee {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 35s linear infinite;
   padding-left: 100%;
+  animation-name: marquee;
+  animation-duration: 28s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
 }
