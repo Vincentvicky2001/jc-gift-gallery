@@ -16,20 +16,28 @@ const notifications = [
 
 export default function NotificationsPage() {
   return (
-    <main className="min-h-screen bg-[#FAF7F0] px-4 py-8 pb-28">
+    <main className="min-h-screen bg-[#FAF7F0] px-4 py-6 pb-28">
 
       <div className="max-w-3xl mx-auto">
 
-        <h1 className="text-3xl font-bold text-black mb-6">
+        <h1 className="text-3xl font-bold text-black mb-5">
           Notifications
         </h1>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
 
           {notifications.map((message, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-sm p-5 text-black text-base md:text-lg leading-relaxed"
+              className="
+                bg-white
+                px-5
+                py-4
+                rounded-xl
+                text-black
+                text-base
+                leading-relaxed
+              "
             >
               {message}
             </div>
