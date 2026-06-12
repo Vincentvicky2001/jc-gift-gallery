@@ -1,5 +1,5 @@
 const notifications = [
-  "✅ Thank you for choosing JC Gift Gallery! Gifts That Create Memories.",
+ 
 
   "🎁 Welcome to JC Gift Gallery! Discover unique gifts for every special occasion.",
 
