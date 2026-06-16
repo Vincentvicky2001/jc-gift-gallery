@@ -6,7 +6,7 @@ import ImageCarousel from "../components/ImageCarousel";
 import Categories from "../components/Categories";
 import ProductSection from "../components/ProductSection";
 import WhyChooseUs from "../components/WhyChooseUs";
-import CustomGiftBanner from "../components/CustomGiftBanner";
+import CustomizeSection from "../components/CustomizeSection";
 import TestimonialSlider from "../components/TestimonialSlider";
 import WhatsAppButton from "../components/WhatsAppButton";
 import Footer from "../components/Footer";
@@ -34,7 +34,7 @@ export default function Home() {
 
       <WhyChooseUs />
 
-      <CustomGiftBanner />
+      <CustomizeSection />
 
       <TestimonialSlider />
 
@@ -43,6 +43,7 @@ export default function Home() {
       <WhatsAppButton />
 
       <BottomNav />
+
     </main>
   );
 }
