@@ -1,8 +1,24 @@
+"use client";
+
 export default function AccountPage() {
+
+  const logout = () => {
+    localStorage.removeItem("jc-cart");
+    localStorage.removeItem("jc-wishlist");
+
+    alert("Logged out successfully!");
+
+    window.location.href = "/";
+  };
+
   return (
     <main className="min-h-screen bg-[#FAF7F0] p-6">
+
       <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-lg p-8">
+
+        {/* Profile */}
         <div className="flex items-center gap-4 mb-8">
+
           <div className="w-20 h-20 rounded-full bg-[#F3E8D2] flex items-center justify-center text-4xl">
             👤
           </div>
@@ -16,30 +32,51 @@ export default function AccountPage() {
               Welcome to JC Gift Gallery
             </p>
           </div>
+
         </div>
 
+        {/* Options */}
         <div className="space-y-4">
-          <div className="border border-[#E8E1D6] rounded-2xl p-4">
+
+          <a
+            href="/track-order"
+            className="block border border-[#E8E1D6] rounded-2xl p-4 hover:bg-[#FFF8E7] transition"
+          >
             📦 My Orders
-          </div>
+          </a>
 
-          <div className="border border-[#E8E1D6] rounded-2xl p-4">
+          <a
+            href="/wishlist"
+            className="block border border-[#E8E1D6] rounded-2xl p-4 hover:bg-[#FFF8E7] transition"
+          >
             ❤️ Wishlist
-          </div>
+          </a>
 
-          <div className="border border-[#E8E1D6] rounded-2xl p-4">
+          <a
+            href="/saved-address"
+            className="block border border-[#E8E1D6] rounded-2xl p-4 hover:bg-[#FFF8E7] transition"
+          >
             📍 Saved Addresses
-          </div>
+          </a>
 
-          <div className="border border-[#E8E1D6] rounded-2xl p-4">
-            ⚙ Account Settings
-          </div>
+          <a
+            href="/settings"
+            className="block border border-[#E8E1D6] rounded-2xl p-4 hover:bg-[#FFF8E7] transition"
+          >
+            ⚙️ Account Settings
+          </a>
 
-          <div className="border border-red-200 text-red-500 rounded-2xl p-4">
+          <button
+            onClick={logout}
+            className="w-full text-left border border-red-200 text-red-500 rounded-2xl p-4 hover:bg-red-50 transition"
+          >
             🚪 Logout
-          </div>
+          </button>
+
         </div>
+
       </div>
+
     </main>
   );
 }
