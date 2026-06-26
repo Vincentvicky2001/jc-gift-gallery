@@ -1,8 +1,46 @@
+"use client";
+
+import { useState } from "react";
+
 export default function CustomizeSection() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [productType, setProductType] = useState("");
+  const [occasion, setOccasion] = useState("");
+  const [printText, setPrintText] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [details, setDetails] = useState("");
+  const [fileName, setFileName] = useState("");
+
+  const whatsappMessage = `Hello JC Gift Gallery,
+
+I want to customize a gift.
+
+Customer Details:
+Name: ${name}
+Phone: ${phone}
+
+Product Details:
+Product Type: ${productType}
+Occasion: ${occasion}
+Name/Text To Print: ${printText}
+Quantity: ${quantity}
+
+Customization Requirements:
+${details}
+
+Reference Image:
+${fileName ? fileName : "I will send image on WhatsApp"}
+
+Please confirm design, price, and delivery details.`;
+
+  const whatsappLink = `https://wa.me/919538952178?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
+
   return (
     <section className="px-4 py-10 bg-[#FAF7F0]">
       <div className="max-w-6xl mx-auto bg-white rounded-3xl border border-[#E8E1D6] shadow-lg p-6 md:p-10">
-
         <div className="mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-black">
             🎁 Customize Your Gift
@@ -18,17 +56,25 @@ export default function CustomizeSection() {
           <input
             type="text"
             placeholder="Enter Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className="border border-[#E8E1D6] rounded-xl px-4 py-4 outline-none"
           />
 
           <input
             type="text"
             placeholder="Enter Phone Number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
             className="border border-[#E8E1D6] rounded-xl px-4 py-4 outline-none"
           />
 
-          <select className="border border-[#E8E1D6] rounded-xl px-4 py-4 outline-none">
-            <option>Select Product Type</option>
+          <select
+            value={productType}
+            onChange={(e) => setProductType(e.target.value)}
+            className="border border-[#E8E1D6] rounded-xl px-4 py-4 outline-none"
+          >
+            <option value="">Select Product Type</option>
             <option>Mug</option>
             <option>Photo Frame</option>
             <option>LED Frame</option>
@@ -42,8 +88,12 @@ export default function CustomizeSection() {
             <option>Other Customized Gift</option>
           </select>
 
-          <select className="border border-[#E8E1D6] rounded-xl px-4 py-4 outline-none">
-            <option>Select Occasion</option>
+          <select
+            value={occasion}
+            onChange={(e) => setOccasion(e.target.value)}
+            className="border border-[#E8E1D6] rounded-xl px-4 py-4 outline-none"
+          >
+            <option value="">Select Occasion</option>
             <option>Birthday</option>
             <option>Anniversary</option>
             <option>Wedding</option>
@@ -57,12 +107,16 @@ export default function CustomizeSection() {
           <input
             type="text"
             placeholder="Name/Text To Print"
+            value={printText}
+            onChange={(e) => setPrintText(e.target.value)}
             className="border border-[#E8E1D6] rounded-xl px-4 py-4 outline-none"
           />
 
           <input
             type="number"
             placeholder="Quantity"
+            value={quantity}
+            onChange={(e) => setQuantity(e.target.value)}
             className="border border-[#E8E1D6] rounded-xl px-4 py-4 outline-none"
           />
         </div>
@@ -70,6 +124,8 @@ export default function CustomizeSection() {
         <textarea
           placeholder="Describe Your Customization Requirements..."
           rows={5}
+          value={details}
+          onChange={(e) => setDetails(e.target.value)}
           className="w-full border border-[#E8E1D6] rounded-xl px-4 py-4 outline-none mt-5"
         />
 
@@ -80,16 +136,20 @@ export default function CustomizeSection() {
 
           <input
             type="file"
+            onChange={(e) =>
+              setFileName(e.target.files?.[0]?.name || "")
+            }
             className="w-full border border-[#E8E1D6] rounded-xl px-4 py-3"
           />
 
           <p className="text-sm text-gray-500 mt-2">
-            You can also send images directly on WhatsApp after clicking order.
+            Note: Image file cannot be auto-attached through website WhatsApp.
+            Please send the image manually in WhatsApp after clicking order.
           </p>
         </div>
 
         <a
-          href="https://wa.me/919538952178?text=Hello%20JC%20Gift%20Gallery%2C%20I%20want%20to%20customize%20a%20gift.%20Please%20help%20me%20with%20product%20details%2C%20design%2C%20price%2C%20and%20delivery."
+          href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
           className="
@@ -117,7 +177,6 @@ export default function CustomizeSection() {
         >
           🎁 Customize & Order on WhatsApp →
         </a>
-
       </div>
     </section>
   );
