@@ -253,7 +253,7 @@ Please confirm design, price, and delivery details.`;
           </div>
 
           <div className="grid grid-cols-4 gap-2 mt-3">
-            {images.map((img) => (
+            {images.map((img: string) => (
               <button
                 key={img}
                 onClick={() => setSelectedImage(img)}
