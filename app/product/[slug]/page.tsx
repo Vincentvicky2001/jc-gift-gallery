@@ -2,61 +2,83 @@
 
 import { useState } from "react";
 import { useParams } from "next/navigation";
-
-const products = [
-  {
-    slug: "led-photo-frame",
-    name: "LED Photo Frame",
-    price: "₹599",
-    oldPrice: "₹999",
-    offer: "40% OFF",
-    image: "/images/gift1.jpg",
-    rating: "⭐⭐⭐⭐⭐",
-    review: "(5.0)",
-  },
-  {
-    slug: "premium-gift-combo",
-    name: "Premium Gift Combo",
-    price: "₹999",
-    oldPrice: "₹1599",
-    offer: "38% OFF",
-    image: "/images/gift2.jpg",
-    rating: "⭐⭐⭐⭐",
-    review: "(4.0)",
-  },
-  {
-    slug: "couple-mug",
-    name: "Couple Mug",
-    price: "₹299",
-    oldPrice: "₹499",
-    offer: "40% OFF",
-    image: "/images/gift3.jpg",
-    rating: "⭐⭐⭐⭐⭐",
-    review: "(4.8)",
-  },
-  {
-    slug: "led-name-lamp",
-    name: "LED Name Lamp",
-    price: "₹799",
-    oldPrice: "₹1299",
-    offer: "38% OFF",
-    image: "/images/gift4.jpg",
-    rating: "⭐⭐⭐⭐",
-    review: "(4.3)",
-  },
-];
+import { products } from "../../../components/ProductData";
 
 export default function ProductPage() {
   const params = useParams();
-
   const slug = params.slug as string;
+
+  const product = products.find((p) => p.slug === slug);
+
+  const getProductImages = () => {
+    if (!product) return [];
+
+    if (product.slug === "birthday-customized-photo-frame") {
+      return [
+        "/images/birthday/birthday-sample-1.jpg",
+        "/images/birthday/birthday-sample-1-2.jpg",
+      ];
+    }
+
+    if (product.slug === "birthday-collage-photo-frame") {
+      return [
+        "/images/birthday/birthday-sample-2.jpg",
+        "/images/birthday/birthday-sample-2-2.jpg",
+      ];
+    }
+
+    if (product.slug === "birthday-photo-clock") {
+      return [
+        "/images/birthday/birthday-sample-4.jpg",
+        "/images/birthday/birthday-sample-4-2.jpg",
+      ];
+    }
+
+    if (product.slug === "birthday-photo-calendar") {
+      return [
+        "/images/birthday/birthday-sample-5.jpg",
+        "/images/birthday/birthday-sample-5-2.jpg",
+      ];
+    }
+
+    if (product.slug === "birthday-customized-mugs") {
+      return [
+        "/images/birthday/birthday-sample-6.jpg",
+        "/images/birthday/birthday-sample-6-2.jpg",
+      ];
+    }
+
+    if (product.slug === "birthday-custom-keychains") {
+      return [
+        "/images/birthday/birthday-sample-7.jpg",
+        "/images/birthday/birthday-sample-7-2.jpg",
+      ];
+    }
+
+    if (product.slug === "birthday-magazines") {
+      return [
+        "/images/birthday/birthday-sample-8.jpg",
+        "/images/birthday/birthday-sample-8-2.jpg",
+      ];
+    }
+
+    if (product.slug === "birthday-custom-photo-book") {
+      return [
+        "/images/birthday/birthday-sample-9.jpg",
+        "/images/birthday/birthday-sample-9-2.jpg",
+      ];
+    }
+
+    return [product.image];
+  };
+
+  const images = getProductImages();
+  const [selectedImage, setSelectedImage] = useState(images[0] || "");
 
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState("1");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
-
-  const product = products.find((p) => p.slug === slug);
 
   if (!product) {
     return (
@@ -65,6 +87,64 @@ export default function ProductPage() {
       </div>
     );
   }
+
+  const addToCart = () => {
+    const savedCart = localStorage.getItem("jc-cart");
+    const cart = savedCart ? JSON.parse(savedCart) : [];
+
+    const existingItem = cart.find((item: any) => item.slug === product.slug);
+
+    let updatedCart;
+
+    if (existingItem) {
+      updatedCart = cart.map((item: any) =>
+        item.slug === product.slug
+          ? { ...item, quantity: item.quantity + Number(quantity) }
+          : item
+      );
+    } else {
+      updatedCart = [
+        ...cart,
+        {
+          slug: product.slug,
+          name: product.name,
+          price: product.price,
+          image: product.image,
+          quantity: Number(quantity),
+        },
+      ];
+    }
+
+    localStorage.setItem("jc-cart", JSON.stringify(updatedCart));
+    alert("Added to cart!");
+  };
+
+  const addToWishlist = () => {
+    const savedWishlist = localStorage.getItem("jc-wishlist");
+    const wishlist = savedWishlist ? JSON.parse(savedWishlist) : [];
+
+    const exists = wishlist.find((item: any) => item.slug === product.slug);
+
+    if (exists) {
+      alert("Already in wishlist!");
+      return;
+    }
+
+    localStorage.setItem(
+      "jc-wishlist",
+      JSON.stringify([
+        ...wishlist,
+        {
+          slug: product.slug,
+          name: product.name,
+          price: product.price,
+          image: product.image,
+        },
+      ])
+    );
+
+    alert("Added to wishlist!");
+  };
 
   const whatsappMessage = `Hello JC Gift Gallery,
 
@@ -87,14 +167,33 @@ Please confirm my order.`;
 
   return (
     <main className="min-h-screen bg-[#fffaf0] px-4 py-8 pb-28">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 bg-white p-5 rounded-3xl shadow-lg">
-        
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 bg-white p-5 rounded-3xl shadow-lg">
         <div>
           <img
-            src={product.image}
+            src={selectedImage || product.image}
             alt={product.name}
-            className="w-full rounded-3xl shadow-md object-cover"
+            className="w-full h-[420px] object-cover rounded-3xl shadow-md"
           />
+
+          <div className="grid grid-cols-4 gap-3 mt-4">
+            {images.map((img) => (
+              <button
+                key={img}
+                onClick={() => setSelectedImage(img)}
+                className={`border rounded-xl overflow-hidden ${
+                  selectedImage === img
+                    ? "border-[#B8860B] border-4"
+                    : "border-[#E8E1D6]"
+                }`}
+              >
+                <img
+                  src={img}
+                  alt={product.name}
+                  className="w-full h-24 object-cover"
+                />
+              </button>
+            ))}
+          </div>
         </div>
 
         <div>
@@ -103,11 +202,8 @@ Please confirm my order.`;
           </h1>
 
           <div className="flex items-center gap-2 mt-3 text-yellow-500">
-            <span>{product.rating}</span>
-
-            <span className="text-gray-600">
-              {product.review}
-            </span>
+            <span>⭐⭐⭐⭐⭐</span>
+            <span className="text-gray-600">(5.0)</span>
           </div>
 
           <div className="flex items-center gap-3 mt-5">
@@ -115,17 +211,36 @@ Please confirm my order.`;
               {product.price}
             </p>
 
-            <p className="line-through text-gray-400">
-              {product.oldPrice}
-            </p>
+            {product.oldPrice && (
+              <p className="line-through text-gray-400">
+                {product.oldPrice}
+              </p>
+            )}
 
-            <span className="bg-red-500 text-white px-3 py-1 rounded-lg text-sm font-bold">
-              {product.offer}
-            </span>
+            {product.offer && (
+              <span className="bg-red-500 text-white px-3 py-1 rounded-lg text-sm font-bold">
+                {product.offer}
+              </span>
+            )}
+          </div>
+
+          <div className="mt-6 grid grid-cols-2 gap-3">
+            <button
+              onClick={addToWishlist}
+              className="bg-pink-100 text-red-600 py-3 rounded-xl font-bold"
+            >
+              ❤️ Wishlist
+            </button>
+
+            <button
+              onClick={addToCart}
+              className="bg-[#D4A017] text-white py-3 rounded-xl font-bold"
+            >
+              🛒 Add to Cart
+            </button>
           </div>
 
           <div className="mt-6 space-y-4">
-
             <input
               type="text"
               placeholder="Enter Your Name"
@@ -164,9 +279,7 @@ Please confirm my order.`;
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 rounded-2xl font-bold text-lg shadow-md hover:bg-green-600 transition"
             >
-              <span className="text-2xl">🟢</span>
-
-              Order on WhatsApp
+              🟢 Order on WhatsApp
             </a>
           </div>
         </div>
