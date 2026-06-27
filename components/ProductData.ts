@@ -10,12 +10,10 @@ export const categories = [
   { name: "Customized T Shirt", slug: "customized-t-shirt", icon: "👕" },
   { name: "Acrylic Frames", slug: "acrylic-frames", icon: "✨" },
   { name: "Stickers and Labels", slug: "stickers-and-labels", icon: "🏷️" },
+  { name: "Resin Art", slug: "resin-art", icon: "🌊" },
 ];
 
 export const products = [
-
-  // FEATURED PRODUCTS
-
   {
     slug: "led-photo-frame",
     name: "LED Photo Frame",
@@ -25,7 +23,6 @@ export const products = [
     offer: "40% OFF",
     image: "/images/gift1.jpg",
   },
-
   {
     slug: "premium-gift-combo",
     name: "Premium Gift Combo",
@@ -35,7 +32,6 @@ export const products = [
     offer: "38% OFF",
     image: "/images/gift2.jpg",
   },
-
   {
     slug: "couple-mug",
     name: "Couple Mug",
@@ -45,7 +41,6 @@ export const products = [
     offer: "40% OFF",
     image: "/images/gift3.jpg",
   },
-
   {
     slug: "led-name-lamp",
     name: "LED Name Lamp",
@@ -56,104 +51,89 @@ export const products = [
     image: "/images/gift4.jpg",
   },
 
-  // =========================
-  // BIRTHDAY
-  // =========================
-
-  {
-    slug: "birthday-customized-photo-frame",
-    name: "Customized Photo Frame",
-    category: "birthday",
-    price: "Updating Soon",
-    oldPrice: "",
-    offer: "",
-    image: "/images/placeholder.jpg",
-  },
-
-  {
-    slug: "birthday-collage-photo-frame",
-    name: "Collage Photo Frame",
-    category: "birthday",
-    price: "Updating Soon",
-    oldPrice: "",
-    offer: "",
-    image: "/images/placeholder.jpg",
-  },
-
-  {
-    slug: "birthday-acrylic-photo-frame",
-    name: "Acrylic Photo Frame",
-    category: "birthday",
-    price: "Updating Soon",
-    oldPrice: "",
-    offer: "",
-    image: "/images/placeholder.jpg",
-  },
-
-  {
-    slug: "birthday-photo-clock",
-    name: "Photo Clock",
-    category: "birthday",
-    price: "Updating Soon",
-    oldPrice: "",
-    offer: "",
-    image: "/images/placeholder.jpg",
-  },
-
-  {
-    slug: "birthday-photo-calendar",
-    name: "Photo Calendar",
-    category: "birthday",
-    price: "Updating Soon",
-    oldPrice: "",
-    offer: "",
-    image: "/images/placeholder.jpg",
-  },
-
-  {
-    slug: "birthday-customized-mugs",
-    name: "Birthday Customized Mugs",
-    category: "birthday",
-    price: "Updating Soon",
-    oldPrice: "",
-    offer: "",
-    image: "/images/placeholder.jpg",
-  },
-
-  {
-    slug: "birthday-custom-keychains",
-    name: "Birthday Custom Keychains",
-    category: "birthday",
-    price: "Updating Soon",
-    oldPrice: "",
-    offer: "",
-    image: "/images/placeholder.jpg",
-  },
-
-  {
-    slug: "birthday-magazines",
-    name: "Birthday Magazines",
-    category: "birthday",
-    price: "Updating Soon",
-    oldPrice: "",
-    offer: "",
-    image: "/images/placeholder.jpg",
-  },
-
-  {
-    slug: "birthday-custom-photo-book",
-    name: "Custom Photo Book",
-    category: "birthday",
-    price: "Updating Soon",
-    oldPrice: "",
-    offer: "",
-    image: "/images/placeholder.jpg",
-  },
-
-  // =========================
+// BIRTHDAY
+{
+  slug: "birthday-customized-photo-frame",
+  name: "Customized Photo Frame",
+  category: "birthday",
+  price: "Updating Soon",
+  oldPrice: "",
+  offer: "New",
+  image: "/images/birthday/birthday-sample-1.jpg",
+},
+{
+  slug: "birthday-collage-photo-frame",
+  name: "Collage Photo Frame",
+  category: "birthday",
+  price: "Updating Soon",
+  oldPrice: "",
+  offer: "New",
+  image: "/images/birthday/birthday-sample-2.jpg",
+},
+{
+  slug: "birthday-acrylic-photo-frame",
+  name: "Acrylic Photo Frame",
+  category: "birthday",
+  price: "Updating Soon",
+  oldPrice: "",
+  offer: "New",
+  image: "/images/placeholder.jpg",
+},
+{
+  slug: "birthday-photo-clock",
+  name: "Photo Clock",
+  category: "birthday",
+  price: "Updating Soon",
+  oldPrice: "",
+  offer: "New",
+  image: "/images/birthday/birthday-sample-4.jpg",
+},
+{
+  slug: "birthday-photo-calendar",
+  name: "Photo Calendar",
+  category: "birthday",
+  price: "Updating Soon",
+  oldPrice: "",
+  offer: "New",
+  image: "/images/birthday/birthday-sample-5.jpg",
+},
+{
+  slug: "birthday-customized-mugs",
+  name: "Birthday Customized Mugs",
+  category: "birthday",
+  price: "Updating Soon",
+  oldPrice: "",
+  offer: "New",
+  image: "/images/birthday/birthday-sample-6.jpg",
+},
+{
+  slug: "birthday-custom-keychains",
+  name: "Birthday Custom Keychains",
+  category: "birthday",
+  price: "Updating Soon",
+  oldPrice: "",
+  offer: "New",
+  image: "/images/birthday/birthday-sample-7.jpg",
+},
+{
+  slug: "birthday-magazines",
+  name: "Birthday Magazines",
+  category: "birthday",
+  price: "Updating Soon",
+  oldPrice: "",
+  offer: "New",
+  image: "/images/birthday/birthday-sample-8.jpg",
+},
+{
+  slug: "birthday-custom-photo-book",
+  name: "Custom Photo Book",
+  category: "birthday",
+  price: "Updating Soon",
+  oldPrice: "",
+  offer: "New",
+  image: "/images/birthday/birthday-sample-9.jpg",
+},
   // ANNIVERSARY
-  // =========================
-
   {
     slug: "anniversary-photo-frame",
     name: "Anniversary Photo Frame",
@@ -163,7 +143,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "anniversary-collage-photo-frame",
     name: "Collage Photo Frame",
@@ -173,7 +152,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "anniversary-mosaic-photo-frame",
     name: "Mosaic Photo Frame",
@@ -183,7 +161,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "anniversary-acrylic-photo-frame",
     name: "Acrylic Photo Frame",
@@ -193,7 +170,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "photo-wall-collage",
     name: "Photo Wall Collage",
@@ -203,7 +179,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "anniversary-mugs",
     name: "Anniversary Mugs",
@@ -213,7 +188,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "anniversary-keychains",
     name: "Anniversary Keychains",
@@ -223,7 +197,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "anniversary-custom-photo-book",
     name: "Custom Photo Book",
@@ -233,7 +206,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "love-message-frame",
     name: "Love Message Frame",
@@ -244,10 +216,7 @@ export const products = [
     image: "/images/placeholder.jpg",
   },
 
-  // =========================
   // COUPLE
-  // =========================
-
   {
     slug: "couple-photo-frame",
     name: "Couple Photo Frame",
@@ -257,7 +226,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "customized-couple-mugs",
     name: "Customized Couple Mugs",
@@ -267,7 +235,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "couple-customized-keychains",
     name: "Customized Keychains",
@@ -277,7 +244,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "love-message-photo-frame",
     name: "Love Message Photo Frame",
@@ -287,7 +253,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "couple-acrylic-photo-frame",
     name: "Acrylic Photo Frame",
@@ -297,7 +262,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "couple-collage-photo-frame",
     name: "Collage Photo Frame",
@@ -307,7 +271,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "couple-mosaic-photo-frame",
     name: "Mosaic Photo Frame",
@@ -317,7 +280,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "customized-photo-album",
     name: "Customized Photo Album",
@@ -327,7 +289,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "couple-customized-photo-book",
     name: "Customized Photo Book",
@@ -337,7 +298,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "customized-magazines",
     name: "Customized Magazines",
@@ -348,10 +308,7 @@ export const products = [
     image: "/images/placeholder.jpg",
   },
 
-  // =========================
   // CORPORATE
-  // =========================
-
   {
     slug: "corporate-customized-mug",
     name: "Customized Mug",
@@ -361,7 +318,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "corporate-customized-keychains",
     name: "Customized Keychains",
@@ -371,7 +327,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "customized-water-bottle",
     name: "Customized Water Bottle",
@@ -381,7 +336,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "corporate-photo-frame",
     name: "Photo Frame",
@@ -391,7 +345,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "logo-printed-keychains",
     name: "Logo Printed Keychains",
@@ -401,7 +354,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "customized-calendar",
     name: "Customized Calendar",
@@ -411,7 +363,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "corporate-gift-set",
     name: "Corporate Gift Set",
@@ -421,7 +372,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "motivational-photo-frame",
     name: "Motivational Photo Frame",
@@ -431,7 +381,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "wall-frames",
     name: "Wall Frames",
@@ -441,7 +390,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "event-runs-gift",
     name: "Event Runs Gift",
@@ -452,10 +400,7 @@ export const products = [
     image: "/images/placeholder.jpg",
   },
 
-  // =========================
   // COMBO
-  // =========================
-
   {
     slug: "photo-frame-mug-combo",
     name: "Photo Frame + Mug",
@@ -465,7 +410,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "mug-keychains-combo",
     name: "Mug + Keychains",
@@ -475,7 +419,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "photo-frame-keychains-combo",
     name: "Photo Frame + Keychains",
@@ -485,7 +428,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "mug-greeting-card-combo",
     name: "Mug + Greeting Card",
@@ -496,10 +438,7 @@ export const products = [
     image: "/images/placeholder.jpg",
   },
 
-  // =========================
   // MUGS
-  // =========================
-
   {
     slug: "photo-mug",
     name: "Photo Mug",
@@ -509,7 +448,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "couple-mug-item",
     name: "Couple Mug",
@@ -519,7 +457,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "magic-mug",
     name: "Magic Mug",
@@ -529,7 +466,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "name-printed-mugs",
     name: "Name Printed Mugs",
@@ -539,7 +475,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "birthday-mug",
     name: "Birthday Mug",
@@ -549,7 +484,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "best-friends-mug",
     name: "Best Friends Mug",
@@ -559,7 +493,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "anniversary-mug",
     name: "Anniversary Mug",
@@ -569,7 +502,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "magic-mirror",
     name: "Magic Mirror",
@@ -580,10 +512,7 @@ export const products = [
     image: "/images/placeholder.jpg",
   },
 
-  // =========================
   // FRAMES
-  // =========================
-
   {
     slug: "frames-customized-photo-frame",
     name: "Customized Photo Frame",
@@ -593,7 +522,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "single-photo-frame",
     name: "Single Photo Frame",
@@ -603,7 +531,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "frames-couple-photo-frame",
     name: "Couple Photo Frame",
@@ -613,7 +540,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "family-photo-frame",
     name: "Family Photo Frame",
@@ -623,7 +549,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "kids-photo-frame",
     name: "Kids Photo Frame",
@@ -633,7 +558,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "friendship-photo-frame",
     name: "Friendship Photo Frame",
@@ -643,7 +567,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "birthday-photo-frame",
     name: "Birthday Photo Frame",
@@ -653,7 +576,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "frames-anniversary-photo-frame",
     name: "Anniversary Photo Frame",
@@ -663,7 +585,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "frames-collage-photo-frame",
     name: "Collage Photo Frame",
@@ -673,7 +594,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "frames-mosaic-photo-frame",
     name: "Mosaic Photo Frame",
@@ -683,7 +603,6 @@ export const products = [
     offer: "",
     image: "/images/placeholder.jpg",
   },
-
   {
     slug: "frames-acrylic-photo-frame",
     name: "Acrylic Photo Frame",
@@ -694,4 +613,247 @@ export const products = [
     image: "/images/placeholder.jpg",
   },
 
+  // KEYCHAINS
+  {
+    slug: "customized-keychain",
+    name: "Customized Keychain",
+    category: "keychains",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "name-keychain",
+    name: "Name Keychain",
+    category: "keychains",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "photo-keychain",
+    name: "Photo Keychain",
+    category: "keychains",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "couple-keychain",
+    name: "Couple Keychain",
+    category: "keychains",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "logo-keychain",
+    name: "Logo Keychain",
+    category: "keychains",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  // CUSTOMIZED T SHIRT
+  {
+    slug: "personalized-t-shirt",
+    name: "Personalized T Shirt",
+    category: "customized-t-shirt",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "name-printed-t-shirt",
+    name: "Name Printed T Shirt",
+    category: "customized-t-shirt",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "couple-t-shirt",
+    name: "Couple T Shirt",
+    category: "customized-t-shirt",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "birthday-t-shirt",
+    name: "Birthday T Shirt",
+    category: "customized-t-shirt",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "family-t-shirt",
+    name: "Family T Shirt",
+    category: "customized-t-shirt",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "friendship-t-shirt",
+    name: "Friendship T Shirt",
+    category: "customized-t-shirt",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  // ACRYLIC FRAMES
+  {
+    slug: "customized-acrylic-frame",
+    name: "Customized Acrylic Frame",
+    category: "acrylic-frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "birthday-acrylic-frame",
+    name: "Birthday Acrylic Frame",
+    category: "acrylic-frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "anniversary-acrylic-frame",
+    name: "Anniversary Acrylic Frame",
+    category: "acrylic-frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "couple-acrylic-frame",
+    name: "Couple Acrylic Frame",
+    category: "acrylic-frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "family-acrylic-frame",
+    name: "Family Acrylic Frame",
+    category: "acrylic-frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "friends-acrylic-frame",
+    name: "Friends Acrylic Frame",
+    category: "acrylic-frames",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  // STICKERS AND LABELS
+  {
+    slug: "customized-sticker",
+    name: "Customized Sticker",
+    category: "stickers-and-labels",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "customized-sticker-chocolates",
+    name: "Customized Sticker Chocolates",
+    category: "stickers-and-labels",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "customized-notebook-name-label",
+    name: "Customized Notebook Name Label",
+    category: "stickers-and-labels",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "business-branding-labels",
+    name: "Business and Branding Labels",
+    category: "stickers-and-labels",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "gift-stickers",
+    name: "Gift Stickers",
+    category: "stickers-and-labels",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "event-stickers",
+    name: "Event Stickers",
+    category: "stickers-and-labels",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "home-personal-label",
+    name: "Home and Personal Label",
+    category: "stickers-and-labels",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+  {
+    slug: "packaging-labels",
+    name: "Packaging Labels",
+    category: "stickers-and-labels",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
+
+  // RESIN ART
+  {
+    slug: "customized-resin-art",
+    name: "Customized Resin Art",
+    category: "resin-art",
+    price: "Updating Soon",
+    oldPrice: "",
+    offer: "",
+    image: "/images/placeholder.jpg",
+  },
 ];
