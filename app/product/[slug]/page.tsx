@@ -76,9 +76,12 @@ export default function ProductPage() {
   const [selectedImage, setSelectedImage] = useState(images[0] || "");
 
   const [name, setName] = useState("");
-  const [quantity, setQuantity] = useState("1");
   const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
+  const [productType, setProductType] = useState("");
+  const [occasion, setOccasion] = useState("");
+  const [printText, setPrintText] = useState("");
+  const [quantity, setQuantity] = useState("1");
+  const [details, setDetails] = useState("");
 
   if (!product) {
     return (
@@ -148,18 +151,27 @@ export default function ProductPage() {
 
   const whatsappMessage = `Hello JC Gift Gallery,
 
-I want to order this product:
+I want to customize and order this product.
 
+Selected Product:
 Product Name: ${product.name}
-Price: ${product.price}
-Quantity: ${quantity}
+Product Price: ${product.price}
 
 Customer Details:
 Name: ${name}
 Phone Number: ${phone}
-Address: ${address}
 
-Please confirm my order.`;
+Customization Details:
+Product Type: ${productType}
+Occasion: ${occasion}
+Name/Text To Print: ${printText}
+Quantity: ${quantity}
+Requirements: ${details}
+
+Reference:
+If I have any reference image or design, I will share it directly on WhatsApp.
+
+Please confirm design, price, and delivery details.`;
 
   const whatsappLink = `https://wa.me/919538952178?text=${encodeURIComponent(
     whatsappMessage
@@ -240,47 +252,112 @@ Please confirm my order.`;
             </button>
           </div>
 
-          <div className="mt-6 space-y-4">
-            <input
-              type="text"
-              placeholder="Enter Your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full border p-3 rounded-xl outline-none"
-            />
+          <div className="mt-8 bg-[#FFF8ED] p-5 rounded-3xl border border-[#E8E1D6]">
+            <h2 className="text-2xl font-bold text-[#B8860B] mb-3">
+              🎁 Customize Your Gift
+            </h2>
 
-            <input
-              type="number"
-              min="1"
-              placeholder="Quantity"
-              value={quantity}
-              onChange={(e) => setQuantity(e.target.value)}
-              className="w-full border p-3 rounded-xl outline-none"
-            />
+            <p className="text-gray-600 mb-6">
+              Tell us what product you need, how you want it customized,
+              and place your order directly on WhatsApp.
+            </p>
 
-            <input
-              type="tel"
-              placeholder="Enter Phone Number"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="w-full border p-3 rounded-xl outline-none"
-            />
+            <div className="space-y-4">
+              <input
+                type="text"
+                placeholder="Enter Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full border p-3 rounded-xl outline-none"
+              />
 
-            <textarea
-              placeholder="Enter Delivery Address"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              className="w-full border p-3 rounded-xl h-28 outline-none"
-            />
+              <input
+                type="tel"
+                placeholder="Enter Phone Number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="w-full border p-3 rounded-xl outline-none"
+              />
 
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 rounded-2xl font-bold text-lg shadow-md hover:bg-green-600 transition"
-            >
-              🟢 Order on WhatsApp
-            </a>
+              <select
+                value={productType}
+                onChange={(e) => setProductType(e.target.value)}
+                className="w-full border p-3 rounded-xl outline-none"
+              >
+                <option value="">Select Product Type</option>
+                <option>Photo Frame</option>
+                <option>Mug</option>
+                <option>Keychain</option>
+                <option>Combo Gift</option>
+                <option>Photo Book</option>
+                <option>T Shirt</option>
+                <option>Acrylic Frame</option>
+                <option>Sticker / Label</option>
+                <option>Resin Art</option>
+                <option>Other Customized Gift</option>
+              </select>
+
+              <select
+                value={occasion}
+                onChange={(e) => setOccasion(e.target.value)}
+                className="w-full border p-3 rounded-xl outline-none"
+              >
+                <option value="">Select Occasion</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Wedding</option>
+                <option>Love / Couple</option>
+                <option>Friendship</option>
+                <option>Corporate</option>
+                <option>Festival</option>
+                <option>Other Occasion</option>
+              </select>
+
+              <input
+                type="text"
+                placeholder="Name/Text To Print"
+                value={printText}
+                onChange={(e) => setPrintText(e.target.value)}
+                className="w-full border p-3 rounded-xl outline-none"
+              />
+
+              <input
+                type="number"
+                min="1"
+                placeholder="Quantity"
+                value={quantity}
+                onChange={(e) => setQuantity(e.target.value)}
+                className="w-full border p-3 rounded-xl outline-none"
+              />
+
+              <textarea
+                placeholder="Describe Your Customization Requirements..."
+                value={details}
+                onChange={(e) => setDetails(e.target.value)}
+                className="w-full border p-3 rounded-xl h-32 outline-none"
+              />
+
+              <div className="bg-white border border-dashed border-[#B8860B] p-4 rounded-2xl">
+                <p className="text-sm text-gray-700">
+                  If you have any reference image or design,
+                  please share it directly on WhatsApp after clicking order.
+                </p>
+
+                <p className="text-sm text-green-600 mt-2 font-semibold">
+                  ✅ Share reference images, screenshots, or design ideas
+                  directly in WhatsApp for better customization.
+                </p>
+              </div>
+
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 rounded-2xl font-bold text-lg shadow-md hover:bg-green-600 transition"
+              >
+                🎁 Customize & Order on WhatsApp →
+              </a>
+            </div>
           </div>
         </div>
       </div>
