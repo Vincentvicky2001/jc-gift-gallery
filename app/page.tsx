@@ -28,7 +28,7 @@ export default function Home() {
 
       <Categories />
 
-      <ProductSection title="Best Seller" />
+      <ProductSection title="Best Selling" />
 
       <ProductSection title="New Arrivals" />
 

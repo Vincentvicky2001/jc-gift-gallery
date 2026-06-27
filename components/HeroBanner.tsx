@@ -72,18 +72,16 @@ export default function HeroBanner() {
               <img
                 src="/images/hero-new.jpg"
                 alt="Premium Gift Banner"
-                className="
-                  relative
-                  w-full
-                  h-[260px]
-                  sm:h-[420px]
-                  md:h-[620px]
-                  object-cover
-                  rounded-[30px]
-                  shadow-2xl
-                  border-4
-                  border-white
-                "
+               className="
+  relative
+  w-full
+  h-[260px]
+  sm:h-[420px]
+  md:h-[620px]
+  object-cover
+  rounded-[30px]
+  shadow-2xl
+"
               />
 
             </div>

@@ -91,23 +91,22 @@ Delivery Address: ${orderAddress}
 
 Please confirm availability and payment details.`;
 
-  const customizeMessage = `Product Name: ${product.name}
+ const customizeMessage = `Hello JC Gift Gallery,
 
-Price: ${product.price}
+I want to customize a gift.
 
+Customer Details:
 Name: ${customName}
 
-Quantity: ${customQuantity}
-
+Product Details:
+Product: ${product.name}
 Product Type: ${customProductType}
-
 Occasion: ${customOccasion}
-
 Name/Text To Print: ${customPrintText}
+Quantity: ${customQuantity}
 
 Customization Requirements:
 ${customDetails}`;
-
   const orderWhatsappLink = `https://wa.me/919538952178?text=${encodeURIComponent(
     orderMessage
   )}`;
@@ -299,7 +298,7 @@ ${customDetails}`;
           <input
             type="number"
             min="1"
-            placeholder="Quantity"
+            placeholder="Enter Quantity"
             value={orderQuantity}
             onChange={(e) => setOrderQuantity(e.target.value)}
             className="border border-[#E8E1D6] p-3 rounded-xl outline-none"
