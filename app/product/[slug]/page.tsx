@@ -76,17 +76,20 @@ export default function ProductPage() {
   const [customPrintText, setCustomPrintText] = useState("");
   const [customDetails, setCustomDetails] = useState("");
 
-  const orderMessage = `Product Name: ${product.name}
+ const orderMessage = `Hello JC Gift Gallery,
 
+I want to order this product:
+
+Product: ${product.name}
 Price: ${product.price}
-
-Name: ${orderName}
-
 Quantity: ${orderQuantity}
 
+Customer Details:
+Name: ${orderName}
 Phone Number: ${orderPhone}
+Delivery Address: ${orderAddress}
 
-Delivery Address: ${orderAddress}`;
+Please confirm availability and payment details.`;
 
   const customizeMessage = `Product Name: ${product.name}
 
