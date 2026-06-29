@@ -31,31 +31,71 @@ export default function ProductPage() {
 
     "couple-photo-frame": ["/images/couple/couple-1.jpg", "/images/couple/couple-1-2.jpg"],
     "customized-couple-mugs": ["/images/couple/couple-2.jpg", "/images/couple/couple-2-2.jpg"],
-    "customized-keychains": ["/images/couple/couple-3.jpg", "/images/couple/couple-3-2.jpg"],
+    "couple-customized-keychains": ["/images/couple/couple-3.jpg", "/images/couple/couple-3-2.jpg"],
     "love-message-photo-frame": ["/images/couple/couple-4.jpg", "/images/couple/couple-4-2.jpg"],
     "couple-acrylic-photo-frame": ["/images/couple/couple-5.jpg", "/images/couple/couple-5-2.jpg"],
+    "couple-collage-photo-frame": ["/images/couple/couple-6.jpg", "/images/couple/couple-6-2.jpg"],
+    "couple-mosaic-photo-frame": ["/images/couple/couple-7.jpg", "/images/couple/couple-7-2.jpg"],
+    "customized-photo-album": ["/images/couple/couple-8.jpg", "/images/couple/couple-8-2.jpg"],
+    "couple-customized-photo-book": ["/images/couple/couple-9.jpg", "/images/couple/couple-9-2.jpg"],
+    "customized-magazines": ["/images/couple/couple-10.jpg", "/images/couple/couple-10-2.jpg"],
 
     "photo-mug": ["/images/mugs/mugs-1.jpg", "/images/mugs/mugs-1-2.jpg"],
-    "couple-mug": ["/images/mugs/mugs-2.jpg", "/images/mugs/mugs-2-2.jpg"],
+    "couple-mug-item": ["/images/mugs/mugs-2.jpg", "/images/mugs/mugs-2-2.jpg"],
     "magic-mug": ["/images/mugs/mugs-3.jpg", "/images/mugs/mugs-3-2.jpg"],
+    "name-printed-mugs": ["/images/mugs/mugs-4.jpg", "/images/mugs/mugs-4-2.jpg"],
+    "birthday-mug": ["/images/mugs/mugs-5.jpg", "/images/mugs/mugs-5-2.jpg"],
+    "best-friends-mug": ["/images/mugs/mugs-6.jpg", "/images/mugs/mugs-6-2.jpg"],
+    "anniversary-mug": ["/images/mugs/mugs-7.jpg", "/images/mugs/mugs-7-2.jpg"],
+    "magic-mirror": ["/images/mugs/mugs-8.jpg", "/images/mugs/mugs-8-2.jpg"],
 
     "customized-keychain": ["/images/keychains/keychain-1.jpg", "/images/keychains/keychain-1-2.jpg"],
     "name-keychain": ["/images/keychains/keychain-2.jpg", "/images/keychains/keychain-2-2.jpg"],
+    "photo-keychain": ["/images/keychains/keychain-3.jpg", "/images/keychains/keychain-3-2.jpg"],
+    "couple-keychain": ["/images/keychains/keychain-4.jpg", "/images/keychains/keychain-4-2.jpg"],
+    "logo-keychain": ["/images/keychains/keychain-5.jpg", "/images/keychains/keychain-5-2.jpg"],
 
     "photo-frame-mug-combo": ["/images/combo/combo-1.jpg", "/images/combo/combo-1-2.jpg"],
     "mug-keychains-combo": ["/images/combo/combo-2.jpg", "/images/combo/combo-2-2.jpg"],
+    "photo-frame-keychains-combo": ["/images/combo/combo-3.jpg", "/images/combo/combo-3-2.jpg"],
+    "mug-greeting-card-combo": ["/images/combo/combo-4.jpg", "/images/combo/combo-4-2.jpg"],
 
-    "customized-photo-frame": ["/images/frames/frames-1.jpg", "/images/frames/frames-1-2.jpg"],
+    "frames-customized-photo-frame": ["/images/frames/frames-1.jpg", "/images/frames/frames-1-2.jpg"],
     "single-photo-frame": ["/images/frames/frames-2.jpg", "/images/frames/frames-2-2.jpg"],
+    "frames-couple-photo-frame": ["/images/frames/frames-3.jpg", "/images/frames/frames-3-2.jpg"],
+    "family-photo-frame": ["/images/frames/frames-4.jpg", "/images/frames/frames-4-2.jpg"],
+    "kids-photo-frame": ["/images/frames/frames-5.jpg", "/images/frames/frames-5-2.jpg"],
+    "friendship-photo-frame": ["/images/frames/frames-6.jpg", "/images/frames/frames-6-2.jpg"],
+    "birthday-photo-frame": ["/images/frames/frames-7.jpg", "/images/frames/frames-7-2.jpg"],
+    "frames-anniversary-photo-frame": ["/images/frames/frames-8.jpg", "/images/frames/frames-8-2.jpg"],
+    "frames-collage-photo-frame": ["/images/frames/frames-9.jpg", "/images/frames/frames-9-2.jpg"],
+    "frames-mosaic-photo-frame": ["/images/frames/frames-10.jpg", "/images/frames/frames-10-2.jpg"],
+    "frames-acrylic-photo-frame": ["/images/frames/frames-11.jpg", "/images/frames/frames-11-2.jpg"],
 
     "personalized-tshirt": ["/images/tshirts/tshirts-1.jpg", "/images/tshirts/tshirts-1-2.jpg"],
     "name-printed-tshirt": ["/images/tshirts/tshirts-2.jpg", "/images/tshirts/tshirts-2-2.jpg"],
+    "couple-tshirt": ["/images/tshirts/tshirts-3.jpg", "/images/tshirts/tshirts-3-2.jpg"],
+    "birthday-tshirt": ["/images/tshirts/tshirts-4.jpg", "/images/tshirts/tshirts-4-2.jpg"],
+    "family-tshirt": ["/images/tshirts/tshirts-5.jpg", "/images/tshirts/tshirts-5-2.jpg"],
+    "friendship-tshirt": ["/images/tshirts/tshirts-6.jpg", "/images/tshirts/tshirts-6-2.jpg"],
 
     "customized-sticker": ["/images/stickers/stickers-1.jpg", "/images/stickers/stickers-1-2.jpg"],
     "customized-sticker-chocolates": ["/images/stickers/stickers-2.jpg", "/images/stickers/stickers-2-2.jpg"],
+    "customized-notebook-name-label": ["/images/stickers/stickers-3.jpg", "/images/stickers/stickers-3-2.jpg"],
+    "business-branding-labels": ["/images/stickers/stickers-4.jpg", "/images/stickers/stickers-4-2.jpg"],
+    "gift-stickers": ["/images/stickers/stickers-5.jpg", "/images/stickers/stickers-5-2.jpg"],
+    "event-stickers": ["/images/stickers/stickers-6.jpg", "/images/stickers/stickers-6-2.jpg"],
+    "home-personal-label": ["/images/stickers/stickers-7.jpg", "/images/stickers/stickers-7-2.jpg"],
+    "packaging-labels": ["/images/stickers/stickers-8.jpg", "/images/stickers/stickers-8-2.jpg"],
 
     "corporate-customized-mug": ["/images/corporate/corporate-1.jpg", "/images/corporate/corporate-1-2.jpg"],
     "corporate-customized-keychains": ["/images/corporate/corporate-2.jpg", "/images/corporate/corporate-2-2.jpg"],
+    "customized-water-bottle": ["/images/corporate/corporate-3.jpg", "/images/corporate/corporate-3-2.jpg"],
+    "corporate-photo-frame": ["/images/corporate/corporate-4.jpg", "/images/corporate/corporate-4-2.jpg"],
+    "logo-printed-keychains": ["/images/corporate/corporate-5.jpg", "/images/corporate/corporate-5-2.jpg"],
+    "customized-calendar": ["/images/corporate/corporate-6.jpg", "/images/corporate/corporate-6-2.jpg"],
+    "motivational-photo-frame": ["/images/corporate/corporate-8.jpg", "/images/corporate/corporate-8-2.jpg"],
+    "wall-frames": ["/images/corporate/corporate-9.jpg", "/images/corporate/corporate-9-2.jpg"],
   };
 
   const images = imageMap[product.slug] || [product.image];
@@ -176,9 +216,7 @@ ${customDetails}`;
 
           <div className="flex items-center gap-3 mt-5 flex-wrap">
             <p className="text-3xl font-bold text-black">{product.price}</p>
-
             {product.oldPrice && <p className="line-through text-gray-400">{product.oldPrice}</p>}
-
             {product.offer && (
               <span className="bg-green-600 text-white px-3 py-1 rounded-lg text-sm font-bold">
                 {product.offer}
@@ -207,16 +245,12 @@ ${customDetails}`;
 
       <section className="max-w-6xl mx-auto mt-5 bg-white rounded-3xl shadow-lg p-5 border border-[#E8E1D6]">
         <h2 className="text-2xl font-bold text-black">🛍️ Place Your Order</h2>
-
         <p className="text-gray-600 mt-2 mb-5">Please fill your details to place order.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <input type="text" placeholder="Enter Your Name" value={orderName} onChange={(e) => setOrderName(e.target.value)} className="border border-[#E8E1D6] p-3 rounded-xl outline-none" />
-
           <input type="number" min="1" placeholder="Enter Quantity" value={orderQuantity} onChange={(e) => setOrderQuantity(e.target.value)} className="border border-[#E8E1D6] p-3 rounded-xl outline-none" />
-
           <input type="tel" placeholder="Enter Phone Number" value={orderPhone} onChange={(e) => setOrderPhone(e.target.value)} className="border border-[#E8E1D6] p-3 rounded-xl outline-none" />
-
           <textarea placeholder="Enter Delivery Address" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} className="border border-[#E8E1D6] p-3 rounded-xl h-24 outline-none" />
         </div>
 
@@ -227,12 +261,10 @@ ${customDetails}`;
 
       <section className="max-w-6xl mx-auto mt-5 bg-[#FFF8ED] rounded-3xl shadow-lg p-5 border border-[#E8E1D6]">
         <h2 className="text-2xl font-bold text-[#B8860B]">🎁 Customize Your Gift</h2>
-
         <p className="text-gray-600 mt-2 mb-5">If you need customization, give details below.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <input type="text" placeholder="Enter Your Name" value={customName} onChange={(e) => setCustomName(e.target.value)} className="border border-[#E8E1D6] p-3 rounded-xl outline-none" />
-
           <input type="number" min="1" placeholder="Enter Quantity" value={customQuantity} onChange={(e) => setCustomQuantity(e.target.value)} className="border border-[#E8E1D6] p-3 rounded-xl outline-none" />
 
           <select value={customProductType} onChange={(e) => setCustomProductType(e.target.value)} className="border border-[#E8E1D6] p-3 rounded-xl outline-none">
@@ -264,7 +296,6 @@ ${customDetails}`;
           <p className="text-sm text-gray-700">
             If you have any reference image or design, please share it directly on WhatsApp.
           </p>
-
           <p className="text-sm text-green-600 mt-2 font-semibold">
             ✅ Share reference images or screenshots directly in WhatsApp for better customization.
           </p>
