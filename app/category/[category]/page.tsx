@@ -16,19 +16,41 @@ export default async function CategoryPage({ params }: Props) {
     .replaceAll(" ", "-");
 
   const categoryAlias: Record<string, string> = {
-    frame: "frames",
-    frames: "frames",
-    mug: "mugs",
-    mugs: "mugs",
-    keychain: "keychains",
-    keychains: "keychains",
-    "acrylic-frame": "acrylic-frames",
-    "acrylic-frames": "acrylic-frames",
-    "sticker-and-lables": "stickers-and-labels",
-    "stickers-and-lables": "stickers-and-labels",
-    "sticker-and-labels": "stickers-and-labels",
-    "stickers-and-labels": "stickers-and-labels",
-  };
+  frame: "frames",
+  frames: "frames",
+
+  mug: "mugs",
+  mugs: "mugs",
+
+  keychain: "keychains",
+  keychains: "keychains",
+
+  tshirt: "customized-t-shirt",
+  tshirts: "customized-t-shirt",
+  "t-shirt": "customized-t-shirt",
+  "t-shirts": "customized-t-shirt",
+  "customized-tshirt": "customized-t-shirt",
+  "customized-tshirts": "customized-t-shirt",
+  "customized-t-shirt": "customized-t-shirt",
+  "customized-t-shirts": "customized-t-shirt",
+
+  sticker: "stickers-and-labels",
+  stickers: "stickers-and-labels",
+  label: "stickers-and-labels",
+  labels: "stickers-and-labels",
+  lables: "stickers-and-labels",
+  "sticker-and-label": "stickers-and-labels",
+  "sticker-and-lable": "stickers-and-labels",
+  "sticker-and-labels": "stickers-and-labels",
+  "sticker-and-lables": "stickers-and-labels",
+  "stickers-and-label": "stickers-and-labels",
+  "stickers-and-lable": "stickers-and-labels",
+  "stickers-and-labels": "stickers-and-labels",
+  "stickers-and-lables": "stickers-and-labels",
+
+  "acrylic-frame": "acrylic-frames",
+  "acrylic-frames": "acrylic-frames",
+};
 
   const finalCategory =
     categoryAlias[normalizedCategory] || normalizedCategory;
@@ -76,9 +98,23 @@ export default async function CategoryPage({ params }: Props) {
                   {product.name}
                 </h2>
 
-                <p className="text-[#B8860B] font-bold mt-2">
-                  {product.price}
-                </p>
+                <div className="flex items-center gap-2 mt-2 flex-wrap">
+                  <p className="text-[#B8860B] font-bold">
+                    {product.price}
+                  </p>
+
+                  {product.oldPrice && (
+                    <p className="text-gray-400 line-through text-xs">
+                      {product.oldPrice}
+                    </p>
+                  )}
+                </div>
+
+                {product.offer && (
+                  <p className="text-green-600 text-xs font-bold mt-1">
+                    {product.offer}
+                  </p>
+                )}
               </div>
             </a>
           ))}
