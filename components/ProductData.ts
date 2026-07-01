@@ -14,34 +14,86 @@ export const categories = [
 ];
 
 export const products = [
+
   {
-    slug: "led-photo-frame",
-    name: "LED Photo Frame",
+    slug: "customized-photo-collage",
+    name: "Customized Photo Collage",
+    category: "featured",
+    price: "₹499",
+    oldPrice: "₹899",
+    offer: "45% OFF",
+    image: "/images/best1.jpg",
+  },
+
+  {
+    slug: "google-collage-frame",
+    name: "Google Collage Frame",
     category: "featured",
     price: "₹599",
     oldPrice: "₹999",
     offer: "40% OFF",
-    image: "/images/gift1.jpg",
-  },
-  {
-    slug: "premium-gift-combo",
-    name: "Premium Gift Combo",
-    category: "featured",
-    price: "₹999",
-    oldPrice: "₹1599",
-    offer: "38% OFF",
-    image: "/images/gift2.jpg",
-  },
-  {
-    slug: "couple-mug",
-    name: "Couple Mug",
-    category: "featured",
-    price: "₹299",
-    oldPrice: "₹499",
-    offer: "40% OFF",
-    image: "/images/gift3.jpg",
+    image: "/images/best2.jpg",
   },
 
+  {
+    slug: "spotify-photo-frame",
+    name: "Spotify Photo Frame",
+    category: "featured",
+    price: "₹399",
+    oldPrice: "₹699",
+    offer: "42% OFF",
+    image: "/images/best3.jpg",
+  },
+
+  {
+    slug: "moon-shape-photo-frame",
+    name: "Moon Shape Photo Frame",
+    category: "featured",
+    price: "₹799",
+    oldPrice: "₹1299",
+    offer: "38% OFF",
+    image: "/images/best4.jpg",
+  },
+
+  {
+    slug: "photo-clip-string-light",
+    name: "Photo Clip String Light",
+    category: "featured",
+    price: "₹349",
+    oldPrice: "₹699",
+    offer: "50% OFF",
+    image: "/images/new1.jpg",
+  },
+
+  {
+    slug: "customized-photo-prints",
+    name: "Customized Photo Prints",
+    category: "featured",
+    price: "₹299",
+    oldPrice: "₹599",
+    offer: "50% OFF",
+    image: "/images/new2.jpg",
+  },
+
+  {
+    slug: "custom-photo-collage",
+    name: "Custom Photo Collage",
+    category: "featured",
+    price: "₹449",
+    oldPrice: "₹899",
+    offer: "50% OFF",
+    image: "/images/new3.jpg",
+  },
+
+  {
+    slug: "students-teacher-photo-frame",
+    name: "Students & Teacher Photo Frame",
+    category: "featured",
+    price: "₹599",
+    oldPrice: "₹999",
+    offer: "40% OFF",
+    image: "/images/new4.jpg",
+  },
   // BIRTHDAY
   {
     slug: "birthday-customized-photo-frame",

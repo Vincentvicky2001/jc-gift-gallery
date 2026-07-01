@@ -165,21 +165,31 @@ ${customDetails}`;
   };
 
   const addToWishlist = () => {
-    const savedWishlist = localStorage.getItem("jc-wishlist");
-    const wishlist = savedWishlist ? JSON.parse(savedWishlist) : [];
+  const savedWishlist = localStorage.getItem("jc-wishlist");
+  const wishlist = savedWishlist ? JSON.parse(savedWishlist) : [];
 
-    wishlist.push({
-      slug: product.slug,
-      name: product.name,
-      image: product.image,
-      price: product.price,
-    });
+  wishlist.push({
+    slug: product.slug,
+    name: product.name,
+    image: product.image,
+    price: product.price,
+  });
 
-    localStorage.setItem("jc-wishlist", JSON.stringify(wishlist));
-    alert("Added to wishlist!");
-  };
+  localStorage.setItem("jc-wishlist", JSON.stringify(wishlist));
+  alert("Added to wishlist!");
+};
 
-  return (
+const [selectedSize, setSelectedSize] = useState("4x6 Inche");
+
+const sizeOptions = [
+  { size: "4x6 Inche", price: "₹149" },
+  { size: "5x7 Inche", price: "₹149" },
+  { size: "6x8 Inche (A5 Size)", price: "₹199" },
+  { size: "8x12 Inche (A4 Size)", price: "₹299" },
+  { size: "12x18 Inche (A3 Size)", price: "₹799" },
+];
+
+return (
     <main className="min-h-screen bg-[#fffaf0] px-3 py-5 pb-24">
       <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-lg p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
@@ -215,14 +225,50 @@ ${customDetails}`;
           </div>
 
           <div className="flex items-center gap-3 mt-5 flex-wrap">
-            <p className="text-3xl font-bold text-black">{product.price}</p>
-            {product.oldPrice && <p className="line-through text-gray-400">{product.oldPrice}</p>}
-            {product.offer && (
-              <span className="bg-green-600 text-white px-3 py-1 rounded-lg text-sm font-bold">
-                {product.offer}
-              </span>
-            )}
-          </div>
+  <p className="text-3xl font-bold text-black">
+    {sizeOptions.find((item) => item.size === selectedSize)?.price || product.price}
+  </p>
+
+  {product.oldPrice && (
+    <p className="line-through text-gray-400">
+      {product.oldPrice}
+    </p>
+  )}
+
+  {product.offer && (
+    <span className="bg-green-600 text-white px-3 py-1 rounded-lg text-sm font-bold">
+      {product.offer}
+    </span>
+  )}
+</div>
+
+<div className="mt-5">
+  <h3 className="font-bold text-lg text-black mb-3">
+    Select Frame Size
+  </h3>
+
+  <div className="grid grid-cols-2 gap-3">
+    {sizeOptions.map((option) => (
+      <button
+        key={option.size}
+        onClick={() => setSelectedSize(option.size)}
+        className={`p-3 rounded-2xl border text-left transition ${
+          selectedSize === option.size
+            ? "border-[#B8860B] bg-[#FFF4D6]"
+            : "border-[#E8E1D6] bg-white"
+        }`}
+      >
+        <p className="font-semibold text-black text-sm">
+          {option.size}
+        </p>
+
+        <p className="text-[#B8860B] font-bold mt-1">
+          {option.price}
+        </p>
+      </button>
+    ))}
+  </div>
+</div>
 
           <div className="mt-6 grid grid-cols-2 gap-3">
             <button onClick={addToWishlist} className="bg-pink-100 text-red-600 py-3 rounded-xl font-bold">

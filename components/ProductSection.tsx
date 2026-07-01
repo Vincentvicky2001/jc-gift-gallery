@@ -81,14 +81,27 @@ export default function ProductSection({ title }: Props) {
               border-[#F3E5C8]
             "
           >
-            <div className="relative">
-              <a href={`/product/${product.slug}`}>
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-56 sm:h-72 object-cover"
-                />
-              </a>
+           <div className="relative">
+  <a
+    href={`/product/${product.slug}`}
+    className="relative block overflow-hidden"
+  >
+    <img
+      src={product.image}
+      alt={product.name}
+      className="w-full h-56 sm:h-72 object-cover transition duration-500 hover:scale-105"
+    />
+
+    <img
+      src={
+        product.image.includes(".jpg")
+          ? product.image.replace(".jpg", "-2.jpg")
+          : product.image
+      }
+      alt={product.name}
+      className="absolute inset-0 w-full h-56 sm:h-72 object-cover opacity-0 hover:opacity-100 transition duration-500"
+    />
+  </a>
 
               <button
                 onClick={() => addToWishlist(product)}

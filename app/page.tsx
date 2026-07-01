@@ -30,7 +30,7 @@ export default function Home() {
 
       <ProductSection title="Best Selling" />
 
-      <ProductSection title="New Arrivals" />
+      <ProductSection title="Trending" />
 
       <WhyChooseUs />
 
