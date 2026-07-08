@@ -7,7 +7,7 @@ const categories = [
   {
     name: "Anniversary",
     image: "/images/categories/anniversary.jpg",
-    link: "/category/Couple",
+    link: "/category/Anniversary",
   },
   {
     name: "Couple",
@@ -27,32 +27,32 @@ const categories = [
   {
     name: "Mugs",
     image: "/images/categories/mugs.jpg",
-    link: "/category/Mug",
+    link: "/category/Mugs",
   },
   {
     name: "Frames",
     image: "/images/categories/frames.jpg",
-    link: "/category/Frame",
+    link: "/category/Frames",
   },
   {
     name: "Keychains",
     image: "/images/categories/keychains.jpg",
-    link: "/category/Keychain",
+    link: "/category/Keychains",
   },
   {
     name: "Customized T Shirt",
     image: "/images/categories/tshirt.jpg",
-    link: "/category/Tshirt",
+    link: "/category/Tshirts",
   },
   {
     name: "Acrylic Frames",
     image: "/images/categories/acrylic.jpg",
-    link: "/category/Acrylic",
+    link: "/category/Acrylic-Frames",
   },
   {
     name: "Stickers and Labels",
     image: "/images/categories/stickers.jpg",
-    link: "/category/Stickers",
+    link: "/category/Stickers-and-Labels",
   },
   {
     name: "Resin Art",
@@ -81,7 +81,6 @@ export default function Categories() {
             href={category.link}
             className="bg-white rounded-2xl overflow-hidden border border-[#E8E1D6] shadow-sm hover:shadow-lg transition"
           >
-
             <img
               src={category.image}
               alt={category.name}
@@ -93,7 +92,6 @@ export default function Categories() {
                 {category.name}
               </p>
             </div>
-
           </a>
         ))}
       </div>

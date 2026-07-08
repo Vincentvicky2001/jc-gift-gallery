@@ -354,9 +354,19 @@ return (
           <textarea placeholder="Enter Delivery Address" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} className="border border-[#E8E1D6] p-3 rounded-xl h-24 outline-none" />
         </div>
 
-        <a href={orderWhatsappLink} target="_blank" rel="noopener noreferrer" className="mt-5 flex items-center justify-center bg-[#25D366] text-white py-4 rounded-2xl font-bold text-lg">
-          🟢 Order on WhatsApp
-        </a>
+       <a
+  href={orderWhatsappLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-5 flex items-center justify-center gap-2 bg-gradient-to-r from-[#D4A017] to-[#B8860B] text-white py-4 rounded-2xl font-bold text-lg shadow-lg"
+>
+  <img
+    src="/images/whatsapp.png"
+    alt="WhatsApp"
+    className="w-6 h-6"
+  />
+  <span>Order on WhatsApp</span>
+</a>
       </section>
 
       <section className="max-w-6xl mx-auto mt-5 bg-[#FFF8ED] rounded-3xl shadow-lg p-5 border border-[#E8E1D6]">
@@ -401,9 +411,19 @@ return (
           </p>
         </div>
 
-        <a href={customizeWhatsappLink} target="_blank" rel="noopener noreferrer" className="mt-5 flex items-center justify-center bg-[#25D366] text-white py-4 rounded-2xl font-bold text-lg">
-          🎁 Customize & Order on WhatsApp
-        </a>
+       <a
+  href={customizeWhatsappLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-5 flex items-center justify-center gap-2 bg-gradient-to-r from-[#D4A017] to-[#B8860B] hover:from-[#C99700] hover:to-[#A87400] text-white py-4 rounded-2xl font-bold text-lg shadow-lg transition-all duration-300"
+>
+  <img
+    src="/images/whatsapp.png"
+    alt="WhatsApp"
+    className="w-6 h-6"
+  />
+  <span>Customize & Order on WhatsApp</span>
+</a>
       </section>
     </main>
   );
