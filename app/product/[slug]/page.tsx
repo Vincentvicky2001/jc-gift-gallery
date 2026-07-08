@@ -148,32 +148,50 @@ export default function ProductPage() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   const [orderName, setOrderName] = useState("");
-  const [orderQuantity, setOrderQuantity] = useState("1");
+  const [orderQuantity, setOrderQuantity] = useState("");
   const [orderPhone, setOrderPhone] = useState("");
   const [orderAddress, setOrderAddress] = useState("");
 
   const [customName, setCustomName] = useState("");
-  const [customQuantity, setCustomQuantity] = useState("1");
+  const [customQuantity, setCustomQuantity] = useState("");
   const [customProductType, setCustomProductType] = useState("");
   const [customOccasion, setCustomOccasion] = useState("");
   const [customPrintText, setCustomPrintText] = useState("");
   const [customDetails, setCustomDetails] = useState("");
+const [selectedSize, setSelectedSize] = useState("4x6 Inche");
 
-  const orderMessage = `Hello JC Gift Gallery,
+const sizeOptions = [
+  { size: "4x6 Inche", price: "₹149" },
+  { size: "5x7 Inche", price: "₹149" },
+  { size: "6x8 Inche (A5 Size)", price: "₹199" },
+  { size: "8x12 Inche (A4 Size)", price: "₹299" },
+  { size: "12x18 Inche (A3 Size)", price: "₹799" },
+];
+const selectedSizePrice =
+  sizeOptions.find((item) => item.size === selectedSize)?.price || product.price;
 
-I want to order this product:
+const orderMessage = `Hello JC Gift Gallery,
 
-Product: ${product.name}
-Price: ${product.price}
-Quantity: ${orderQuantity}
+I want to place an order.
 
-Customer Details:
-Name: ${orderName}
-Phone Number: ${orderPhone}
-Delivery Address: ${orderAddress}
+━━━━━━━━━━━━━━━━━━━━
+🛍️ PRODUCT DETAILS
+━━━━━━━━━━━━━━━━━━━━
+Product : ${product.name}
+Size : ${selectedSize}
+Price : ${selectedSizePrice}
+Quantity : ${orderQuantity}
 
-Please confirm availability and payment details.`;
+━━━━━━━━━━━━━━━━━━━━
+👤 CUSTOMER DETAILS
+━━━━━━━━━━━━━━━━━━━━
+Name : ${orderName}
+Phone : ${orderPhone}
+Address : ${orderAddress}
 
+Please confirm availability and payment details.
+
+Thank You.`;
   const customizeMessage = `Hello JC Gift Gallery,
 
 I want to customize a gift.
@@ -224,16 +242,6 @@ ${customDetails}`;
   localStorage.setItem("jc-wishlist", JSON.stringify(wishlist));
   alert("Added to wishlist!");
 };
-
-const [selectedSize, setSelectedSize] = useState("4x6 Inche");
-
-const sizeOptions = [
-  { size: "4x6 Inche", price: "₹149" },
-  { size: "5x7 Inche", price: "₹149" },
-  { size: "6x8 Inche (A5 Size)", price: "₹199" },
-  { size: "8x12 Inche (A4 Size)", price: "₹299" },
-  { size: "12x18 Inche (A3 Size)", price: "₹799" },
-];
 
 return (
     <main className="min-h-screen bg-[#fffaf0] px-3 py-5 pb-24">

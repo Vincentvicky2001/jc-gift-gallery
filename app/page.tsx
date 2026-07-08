@@ -2,7 +2,6 @@ import TopMarquee from "../components/TopMarquee";
 import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import HeroBanner from "../components/HeroBanner";
-import ImageCarousel from "../components/ImageCarousel";
 import Categories from "../components/Categories";
 import ProductSection from "../components/ProductSection";
 import WhyChooseUs from "../components/WhyChooseUs";
@@ -23,8 +22,6 @@ export default function Home() {
       <SearchBar />
 
       <HeroBanner />
-
-      <ImageCarousel />
 
       <Categories />
 

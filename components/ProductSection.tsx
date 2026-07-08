@@ -17,7 +17,7 @@ type Product = {
 
 export default function ProductSection({ title }: Props) {
   const displayProducts =
-    title === "Best Seller"
+    title === "Best Selling"
       ? products.slice(0, 4)
       : products.slice(4, 8);
 
@@ -56,7 +56,7 @@ export default function ProductSection({ title }: Props) {
 
   return (
     <section
-      id={title === "Best Seller" ? "best-seller" : ""}
+      id={title === "Best Selling" ? "best-selling" : ""}
       className="px-4 py-8 bg-gradient-to-b from-[#FFFDF8] to-[#FFF6E9]"
     >
       <div className="flex justify-between items-center mb-6">
