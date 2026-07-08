@@ -96,7 +96,53 @@ export default function ProductPage() {
     "customized-calendar": ["/images/corporate/corporate-6.jpg", "/images/corporate/corporate-6-2.jpg"],
     "motivational-photo-frame": ["/images/corporate/corporate-8.jpg", "/images/corporate/corporate-8-2.jpg"],
     "wall-frames": ["/images/corporate/corporate-9.jpg", "/images/corporate/corporate-9-2.jpg"],
-  };
+  
+// ===== HOMEPAGE BEST SELLERS =====
+
+"customized-photo-collage": [
+  "/images/best1.jpg",
+  "/images/best1-2.jpg",
+],
+
+"google-collage-frame": [
+  "/images/best2.jpg",
+  "/images/best2-2.jpg",
+],
+
+"spotify-photo-frame": [
+  "/images/best3.jpg",
+  "/images/best3-2.jpg",
+],
+
+"moon-shape-photo-frame": [
+  "/images/best4.jpg",
+  "/images/best4-2.jpg",
+],
+
+// ===== HOMEPAGE NEW ARRIVALS =====
+
+"photo-clip-string-light": [
+  "/images/new1.jpg",
+  "/images/new1-2.jpg",
+],
+
+"customized-photo-prints": [
+  "/images/new2.jpg",
+  "/images/new2-2.jpg",
+],
+
+"custom-photo-collage": [
+  "/images/new3.jpg",
+  "/images/new3-2.jpg",
+],
+
+"students-teacher-photo-frame": [
+  "/images/new4.jpg",
+  "/images/new4-2.jpg",
+],
+
+};
+
 
   const images = imageMap[product.slug] || [product.image];
   const [selectedImage, setSelectedImage] = useState(images[0]);

@@ -16,13 +16,16 @@ type Product = {
 };
 
 export default function ProductSection({ title }: Props) {
+  const displayProducts =
+    title === "Best Seller"
+      ? products.slice(0, 4)
+      : products.slice(4, 8);
+
   const addToWishlist = (product: Product) => {
     const savedWishlist = localStorage.getItem("jc-wishlist");
     const wishlist = savedWishlist ? JSON.parse(savedWishlist) : [];
 
-    const exists = wishlist.find(
-      (item: Product) => item.slug === product.slug
-    );
+    const exists = wishlist.find((item: Product) => item.slug === product.slug);
 
     if (exists) {
       alert("Already added to wishlist!");
@@ -65,43 +68,32 @@ export default function ProductSection({ title }: Props) {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-        {products.slice(0, 4).map((product) => (
+        {displayProducts.map((product) => (
           <div
             key={`${title}-${product.slug}`}
-            className="
-              bg-white
-              rounded-3xl
-              overflow-hidden
-              shadow-lg
-              hover:shadow-2xl
-              hover:-translate-y-2
-              transition-all
-              duration-300
-              border
-              border-[#F3E5C8]
-            "
+            className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-[#F3E5C8]"
           >
-           <div className="relative">
-  <a
-    href={`/product/${product.slug}`}
-    className="relative block overflow-hidden"
-  >
-    <img
-      src={product.image}
-      alt={product.name}
-      className="w-full h-56 sm:h-72 object-cover transition duration-500 hover:scale-105"
-    />
+            <div className="relative">
+              <a
+                href={`/product/${product.slug}`}
+                className="relative block overflow-hidden"
+              >
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-56 sm:h-72 object-cover transition duration-500 hover:scale-105"
+                />
 
-    <img
-      src={
-        product.image.includes(".jpg")
-          ? product.image.replace(".jpg", "-2.jpg")
-          : product.image
-      }
-      alt={product.name}
-      className="absolute inset-0 w-full h-56 sm:h-72 object-cover opacity-0 hover:opacity-100 transition duration-500"
-    />
-  </a>
+                <img
+                  src={
+                    product.image.includes(".jpg")
+                      ? product.image.replace(".jpg", "-2.jpg")
+                      : product.image
+                  }
+                  alt={product.name}
+                  className="absolute inset-0 w-full h-56 sm:h-72 object-cover opacity-0 hover:opacity-100 transition duration-500"
+                />
+              </a>
 
               <button
                 onClick={() => addToWishlist(product)}
