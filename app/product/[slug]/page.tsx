@@ -158,7 +158,18 @@ export default function ProductPage() {
   const [customOccasion, setCustomOccasion] = useState("");
   const [customPrintText, setCustomPrintText] = useState("");
   const [customDetails, setCustomDetails] = useState("");
-const [selectedSize, setSelectedSize] = useState("4x6 Inche");
+const isPhotoFrame = product.name
+  .toLowerCase()
+  .includes("photo frame");
+
+const [activeOption, setActiveOption] =
+  useState<"sizes" | "types">("sizes");
+
+const [selectedSize, setSelectedSize] =
+  useState("4x6 Inche");
+
+const [selectedFinish, setSelectedFinish] =
+  useState("Glossy Finish");
 
 const sizeOptions = [
   { size: "4x6 Inche", price: "₹149" },
@@ -167,8 +178,20 @@ const sizeOptions = [
   { size: "8x12 Inche (A4 Size)", price: "₹299" },
   { size: "12x18 Inche (A3 Size)", price: "₹799" },
 ];
+
+const finishOptions = [
+  "Glossy Finish",
+  "Matte Finish",
+  "Sparkle Finish",
+];
+
 const selectedSizePrice =
-  sizeOptions.find((item) => item.size === selectedSize)?.price || product.price;
+  sizeOptions.find((item) => item.size === selectedSize)?.price ||
+  product.price;
+
+const displayPrice = isPhotoFrame
+  ? selectedSizePrice
+  : product.price;
 
 const orderMessage = `Hello JC Gift Gallery,
 
@@ -178,8 +201,9 @@ I want to place an order.
 🛍️ PRODUCT DETAILS
 ━━━━━━━━━━━━━━━━━━━━
 Product : ${product.name}
-Size : ${selectedSize}
-Price : ${selectedSizePrice}
+${isPhotoFrame ? `Size : ${selectedSize}` : ""}
+${isPhotoFrame ? `Type : ${selectedFinish}` : ""}
+Price : ${displayPrice}
 Quantity : ${orderQuantity}
 
 ━━━━━━━━━━━━━━━━━━━━
@@ -192,7 +216,8 @@ Address : ${orderAddress}
 Please confirm availability and payment details.
 
 Thank You.`;
-  const customizeMessage = `Hello JC Gift Gallery,
+
+const customizeMessage = `Hello JC Gift Gallery,
 
 I want to customize a gift.
 
@@ -205,9 +230,13 @@ Product Type: ${customProductType}
 Occasion: ${customOccasion}
 Name/Text To Print: ${customPrintText}
 Quantity: ${customQuantity}
+${isPhotoFrame ? `Size: ${selectedSize}` : ""}
+${isPhotoFrame ? `Type: ${selectedFinish}` : ""}
 
 Customization Requirements:
-${customDetails}`;
+${customDetails}
+
+Please confirm design, price, and delivery details.`;
 
   const orderWhatsappLink = `https://wa.me/919538952178?text=${encodeURIComponent(orderMessage)}`;
   const customizeWhatsappLink = `https://wa.me/919538952178?text=${encodeURIComponent(customizeMessage)}`;
@@ -279,9 +308,10 @@ return (
           </div>
 
           <div className="flex items-center gap-3 mt-5 flex-wrap">
-  <p className="text-3xl font-bold text-black">
-    {sizeOptions.find((item) => item.size === selectedSize)?.price || product.price}
-  </p>
+
+<p className="text-3xl font-bold text-black">
+  {displayPrice}
+</p>
 
   {product.oldPrice && (
     <p className="line-through text-gray-400">
@@ -295,34 +325,103 @@ return (
     </span>
   )}
 </div>
+{isPhotoFrame && (
+  <div className="mt-5">
 
-<div className="mt-5">
-  <h3 className="font-bold text-lg text-black mb-3">
-    Select Frame Size
-  </h3>
+    <h3 className="font-bold text-lg text-black mb-3">
+      Select Frame Options
+    </h3>
 
-  <div className="grid grid-cols-2 gap-3">
-    {sizeOptions.map((option) => (
+    <div className="grid grid-cols-2 gap-3 mb-4">
+
       <button
-        key={option.size}
-        onClick={() => setSelectedSize(option.size)}
-        className={`p-3 rounded-2xl border text-left transition ${
-          selectedSize === option.size
-            ? "border-[#B8860B] bg-[#FFF4D6]"
-            : "border-[#E8E1D6] bg-white"
+        type="button"
+        onClick={() => setActiveOption("sizes")}
+        className={`py-3 rounded-xl font-bold ${
+          activeOption === "sizes"
+            ? "bg-gradient-to-r from-[#D4A017] to-[#B8860B] text-white"
+            : "bg-white border border-[#E8E1D6]"
         }`}
       >
-        <p className="font-semibold text-black text-sm">
-          {option.size}
-        </p>
-
-        <p className="text-[#B8860B] font-bold mt-1">
-          {option.price}
-        </p>
+        Sizes
       </button>
-    ))}
+
+      <button
+        type="button"
+        onClick={() => setActiveOption("types")}
+        className={`py-3 rounded-xl font-bold ${
+          activeOption === "types"
+            ? "bg-gradient-to-r from-[#D4A017] to-[#B8860B] text-white"
+            : "bg-white border border-[#E8E1D6]"
+        }`}
+      >
+        Types
+      </button>
+
+    </div>
+
+    {activeOption === "sizes" && (
+
+      <div className="grid grid-cols-2 gap-3">
+
+        {sizeOptions.map((option) => (
+
+          <button
+            key={option.size}
+            type="button"
+            onClick={() => setSelectedSize(option.size)}
+            className={`p-3 rounded-xl border ${
+              selectedSize === option.size
+                ? "border-[#B8860B] bg-[#FFF4D6]"
+                : "border-[#E8E1D6]"
+            }`}
+          >
+
+            <p className="font-semibold">
+              {option.size}
+            </p>
+
+            <p className="text-[#B8860B] font-bold">
+              {option.price}
+            </p>
+
+          </button>
+
+        ))}
+
+      </div>
+
+    )}
+
+    {activeOption === "types" && (
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+
+        {finishOptions.map((finish) => (
+
+          <button
+            key={finish}
+            type="button"
+            onClick={() => setSelectedFinish(finish)}
+            className={`p-3 rounded-xl border font-semibold ${
+              selectedFinish === finish
+                ? "border-[#B8860B] bg-[#FFF4D6] text-[#B8860B]"
+                : "border-[#E8E1D6]"
+            }`}
+          >
+
+            {finish}
+
+          </button>
+
+        ))}
+
+      </div>
+
+    )}
+
   </div>
-</div>
+)}
 
           <div className="mt-6 grid grid-cols-2 gap-3">
             <button onClick={addToWishlist} className="bg-pink-100 text-red-600 py-3 rounded-xl font-bold">
