@@ -1,9 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { products } from "../../../components/ProductData";
 import { productInformation } from "../../../components/ProductInformation";
+import ProductReviews from "../../../components/ProductReviews";
+import RelatedProducts from "../../../components/RelatedProducts";
+import FrequentlyBoughtTogether from "../../../components/FrequentlyBoughtTogether";
+import RecentlyViewed from "../../../components/RecentlyViewed";
 
 export default function ProductPage() {
   const params = useParams();
@@ -149,6 +153,24 @@ export default function ProductPage() {
   const images = imageMap[product.slug] || [product.image];
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
+  const [isWishlisted, setIsWishlisted] = useState(false);
+
+useEffect(() => {
+  try {
+    const wishlist = JSON.parse(
+      localStorage.getItem("jc-wishlist") || "[]"
+    );
+
+    const exists = wishlist.some(
+      (item: { slug: string }) => item.slug === product.slug
+    );
+
+    setIsWishlisted(exists);
+  } catch {
+    setIsWishlisted(false);
+  }
+}, [product.slug]);
+
   const [orderName, setOrderName] = useState("");
   const [orderQuantity, setOrderQuantity] = useState("");
   const [orderPhone, setOrderPhone] = useState("");
@@ -194,6 +216,58 @@ const selectedSizePrice =
 const displayPrice = isPhotoFrame
   ? selectedSizePrice
   : product.price;
+
+useEffect(() => {
+  try {
+    const savedProducts = JSON.parse(
+      localStorage.getItem("jc-recently-viewed") || "[]"
+    );
+  
+
+    const recentProducts = Array.isArray(savedProducts)
+      ? savedProducts
+      : [];
+
+    const productDetails = {
+      slug: product.slug,
+      name: product.name,
+      price: displayPrice,
+      image: selectedImage,
+      category: product.category,
+      oldPrice: product.oldPrice,
+      offer: product.offer,
+    };
+
+    const updatedProducts = [
+      productDetails,
+      ...recentProducts.filter(
+        (item: { slug: string }) =>
+          item.slug !== product.slug
+      ),
+    ].slice(0, 10);
+
+    localStorage.setItem(
+      "jc-recently-viewed",
+      JSON.stringify(updatedProducts)
+    );
+
+    window.dispatchEvent(
+      new Event("recentlyViewedUpdated")
+    );
+  } catch {
+    console.error(
+      "Unable to save recently viewed product."
+    );
+  }
+}, [
+  product.slug,
+  product.name,
+  product.category,
+  product.oldPrice,
+  product.offer,
+  displayPrice,
+  selectedImage,
+]);
 
 const orderMessage = `Hello JC Gift Gallery,
 
@@ -260,22 +334,55 @@ Please confirm design, price, and delivery details.`;
   });
 
   localStorage.setItem("jc-cart", JSON.stringify(cart));
-  alert("Product added to cart!");
+
+// Notify the Header that the cart changed
+window.dispatchEvent(new Event("cartUpdated"));
+
+alert("Product added to cart!");
 };
 
-  const addToWishlist = () => {
-  const savedWishlist = localStorage.getItem("jc-wishlist");
-  const wishlist = savedWishlist ? JSON.parse(savedWishlist) : [];
+ const addToWishlist = () => {
+  try {
+    const wishlist = JSON.parse(
+      localStorage.getItem("jc-wishlist") || "[]"
+    );
 
-  wishlist.push({
-    slug: product.slug,
-    name: product.name,
-    image: product.image,
-    price: product.price,
-  });
+    const alreadyExists = wishlist.some(
+      (item: { slug: string }) => item.slug === product.slug
+    );
 
-  localStorage.setItem("jc-wishlist", JSON.stringify(wishlist));
-  alert("Added to wishlist!");
+    let updatedWishlist;
+
+    if (alreadyExists) {
+      updatedWishlist = wishlist.filter(
+        (item: { slug: string }) =>
+          item.slug !== product.slug
+      );
+
+      setIsWishlisted(false);
+    } else {
+      updatedWishlist = [
+        ...wishlist,
+        {
+          slug: product.slug,
+          name: product.name,
+          image: selectedImage,
+          price: displayPrice,
+        },
+      ];
+
+      setIsWishlisted(true);
+    }
+
+    localStorage.setItem(
+      "jc-wishlist",
+      JSON.stringify(updatedWishlist)
+    );
+
+    window.dispatchEvent(new Event("wishlistUpdated"));
+  } catch {
+    alert("Unable to update wishlist.");
+  }
 };
 
 return (
@@ -459,9 +566,16 @@ return (
 )}
 
           <div className="mt-6 grid grid-cols-2 gap-3">
-            <button onClick={addToWishlist} className="bg-pink-100 text-red-600 py-3 rounded-xl font-bold">
-              ❤️ Wishlist
-            </button>
+            <button
+  onClick={addToWishlist}
+  className={`py-3 rounded-xl font-bold transition ${
+    isWishlisted
+      ? "bg-red-600 text-white"
+      : "bg-pink-100 text-red-600"
+  }`}
+>
+  {isWishlisted ? "❤️ Wishlisted" : "🤍 Wishlist"}
+</button>
 
             <button onClick={addToCart} className="bg-[#D4A017] text-white py-3 rounded-xl font-bold">
               🛒 Add to Cart
@@ -694,6 +808,21 @@ return (
     </p>
   </div>
 </section>
-    </main>
+<RelatedProducts
+  currentSlug={product.slug}
+  category={product.category}
+/>
+
+<FrequentlyBoughtTogether
+  currentSlug={product.slug}
+/>
+
+<RecentlyViewed
+  currentSlug={product.slug}
+/>
+
+<ProductReviews />
+
+</main>
   );
 }
