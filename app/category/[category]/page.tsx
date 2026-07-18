@@ -16,41 +16,41 @@ export default async function CategoryPage({ params }: Props) {
     .replaceAll(" ", "-");
 
   const categoryAlias: Record<string, string> = {
-  frame: "frames",
-  frames: "frames",
+    frame: "frames",
+    frames: "frames",
 
-  mug: "mugs",
-  mugs: "mugs",
+    mug: "mugs",
+    mugs: "mugs",
 
-  keychain: "keychains",
-  keychains: "keychains",
+    keychain: "keychains",
+    keychains: "keychains",
 
-  tshirt: "customized-t-shirt",
-  tshirts: "customized-t-shirt",
-  "t-shirt": "customized-t-shirt",
-  "t-shirts": "customized-t-shirt",
-  "customized-tshirt": "customized-t-shirt",
-  "customized-tshirts": "customized-t-shirt",
-  "customized-t-shirt": "customized-t-shirt",
-  "customized-t-shirts": "customized-t-shirt",
+    tshirt: "customized-t-shirt",
+    tshirts: "customized-t-shirt",
+    "t-shirt": "customized-t-shirt",
+    "t-shirts": "customized-t-shirt",
+    "customized-tshirt": "customized-t-shirt",
+    "customized-tshirts": "customized-t-shirt",
+    "customized-t-shirt": "customized-t-shirt",
+    "customized-t-shirts": "customized-t-shirt",
 
-  sticker: "stickers-and-labels",
-  stickers: "stickers-and-labels",
-  label: "stickers-and-labels",
-  labels: "stickers-and-labels",
-  lables: "stickers-and-labels",
-  "sticker-and-label": "stickers-and-labels",
-  "sticker-and-lable": "stickers-and-labels",
-  "sticker-and-labels": "stickers-and-labels",
-  "sticker-and-lables": "stickers-and-labels",
-  "stickers-and-label": "stickers-and-labels",
-  "stickers-and-lable": "stickers-and-labels",
-  "stickers-and-labels": "stickers-and-labels",
-  "stickers-and-lables": "stickers-and-labels",
+    sticker: "stickers-and-labels",
+    stickers: "stickers-and-labels",
+    label: "stickers-and-labels",
+    labels: "stickers-and-labels",
+    lables: "stickers-and-labels",
+    "sticker-and-label": "stickers-and-labels",
+    "sticker-and-lable": "stickers-and-labels",
+    "sticker-and-labels": "stickers-and-labels",
+    "sticker-and-lables": "stickers-and-labels",
+    "stickers-and-label": "stickers-and-labels",
+    "stickers-and-lable": "stickers-and-labels",
+    "stickers-and-labels": "stickers-and-labels",
+    "stickers-and-lables": "stickers-and-labels",
 
-  "acrylic-frame": "acrylic-frames",
-  "acrylic-frames": "acrylic-frames",
-};
+    "acrylic-frame": "acrylic-frames",
+    "acrylic-frames": "acrylic-frames",
+  };
 
   const finalCategory =
     categoryAlias[normalizedCategory] || normalizedCategory;
@@ -59,6 +59,8 @@ export default async function CategoryPage({ params }: Props) {
     (product) =>
       product.category.toLowerCase().replaceAll(" ", "-") === finalCategory
   );
+
+  const isComingSoonCategory = finalCategory === "acrylic-frames";
 
   const title = finalCategory
     .replaceAll("-", " ")
@@ -70,11 +72,12 @@ export default async function CategoryPage({ params }: Props) {
         {title} Gifts
       </h1>
 
-      {filteredProducts.length === 0 ? (
+      {isComingSoonCategory || filteredProducts.length === 0 ? (
         <div className="bg-white rounded-3xl p-8 text-center shadow">
           <h2 className="text-xl font-bold text-black">
             Products Coming Soon
           </h2>
+
           <p className="text-gray-600 mt-2">
             Images and prices will be updated soon.
           </p>
