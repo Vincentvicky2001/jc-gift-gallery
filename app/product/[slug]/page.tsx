@@ -3,11 +3,13 @@
 import { useState } from "react";
 import { useParams } from "next/navigation";
 import { products } from "../../../components/ProductData";
+import { productInformation } from "../../../components/ProductInformation";
 
 export default function ProductPage() {
   const params = useParams();
   const slug = params.slug as string;
   const product = products.find((p) => p.slug === slug);
+  const details = productInformation[slug];
 
   if (!product) {
     return <div className="p-10 text-center text-2xl font-bold">Product Not Found</div>;
@@ -241,21 +243,25 @@ Please confirm design, price, and delivery details.`;
   const orderWhatsappLink = `https://wa.me/919538952178?text=${encodeURIComponent(orderMessage)}`;
   const customizeWhatsappLink = `https://wa.me/919538952178?text=${encodeURIComponent(customizeMessage)}`;
 
-  const addToCart = () => {
-    const savedCart = localStorage.getItem("jc-cart");
-    const cart = savedCart ? JSON.parse(savedCart) : [];
+ const addToCart = () => {
+  const quantity = Number(orderQuantity) || 1;
 
-    cart.push({
-      slug: product.slug,
-      name: product.name,
-      image: product.image,
-      price: product.price,
-      quantity: orderQuantity,
-    });
+  const savedCart = localStorage.getItem("jc-cart");
+  const cart = savedCart ? JSON.parse(savedCart) : [];
 
-    localStorage.setItem("jc-cart", JSON.stringify(cart));
-    alert("Added to cart!");
-  };
+  cart.push({
+    slug: product.slug,
+    name: product.name,
+    image: selectedImage,
+    price: displayPrice,
+    quantity,
+    size: isPhotoFrame ? selectedSize : "",
+    finish: isPhotoFrame ? selectedFinish : "",
+  });
+
+  localStorage.setItem("jc-cart", JSON.stringify(cart));
+  alert("Product added to cart!");
+};
 
   const addToWishlist = () => {
   const savedWishlist = localStorage.getItem("jc-wishlist");
@@ -325,6 +331,35 @@ return (
     </span>
   )}
 </div>
+{details && (
+  <div className="mt-5 space-y-4">
+    <div className="bg-[#FFF8ED] border border-[#E8E1D6] rounded-2xl p-4">
+      <h2 className="font-bold text-lg text-[#B8860B] mb-2">
+        Product Description
+      </h2>
+
+      <p className="text-gray-700 leading-7">
+        {details.description}
+      </p>
+    </div>
+
+    <div className="bg-[#FFF8ED] border border-[#E8E1D6] rounded-2xl p-4">
+      <h2 className="font-bold text-lg text-[#B8860B] mb-2">
+        📷 {details.requirementTitle}
+      </h2>
+
+      <ul className="space-y-2 text-gray-700">
+        {details.requirements.map((requirement) => (
+          <li key={requirement} className="flex gap-2">
+            <span className="text-[#B8860B] font-bold">•</span>
+            <span>{requirement}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+)}
+
 {isPhotoFrame && (
   <div className="mt-5">
 
@@ -524,6 +559,141 @@ return (
   <span>Customize & Order on WhatsApp</span>
 </a>
       </section>
+      <section className="max-w-6xl mx-auto mt-5 bg-white rounded-3xl shadow-lg p-5 md:p-8 border border-[#E8E1D6]">
+  <h2 className="text-2xl md:text-3xl font-bold text-[#B8860B] mb-6">
+    Important Product Information
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <div className="bg-[#FFF8ED] rounded-2xl p-5">
+      <h3 className="text-xl font-bold text-black mb-3">
+        📷 Upload Your Photos
+      </h3>
+
+      <ul className="space-y-2 text-gray-700">
+        <li>• Upload photos during checkout or via WhatsApp with your Order ID.</li>
+        <li>• Supported formats: JPG, JPEG and PNG.</li>
+        <li>• Use high-resolution images and avoid blurred or heavily cropped photos.</li>
+      </ul>
+    </div>
+
+    <div className="bg-[#FFF8ED] rounded-2xl p-5">
+      <h3 className="text-xl font-bold text-black mb-3">
+        🎨 Design & Production
+      </h3>
+
+      <ul className="space-y-2 text-gray-700">
+        <li>• Design preparation takes 1–2 working days.</li>
+        <li>• Customer approval will be requested where applicable.</li>
+        <li>• Printing and production take 1–2 working days.</li>
+        <li>• Every order goes through quality checking and secure packaging before dispatch.</li>
+      </ul>
+    </div>
+
+    <div className="bg-[#FFF8ED] rounded-2xl p-5">
+      <h3 className="text-xl font-bold text-black mb-3">
+        🚚 Shipping & Delivery
+      </h3>
+
+      <ul className="space-y-2 text-gray-700">
+        <li>• Dispatch usually takes 2–3 working days.</li>
+        <li>• South India delivery: approximately 2–4 working days.</li>
+        <li>• Rest of India delivery: approximately 3–7 working days.</li>
+        <li>• Products are packed using secure protective packaging.</li>
+        <li>• Tracking details will be shared after dispatch.</li>
+      </ul>
+    </div>
+
+    <div className="bg-[#FFF8ED] rounded-2xl p-5">
+      <h3 className="text-xl font-bold text-black mb-3">
+        👁️ Design Preview Policy
+      </h3>
+
+      <ul className="space-y-2 text-gray-700">
+        <li>• Design preview is available for selected products.</li>
+        <li>• Up to 2 minor revisions are included.</li>
+        <li>• Printing begins only after design approval, where approval is applicable.</li>
+      </ul>
+    </div>
+
+    <div className="bg-[#FFF8ED] rounded-2xl p-5">
+      <h3 className="text-xl font-bold text-black mb-3">
+        💳 Ordering Terms
+      </h3>
+
+      <ul className="space-y-2 text-gray-700">
+        <li>• 100% advance payment is required.</li>
+        <li>• Orders are processed only after payment confirmation.</li>
+        <li>• Cancellation or refund is not available after production begins.</li>
+        <li>• Customers must provide accurate photos, names, text and customization details.</li>
+        <li>• Minor colour variation may occur due to screen and printing differences.</li>
+      </ul>
+    </div>
+
+    <div className="bg-[#FFF8ED] rounded-2xl p-5">
+      <h3 className="text-xl font-bold text-black mb-3">
+        📦 Delivery Terms
+      </h3>
+
+      <ul className="space-y-2 text-gray-700">
+        <li>• Tracking ID will be shared after dispatch.</li>
+        <li>• Please inspect the package immediately after delivery.</li>
+        <li>• Courier delays caused by external delivery partners are beyond our control.</li>
+        <li>• Transit damage must be reported within 24 hours with clear photos and videos.</li>
+      </ul>
+    </div>
+
+    <div className="bg-[#FFF8ED] rounded-2xl p-5">
+      <h3 className="text-xl font-bold text-black mb-3">
+        ✅ Quality Assurance
+      </h3>
+
+      <ul className="space-y-2 text-gray-700">
+        <li>• Premium print quality.</li>
+        <li>• Accurate personalization based on customer-provided details.</li>
+        <li>• Secure packaging for safer delivery.</li>
+        <li>• Final quality inspection before dispatch.</li>
+      </ul>
+    </div>
+
+    <div className="bg-[#FFF8ED] rounded-2xl p-5">
+      <h3 className="text-xl font-bold text-black mb-3">
+        🧼 Care Instructions
+      </h3>
+
+      <ul className="space-y-2 text-gray-700">
+        <li>• Keep products away from direct sunlight and moisture.</li>
+        <li>• Clean using a soft, dry microfiber cloth.</li>
+        <li>• Avoid harsh chemicals and abrasive cleaning materials.</li>
+        <li>• Handle glass and acrylic products carefully.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div className="mt-6 bg-gradient-to-r from-[#D4A017] to-[#B8860B] text-white rounded-2xl p-6 text-center">
+    <h3 className="text-2xl font-bold">
+      Our Promise
+    </h3>
+
+    <p className="mt-3 leading-7 max-w-4xl mx-auto">
+      Every product from JC Gift Gallery is carefully designed, personalized
+      and quality-checked to create gifts that preserve your most precious
+      memories. We are committed to delivering products that bring joy to
+      every celebration, make special moments memorable and leave lasting
+      impressions.
+    </p>
+
+    <p className="mt-4 font-bold text-lg">
+      Thank you for trusting us to be a part of your memories.
+    </p>
+
+    <p className="mt-2 font-bold uppercase tracking-wide">
+      Your Trust Is Our Pride
+    </p>
+  </div>
+</section>
     </main>
   );
 }

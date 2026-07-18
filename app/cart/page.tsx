@@ -8,6 +8,8 @@ type CartItem = {
   price: string;
   image: string;
   quantity: number;
+  size?: string;
+  finish?: string;
 };
 
 export default function CartPage() {
@@ -32,8 +34,9 @@ I want to order these products:
 
 ${cart
   .map(
-    (item) =>
-      `Product: ${item.name}
+    (item) => `Product: ${item.name}
+${item.size ? `Size: ${item.size}` : ""}
+${item.finish ? `Type: ${item.finish}` : ""}
 Price: ${item.price}
 Quantity: ${item.quantity}`
   )
@@ -54,7 +57,7 @@ Please confirm availability and payment details.`;
 
             <a
               href="/"
-              className="block mt-6 text-center bg-[#D4A017] text-white py-3 rounded-xl font-bold"
+              className="block mt-6 text-center bg-[#D4A017] text-white py-3 rounded-xl font-bold rounded-2xl"
             >
               Continue Shopping
             </a>
@@ -74,15 +77,36 @@ Please confirm availability and payment details.`;
                   />
 
                   <div className="flex-1">
-                    <h2 className="font-bold text-black">{item.name}</h2>
-                    <p className="text-[#B8860B] font-bold">{item.price}</p>
-                    <p className="text-gray-600">
-                      Quantity: {item.quantity}
+                    <h2 className="font-bold text-lg text-black">
+                      {item.name}
+                    </h2>
+
+                    {item.size && (
+                      <p className="text-sm text-gray-600">
+                        Size: <span className="font-semibold">{item.size}</span>
+                      </p>
+                    )}
+
+                    {item.finish && (
+                      <p className="text-sm text-gray-600">
+                        Type: <span className="font-semibold">{item.finish}</span>
+                      </p>
+                    )}
+
+                    <p className="text-sm text-gray-600">
+                      Quantity:{" "}
+                      <span className="font-semibold">
+                        {item.quantity || 1}
+                      </span>
+                    </p>
+
+                    <p className="text-lg font-bold text-[#B8860B] mt-2">
+                      {item.price}
                     </p>
 
                     <button
                       onClick={() => removeItem(item.slug)}
-                      className="mt-2 text-red-600 font-semibold"
+                      className="mt-3 text-red-600 font-semibold hover:underline"
                     >
                       Remove
                     </button>
@@ -97,9 +121,9 @@ Please confirm availability and payment details.`;
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block mt-6 text-center bg-[#25D366] text-white py-4 rounded-xl font-bold text-lg"
+              className="block mt-6 text-center bg-[#25D366] text-white py-4 rounded-2xl font-bold text-lg"
             >
-              Order Cart on WhatsApp
+              📲 Order Cart on WhatsApp
             </a>
           </>
         )}
