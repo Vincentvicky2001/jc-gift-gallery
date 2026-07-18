@@ -565,28 +565,31 @@ return (
   </div>
 )}
 
-          <div className="mt-6 grid grid-cols-2 gap-3">
-            <button
-  onClick={addToWishlist}
-  className={`py-3 rounded-xl font-bold transition ${
-    isWishlisted
-      ? "bg-red-600 text-white"
-      : "bg-pink-100 text-red-600"
-  }`}
->
-  {isWishlisted ? "❤️ Wishlisted" : "🤍 Wishlist"}
-</button>
-
-            <button onClick={addToCart} className="bg-[#D4A017] text-white py-3 rounded-xl font-bold">
-              🛒 Add to Cart
-            </button>
-          </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
             <div className="bg-[#FFF8ED] p-4 rounded-2xl text-center text-sm">🛡️ <br /> Premium Quality</div>
             <div className="bg-[#FFF8ED] p-4 rounded-2xl text-center text-sm">🎨 <br /> Easy Customization</div>
             <div className="bg-[#FFF8ED] p-4 rounded-2xl text-center text-sm">🚚 <br /> Fast Delivery</div>
             <div className="bg-[#FFF8ED] p-4 rounded-2xl text-center text-sm">🔒 <br /> Secure Payment</div>
+          </div>
+
+          <div className="mt-6 grid grid-cols-2 gap-3">
+            <button
+              onClick={addToWishlist}
+              className={`py-3 rounded-xl font-bold transition ${
+                isWishlisted
+                  ? "bg-red-600 text-white"
+                  : "bg-pink-100 text-red-600"
+              }`}
+            >
+              {isWishlisted ? "❤️ Wishlisted" : "🤍 Wishlist"}
+            </button>
+
+            <button
+              onClick={addToCart}
+              className="bg-[#D4A017] text-white py-3 rounded-xl font-bold"
+            >
+              🛒 Add to Cart
+            </button>
           </div>
         </div>
       </div>

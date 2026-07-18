@@ -549,4 +549,116 @@ export const productInformation: Record<string, ProductInformation> = {
       "Custom quote or text is optional",
     ],
   },
+
+
+  // =========================
+  // STICKERS AND LABELS
+  // =========================
+
+  "customized-sticker": {
+  description:
+    "Create personalized stickers with your own logo, name, artwork, photo, or design. Perfect for businesses, events, product branding, laptops, bottles, and personal use. Printed on premium-quality waterproof vinyl with vibrant colors.",
+  requirementTitle: "Required Design and Details",
+  requirements: [
+    "1 logo, photo, artwork, or design",
+    "Sticker size",
+    "Shape: Round, Square, Rectangle, or Custom",
+    "Required quantity",
+    "Text to print, if required",
+  ],
+},
+
+"customized-sticker-chocolates": {
+  description:
+    "Make every celebration sweeter with personalized chocolate wrappers featuring your favorite photo, name, and special message. Perfect for birthdays, weddings, baby showers, anniversaries, and return gifts.",
+  requirementTitle: "Required Photo and Details",
+  requirements: [
+    "1 high-quality photo",
+    "Name to print",
+    "Event date",
+    "Custom message, if required",
+    "Required quantity",
+  ],
+},
+
+"customized-notebook-name-label": {
+  description:
+    "Personalized waterproof name labels for school books, notebooks, lunch boxes, bottles, and stationery. These labels are durable, colorful, long-lasting, and easy to apply.",
+  requirementTitle: "Required Name and Details",
+  requirements: [
+    "Child's name",
+    "Class and section, if required",
+    "School name, if required",
+    "Preferred theme or character, if required",
+    "Required quantity",
+  ],
+},
+
+"business-branding-labels": {
+  description:
+    "Professional custom labels designed for businesses to enhance product packaging and brand identity. Suitable for bottles, boxes, jars, cosmetics, handmade products, food packaging, and many other business products.",
+  requirementTitle: "Required Branding Details",
+  requirements: [
+    "Business logo, preferably in PNG format",
+    "Brand name",
+    "Product details",
+    "Contact information, if required",
+    "Label size",
+    "Required quantity",
+  ],
+},
+
+"gift-stickers": {
+  description:
+    "Add a premium finishing touch to your gifts with personalized thank-you stickers, handmade labels, festive gift seals, and business gift stickers. Ideal for gift wrapping, celebrations, return gifts, and small businesses.",
+  requirementTitle: "Required Design and Details",
+  requirements: [
+    "Logo or name",
+    "Thank-you message or custom text",
+    "Preferred color theme",
+    "Sticker size",
+    "Required quantity",
+  ],
+},
+
+"event-stickers": {
+  description:
+    "Celebrate every occasion with customized event stickers featuring names, photos, dates, and unique themes. Perfect for birthdays, weddings, engagements, baby showers, anniversaries, and corporate events.",
+  requirementTitle: "Required Event Details",
+  requirements: [
+    "1 high-quality photo, if required",
+    "Name or names to print",
+    "Event date",
+    "Preferred theme or color",
+    "Custom text or message",
+    "Required quantity",
+  ],
+},
+
+"home-personal-label": {
+  description:
+    "Organize your home beautifully with customized labels for kitchen jars, spice containers, storage boxes, toiletries, bottles, and household items. These labels are waterproof, elegant, durable, and easy to apply.",
+  requirementTitle: "Required Label Details",
+  requirements: [
+    "Names to print on the labels",
+    "Preferred font style, if required",
+    "Preferred color or design",
+    "Label size",
+    "Required quantity",
+  ],
+},
+
+"packaging-labels": {
+  description:
+    "Premium custom packaging labels designed to give your products a professional and attractive appearance. Perfect for food products, clothing, handmade items, cosmetics, gift products, and online businesses.",
+  requirementTitle: "Required Packaging Details",
+  requirements: [
+    "Business logo",
+    "Product name",
+    "Ingredients or product information, if required",
+    "Barcode or QR code, if required",
+    "Label size",
+    "Required quantity",
+  ],
+},
 };
