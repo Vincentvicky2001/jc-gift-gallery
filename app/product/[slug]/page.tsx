@@ -807,27 +807,48 @@ return (
 
   </div>
 
-  <div className="mt-6 bg-gradient-to-r from-[#D4A017] to-[#B8860B] text-white rounded-2xl p-6 text-center">
-    <h3 className="text-2xl font-bold">
-      Our Promise
-    </h3>
+  <div className="mt-6 rounded-3xl bg-gradient-to-r from-[#D4A017] to-[#B8860B] p-8 text-center text-white shadow-xl">
+  <h3 className="text-3xl font-black">
+    Our Promise
+  </h3>
 
-    <p className="mt-3 leading-7 max-w-4xl mx-auto">
-      Every product from JC Gift Gallery is carefully designed, personalized
-      and quality-checked to create gifts that preserve your most precious
-      memories. We are committed to delivering products that bring joy to
-      every celebration, make special moments memorable and leave lasting
-      impressions.
-    </p>
-
-    <p className="mt-4 font-bold text-lg">
-      Thank you for trusting us to be a part of your memories.
-    </p>
-
-    <p className="mt-2 font-bold uppercase tracking-wide">
-      Your Trust Is Our Pride
-    </p>
+  <div className="my-4 flex items-center justify-center gap-3">
+    <div className="h-[2px] w-20 bg-white/60"></div>
+    <span className="text-2xl">🤎</span>
+    <div className="h-[2px] w-20 bg-white/60"></div>
   </div>
+
+  <p className="mx-auto max-w-4xl text-lg leading-9">
+    Every product from JC Gift Gallery is carefully designed,
+    personalized and quality-checked to create gifts that
+    preserve your most precious memories. We are committed
+    to delivering products that bring joy to every celebration,
+    make special moments memorable and leave lasting
+    impressions.
+  </p>
+
+  <div className="my-6 flex items-center justify-center gap-3">
+    <div className="h-[2px] w-28 bg-white/60"></div>
+    <span className="text-xl">✦</span>
+    <div className="h-[2px] w-28 bg-white/60"></div>
+  </div>
+
+  <h4 className="text-3xl font-black leading-tight">
+    Thank You For Choosing Us
+    <br />
+    To Be A Part Of Your Memories.
+  </h4>
+
+  <div className="my-6 flex items-center justify-center gap-3">
+    <div className="h-[2px] w-20 bg-white/60"></div>
+    <span className="text-2xl">🤎</span>
+    <div className="h-[2px] w-20 bg-white/60"></div>
+  </div>
+
+  <p className="text-2xl font-black uppercase tracking-wider">
+    YOUR TRUST IS OUR PRIDE
+  </p>
+</div>
 </section>
 <RelatedProducts
   currentSlug={product.slug}

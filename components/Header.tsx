@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Heart } from "lucide-react";
 
 type CartItem = {
   quantity?: number;
@@ -115,20 +116,27 @@ export default function Header() {
         {/* Wishlist, Cart and Notification */}
         <div className="flex items-center gap-4 text-2xl md:gap-5 md:text-3xl">
           <a
-            href="/wishlist"
-            aria-label="Open wishlist"
-            className="relative"
-          >
-            ♡
+  href="/wishlist"
+  aria-label="Open wishlist"
+  className="relative flex items-center justify-center"
+>
+ <span className="flex h-10 w-10 items-center justify-center rounded-full bg-pink-50 transition hover:scale-110 hover:bg-pink-100">
+  <Heart
+    size={28}
+    fill="#ec4899"
+    color="#ec4899"
+    strokeWidth={2}
+  />
+</span>
 
-            {wishlistCount > 0 && (
-              <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">
-                {wishlistCount > 99
-                  ? "99+"
-                  : wishlistCount}
-              </span>
-            )}
-          </a>
+  {wishlistCount > 0 && (
+    <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">
+      {wishlistCount > 99
+        ? "99+"
+        : wishlistCount}
+    </span>
+  )}
+</a>
 
           <a
             href="/cart"
