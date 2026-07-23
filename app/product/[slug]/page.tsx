@@ -807,8 +807,8 @@ return (
 
   </div>
 
-  <div className="mt-6 rounded-3xl bg-gradient-to-r from-[#D4A017] to-[#B8860B] p-8 text-center text-white shadow-xl">
-  <h3 className="text-3xl font-black">
+  <div className="mt-6 rounded-3xl bg-gradient-to-r from-[#D4A017] to-[#B8860B] p-6 text-center text-white shadow-xl">
+  <h3 className="text-2xl md:text-3xl font-black">
     Our Promise
   </h3>
 
@@ -818,7 +818,7 @@ return (
     <div className="h-[2px] w-20 bg-white/60"></div>
   </div>
 
-  <p className="mx-auto max-w-4xl text-lg leading-9">
+  <p className="mx-auto max-w-3xl text-base leading-8">
     Every product from JC Gift Gallery is carefully designed,
     personalized and quality-checked to create gifts that
     preserve your most precious memories. We are committed
@@ -827,25 +827,25 @@ return (
     impressions.
   </p>
 
-  <div className="my-6 flex items-center justify-center gap-3">
+  <div className="my-4 flex items-center justify-center gap-3">
     <div className="h-[2px] w-28 bg-white/60"></div>
     <span className="text-xl">✦</span>
     <div className="h-[2px] w-28 bg-white/60"></div>
   </div>
 
-  <h4 className="text-3xl font-black leading-tight">
+  <h4 className="text-2xl md:text-3xl font-black leading-tight">
     Thank You For Choosing Us
     <br />
     To Be A Part Of Your Memories.
   </h4>
 
-  <div className="my-6 flex items-center justify-center gap-3">
+  <div className="my-4 flex items-center justify-center gap-3">
     <div className="h-[2px] w-20 bg-white/60"></div>
     <span className="text-2xl">🤎</span>
     <div className="h-[2px] w-20 bg-white/60"></div>
   </div>
 
-  <p className="text-2xl font-black uppercase tracking-wider">
+  <p className="text-xl md:text-2xl font-black uppercase tracking-wide">
     YOUR TRUST IS OUR PRIDE
   </p>
 </div>
