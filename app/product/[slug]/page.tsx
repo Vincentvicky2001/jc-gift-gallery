@@ -269,29 +269,37 @@ useEffect(() => {
   selectedImage,
 ]);
 
-const orderMessage = `Hello JC Gift Gallery,
+const productPageLink =
+  `https://jc-gift-gallery.vercel.app/product/${product.slug}`;
 
-I want to place an order.
+const orderMessage = `🛍️ *NEW ORDER - JC Gift Gallery*
 
 ━━━━━━━━━━━━━━━━━━━━
-🛍️ PRODUCT DETAILS
+📦 ORDER DETAILS
 ━━━━━━━━━━━━━━━━━━━━
+Category : ${product.category}
 Product : ${product.name}
-${isPhotoFrame ? `Size : ${selectedSize}` : ""}
-${isPhotoFrame ? `Type : ${selectedFinish}` : ""}
+${isPhotoFrame ? `Frame Size : ${selectedSize}` : ""}
+${isPhotoFrame ? `Frame Type : ${selectedFinish}` : ""}
 Price : ${displayPrice}
-Quantity : ${orderQuantity}
+Quantity : ${orderQuantity || 1}
 
 ━━━━━━━━━━━━━━━━━━━━
 👤 CUSTOMER DETAILS
 ━━━━━━━━━━━━━━━━━━━━
 Name : ${orderName}
 Phone : ${orderPhone}
-Address : ${orderAddress}
+Address :
+${orderAddress}
 
-Please confirm availability and payment details.
+━━━━━━━━━━━━━━━━━━━━
+🌐 PRODUCT LINK
+━━━━━━━━━━━━━━━━━━━━
+${productPageLink}
 
-Thank You.`;
+Please confirm availability, payment and delivery details.
+
+Thank you.`;
 
 const customizeMessage = `Hello JC Gift Gallery,
 
