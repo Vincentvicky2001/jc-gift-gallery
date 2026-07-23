@@ -25,7 +25,7 @@ const features = [
     subtitle: "You Can Trust",
   },
   {
-    icon: "♡",
+    icon: "❤️",
     title: "Made with Love",
     subtitle: "For Every Occasion",
   },
@@ -43,7 +43,7 @@ const statistics = [
     label: "Gifts Delivered",
   },
   {
-    icon: "☆",
+    icon: "⭐",
     value: "4.9",
     label: "Customer Rating",
   },
@@ -88,7 +88,7 @@ export default function HeroBanner() {
   return (
     <section className="bg-gradient-to-b from-[#FFFDF8] to-[#FFF6E9] px-2 py-3 md:px-4">
       <div className="mx-auto max-w-7xl">
-        {/* Full Width Changing Banner */}
+        {/* Banner Slider */}
         <div className="relative overflow-hidden rounded-[24px] border border-[#E8D4A2] bg-[#FFF8ED] shadow-xl md:rounded-[35px]">
           <div className="relative h-[280px] w-full sm:h-[420px] md:h-[560px] lg:h-[620px]">
             {banners.map((banner, index) => (
@@ -104,30 +104,27 @@ export default function HeroBanner() {
               />
             ))}
 
-            {/* Soft Dark Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
 
-            {/* Shop Now Button on Every Banner */}
-<div className="absolute bottom-8 left-0 right-0 flex justify-center">
-  <a
-    href="#best-selling"
-    onClick={(event) => {
-      event.preventDefault();
+            <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+              <a
+                href="#best-selling"
+                onClick={(event) => {
+                  event.preventDefault();
 
-      document
-        .getElementById("best-selling")
-        ?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-    }}
-    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#D4A017] to-[#B8860B] px-7 py-3 text-base font-bold text-white shadow-2xl transition duration-300 hover:scale-105 md:px-10 md:py-4 md:text-xl"
-  >
-    🎁 Shop Now →
-  </a>
-</div>
+                  document
+                    .getElementById("best-selling")
+                    ?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                }}
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#D4A017] to-[#B8860B] px-7 py-3 text-base font-bold text-white shadow-2xl transition duration-300 hover:scale-105 md:px-10 md:py-4 md:text-xl"
+              >
+                🎁 Shop Now →
+              </a>
+            </div>
 
-            {/* Previous Button */}
             <button
               type="button"
               onClick={showPreviousBanner}
@@ -137,7 +134,6 @@ export default function HeroBanner() {
               ‹
             </button>
 
-            {/* Next Button */}
             <button
               type="button"
               onClick={showNextBanner}
@@ -147,7 +143,6 @@ export default function HeroBanner() {
               ›
             </button>
 
-            {/* Slider Dots */}
             <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2 md:bottom-4">
               {banners.map((_, index) => (
                 <button
@@ -166,22 +161,18 @@ export default function HeroBanner() {
           </div>
         </div>
 
-        {/* Features Row */}
-        <div className="mt-5 grid grid-cols-2 gap-3 rounded-[24px] border border-[#E8D4A2] bg-white p-4 shadow-lg md:grid-cols-4 md:gap-0 md:rounded-[30px] md:p-6">
-          {features.map((feature, index) => (
+        {/* Feature Cards */}
+        <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4">
+          {features.map((feature) => (
             <div
               key={feature.title}
-              className={`flex flex-col items-center justify-center px-3 py-5 text-center ${
-                index !== features.length - 1
-                  ? "md:border-r md:border-[#E8D4A2]"
-                  : ""
-              }`}
+              className="flex min-h-[190px] flex-col items-center justify-center rounded-3xl border border-[#DDB760] bg-gradient-to-br from-[#FFFDF8] to-[#FFF4D6] px-3 py-5 text-center shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-[#FFF8ED] text-4xl text-[#B8860B]">
+              <div className="mb-3 flex h-16 w-16 items-center justify-center rounded-full border border-[#E8D4A2] bg-white text-4xl shadow-sm">
                 {feature.icon}
               </div>
 
-              <h3 className="text-base font-bold text-black md:text-lg">
+              <h3 className="text-base font-black text-black md:text-lg">
                 {feature.title}
               </h3>
 
@@ -192,26 +183,22 @@ export default function HeroBanner() {
           ))}
         </div>
 
-        {/* Statistics Row */}
-        <div className="mt-5 grid grid-cols-2 gap-3 rounded-[24px] border border-[#E8D4A2] bg-white p-4 shadow-lg md:grid-cols-4 md:gap-0 md:rounded-[30px] md:p-6">
-          {statistics.map((statistic, index) => (
+        {/* Statistic Cards */}
+        <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+          {statistics.map((statistic) => (
             <div
               key={statistic.label}
-              className={`flex flex-col items-center justify-center px-3 py-5 text-center ${
-                index !== statistics.length - 1
-                  ? "md:border-r md:border-[#E8D4A2]"
-                  : ""
-              }`}
+              className="flex min-h-[175px] flex-col items-center justify-center rounded-3xl border border-[#DDB760] bg-gradient-to-br from-[#FFFDF8] to-[#FFF4D6] px-3 py-5 text-center shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="mb-2 text-4xl text-[#B8860B]">
+              <div className="mb-2 text-4xl">
                 {statistic.icon}
               </div>
 
-              <p className="text-3xl font-black text-black md:text-4xl">
+              <p className="text-3xl font-black text-[#B8860B] md:text-4xl">
                 {statistic.value}
               </p>
 
-              <p className="mt-1 text-sm text-gray-700 md:text-base">
+              <p className="mt-1 text-sm font-medium text-gray-700 md:text-base">
                 {statistic.label}
               </p>
             </div>
