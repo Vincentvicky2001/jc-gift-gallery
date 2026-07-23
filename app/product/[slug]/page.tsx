@@ -807,46 +807,45 @@ return (
 
   </div>
 
-  <div className="mt-6 rounded-3xl bg-gradient-to-r from-[#D4A017] to-[#B8860B] p-6 text-center text-white shadow-xl">
-  <h3 className="text-2xl md:text-3xl font-black">
+  <div className="mt-6 rounded-3xl bg-gradient-to-r from-[#D4A017] to-[#B8860B] p-4 text-center text-white shadow-xl md:p-5">
+  <h3 className="text-xl font-black md:text-2xl">
     Our Promise
   </h3>
 
-  <div className="my-4 flex items-center justify-center gap-3">
-    <div className="h-[2px] w-20 bg-white/60"></div>
-    <span className="text-2xl">🤎</span>
-    <div className="h-[2px] w-20 bg-white/60"></div>
+  <div className="my-2 flex items-center justify-center gap-2">
+    <div className="h-px w-12 bg-white/60 md:w-16"></div>
+    <span className="text-base">🤎</span>
+    <div className="h-px w-12 bg-white/60 md:w-16"></div>
   </div>
 
-  <p className="mx-auto max-w-3xl text-base leading-8">
+  <p className="mx-auto max-w-3xl text-sm leading-6 md:text-sm md:leading-6">
     Every product from JC Gift Gallery is carefully designed,
-    personalized and quality-checked to create gifts that
-    preserve your most precious memories. We are committed
-    to delivering products that bring joy to every celebration,
-    make special moments memorable and leave lasting
-    impressions.
+    personalized and quality-checked to create gifts that preserve
+    your most precious memories. We are committed to delivering
+    products that bring joy to every celebration, make special
+    moments memorable and leave lasting impressions.
   </p>
 
-  <div className="my-4 flex items-center justify-center gap-3">
-    <div className="h-[2px] w-28 bg-white/60"></div>
-    <span className="text-xl">✦</span>
-    <div className="h-[2px] w-28 bg-white/60"></div>
+  <div className="my-3 flex items-center justify-center gap-2">
+    <div className="h-px w-16 bg-white/60 md:w-24"></div>
+    <span className="text-sm">✦</span>
+    <div className="h-px w-16 bg-white/60 md:w-24"></div>
   </div>
 
-  <h4 className="text-2xl md:text-3xl font-black leading-tight">
+  <h4 className="text-lg font-black leading-snug md:text-xl">
     Thank You For Choosing Us
     <br />
     To Be A Part Of Your Memories.
   </h4>
 
-  <div className="my-4 flex items-center justify-center gap-3">
-    <div className="h-[2px] w-20 bg-white/60"></div>
-    <span className="text-2xl">🤎</span>
-    <div className="h-[2px] w-20 bg-white/60"></div>
+  <div className="my-3 flex items-center justify-center gap-2">
+    <div className="h-px w-12 bg-white/60 md:w-16"></div>
+    <span className="text-base">🤎</span>
+    <div className="h-px w-12 bg-white/60 md:w-16"></div>
   </div>
 
-  <p className="text-xl md:text-2xl font-black uppercase tracking-wide">
-    YOUR TRUST IS OUR PRIDE
+  <p className="text-base font-black uppercase tracking-wide md:text-lg">
+    Your Trust Is Our Pride
   </p>
 </div>
 </section>
