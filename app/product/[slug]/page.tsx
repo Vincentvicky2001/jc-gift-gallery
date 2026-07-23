@@ -272,29 +272,39 @@ useEffect(() => {
 const productPageLink =
   `https://jc-gift-gallery.vercel.app/product/${product.slug}`;
 
-const orderMessage = `🛍️ *NEW ORDER - JC Gift Gallery*
+const finalOrderQuantity = Math.max(Number(orderQuantity) || 1, 1);
 
-━━━━━━━━━━━━━━━━━━━━
-📦 ORDER DETAILS
-━━━━━━━━━━━━━━━━━━━━
-Category : ${product.category}
+const unitPriceNumber =
+  Number(String(displayPrice).replace(/[^0-9.]/g, "")) || 0;
+
+const totalPriceNumber = unitPriceNumber * finalOrderQuantity;
+
+const formattedTotalPrice = `₹${totalPriceNumber.toLocaleString("en-IN")}`;
+
+const orderMessage = `*NEW ORDER - JC Gift Gallery*
+
+--------------------------------
+ORDER DETAILS
+--------------------------------
+Category : ${String(product.category).toUpperCase()}
 Product : ${product.name}
 ${isPhotoFrame ? `Frame Size : ${selectedSize}` : ""}
 ${isPhotoFrame ? `Frame Type : ${selectedFinish}` : ""}
-Price : ${displayPrice}
-Quantity : ${orderQuantity || 1}
+Unit Price : ${displayPrice}
+Quantity : ${finalOrderQuantity}
+Total Price : ${formattedTotalPrice}
 
-━━━━━━━━━━━━━━━━━━━━
-👤 CUSTOMER DETAILS
-━━━━━━━━━━━━━━━━━━━━
+--------------------------------
+CUSTOMER DETAILS
+--------------------------------
 Name : ${orderName}
 Phone : ${orderPhone}
 Address :
 ${orderAddress}
 
-━━━━━━━━━━━━━━━━━━━━
-🌐 PRODUCT LINK
-━━━━━━━━━━━━━━━━━━━━
+--------------------------------
+PRODUCT LINK
+--------------------------------
 ${productPageLink}
 
 Please confirm availability, payment and delivery details.
