@@ -230,12 +230,7 @@ export default function Header() {
             FAQ
           </a>
 
-          <a
-            href="/admin"
-            className="block font-semibold text-black hover:text-[#B8860B]"
-          >
-            Admin
-          </a>
+          
         </nav>
       )}
     </header>

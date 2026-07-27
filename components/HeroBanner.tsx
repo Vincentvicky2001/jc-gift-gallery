@@ -105,26 +105,7 @@ export default function HeroBanner() {
             ))}
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
-
-            <div className="absolute bottom-8 left-0 right-0 flex justify-center">
-              <a
-                href="#best-selling"
-                onClick={(event) => {
-                  event.preventDefault();
-
-                  document
-                    .getElementById("best-selling")
-                    ?.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                }}
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#D4A017] to-[#B8860B] px-7 py-3 text-base font-bold text-white shadow-2xl transition duration-300 hover:scale-105 md:px-10 md:py-4 md:text-xl"
-              >
-                🎁 Shop Now →
-              </a>
-            </div>
-
+            
             <button
               type="button"
               onClick={showPreviousBanner}
