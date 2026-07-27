@@ -7,26 +7,60 @@ export default function ContactPage() {
         </h1>
 
         <div className="space-y-5 text-black">
-          <p>📞 Phone / WhatsApp: +91 9538952178</p>
-          <p>📧 Email: jcgiftgallery@gmail.com</p>
-          <p>
-            📍 Address: 4th Main, 2nd Cross, Palasandra Layout,
-            Kolar - 563101, Karnataka
-          </p>
+
+          <div>
+            <p className="font-semibold">
+              📞 Phone / WhatsApp:
+            </p>
+
+            <a
+              href="tel:+919538952178"
+              className="text-[#B8860B] hover:underline block mt-1"
+            >
+              +91 95389 52178
+            </a>
+
+            <a
+              href="tel:+917760761963"
+              className="text-[#B8860B] hover:underline block mt-1"
+            >
+              +91 77607 61963
+            </a>
+          </div>
+
+          <div>
+            <p className="font-semibold">📧 Email:</p>
+            <a
+              href="mailto:jcgiftgallery@gmail.com"
+              className="text-[#B8860B] hover:underline"
+            >
+              jcgiftgallery@gmail.com
+            </a>
+          </div>
+
+          <div>
+            <p className="font-semibold">📍 Address:</p>
+            <p>
+              4th Main, 2nd Cross, Palasandra Layout,
+              <br />
+              Kolar - 563101, Karnataka
+            </p>
+          </div>
+
         </div>
 
         <a
-          href="https://wa.me/9538952178"
+          href="https://wa.me/919538952178"
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-center mt-8 bg-[#25D366] text-white py-4 rounded-xl font-bold"
+          className="block text-center mt-8 bg-[#25D366] text-white py-4 rounded-xl font-bold hover:bg-[#20ba5a] transition"
         >
           Chat on WhatsApp
         </a>
 
         <a
           href="/"
-          className="block text-center mt-4 bg-[#D4A017] text-white py-4 rounded-xl font-bold"
+          className="block text-center mt-4 bg-[#D4A017] text-white py-4 rounded-xl font-bold hover:bg-[#B8860B] transition"
         >
           Back to Home
         </a>

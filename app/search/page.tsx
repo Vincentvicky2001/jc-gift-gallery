@@ -1,14 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { products } from "../../components/ProductData";
 
 export default function SearchPage() {
   const [search, setSearch] = useState("");
 
-  const filteredProducts = products.filter((product) => {
+  const uniqueProducts = useMemo(() => {
+    const map = new Map();
+
+    products.forEach((product) => {
+      // Skip placeholder images
+      if (
+        !product.image ||
+        product.image.includes("placeholder")
+      ) {
+        return;
+      }
+
+      // Skip duplicate product names
+      const key = product.name.toLowerCase();
+
+      if (!map.has(key)) {
+        map.set(key, product);
+      }
+    });
+
+    return Array.from(map.values());
+  }, []);
+
+  const filteredProducts = uniqueProducts.filter((product) => {
     return (
-      product.name.toLowerCase().includes(search.toLowerCase()) ||
+      product.name
+        .toLowerCase()
+        .includes(search.toLowerCase()) ||
       product.price.includes(search)
     );
   });
@@ -19,7 +44,6 @@ export default function SearchPage() {
         Search Products
       </h1>
 
-      {/* Search Input */}
       <div className="mb-6">
         <input
           type="text"
@@ -30,19 +54,21 @@ export default function SearchPage() {
         />
       </div>
 
-      {/* Products */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <a
               href={`/product/${product.slug}`}
               key={product.slug}
-              className="bg-white rounded-2xl shadow overflow-hidden"
+              className="bg-white rounded-2xl shadow overflow-hidden hover:shadow-lg transition"
             >
               <img
                 src={product.image}
-                alt=""
+                alt={product.name}
                 className="w-full h-44 object-cover"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
               />
 
               <div className="p-3">

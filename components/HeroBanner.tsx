@@ -86,11 +86,12 @@ export default function HeroBanner() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-[#FFFDF8] to-[#FFF6E9] px-2 py-3 md:px-4">
+    <section className="bg-gradient-to-b from-[#FFFEFC] to-[#F7F5EF] px-2 py-2 md:px-4 md:py-3">
       <div className="mx-auto max-w-7xl">
+
         {/* Banner Slider */}
-        <div className="relative overflow-hidden rounded-[24px] border border-[#E8D4A2] bg-[#FFF8ED] shadow-xl md:rounded-[35px]">
-          <div className="relative h-[280px] w-full sm:h-[420px] md:h-[560px] lg:h-[620px]">
+        <div className="relative overflow-hidden rounded-[20px] border border-[#E9E3D6] bg-[#FCFBF8] shadow-md md:rounded-[30px]">
+          <div className="relative h-[220px] w-full sm:h-[360px] md:h-[520px] lg:h-[600px]">
             {banners.map((banner, index) => (
               <img
                 key={banner}
@@ -104,13 +105,13 @@ export default function HeroBanner() {
               />
             ))}
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
-            
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+
             <button
               type="button"
               onClick={showPreviousBanner}
               aria-label="Previous banner"
-              className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-3xl font-bold text-black shadow-lg transition hover:bg-white md:left-5 md:h-14 md:w-14"
+              className="absolute left-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl font-bold text-black shadow-md transition hover:bg-white md:left-5 md:h-14 md:w-14 md:text-3xl"
             >
               ‹
             </button>
@@ -119,7 +120,7 @@ export default function HeroBanner() {
               type="button"
               onClick={showNextBanner}
               aria-label="Next banner"
-              className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-3xl font-bold text-black shadow-lg transition hover:bg-white md:right-5 md:h-14 md:w-14"
+              className="absolute right-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl font-bold text-black shadow-md transition hover:bg-white md:right-5 md:h-14 md:w-14 md:text-3xl"
             >
               ›
             </button>
@@ -131,10 +132,10 @@ export default function HeroBanner() {
                   type="button"
                   onClick={() => setCurrentBanner(index)}
                   aria-label={`Open banner ${index + 1}`}
-                  className={`h-3 rounded-full transition-all duration-300 ${
+                  className={`h-2.5 rounded-full transition-all duration-300 md:h-3 ${
                     currentBanner === index
-                      ? "w-8 bg-[#D4A017]"
-                      : "w-3 bg-white/80"
+                      ? "w-7 bg-[#D4A017] md:w-8"
+                      : "w-2.5 bg-white/80 md:w-3"
                   }`}
                 />
               ))}
@@ -143,21 +144,21 @@ export default function HeroBanner() {
         </div>
 
         {/* Feature Cards */}
-        <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="mt-2 grid grid-cols-2 gap-2 md:mt-4 md:grid-cols-4 md:gap-3">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="flex min-h-[190px] flex-col items-center justify-center rounded-3xl border border-[#DDB760] bg-gradient-to-br from-[#FFFDF8] to-[#FFF4D6] px-3 py-5 text-center shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="flex min-h-[125px] flex-col items-center justify-center rounded-2xl border border-[#E7E1D5] bg-[#FBFAF7] px-2 py-3 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md md:min-h-[165px] md:px-3 md:py-4"
             >
-              <div className="mb-3 flex h-16 w-16 items-center justify-center rounded-full border border-[#E8D4A2] bg-white text-4xl shadow-sm">
+              <div className="mb-2 flex h-11 w-11 items-center justify-center rounded-full border border-[#ECE6DA] bg-[#FFFDF9] text-2xl shadow-sm md:h-14 md:w-14 md:text-3xl">
                 {feature.icon}
               </div>
 
-              <h3 className="text-base font-black text-black md:text-lg">
+              <h3 className="text-sm font-black leading-5 text-black md:text-lg">
                 {feature.title}
               </h3>
 
-              <p className="mt-1 text-sm text-gray-700 md:text-base">
+              <p className="mt-1 text-xs leading-4 text-gray-700 md:text-base">
                 {feature.subtitle}
               </p>
             </div>
@@ -165,26 +166,27 @@ export default function HeroBanner() {
         </div>
 
         {/* Statistic Cards */}
-        <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="mt-2 grid grid-cols-2 gap-2 md:mt-3 md:grid-cols-4 md:gap-3">
           {statistics.map((statistic) => (
             <div
               key={statistic.label}
-              className="flex min-h-[175px] flex-col items-center justify-center rounded-3xl border border-[#DDB760] bg-gradient-to-br from-[#FFFDF8] to-[#FFF4D6] px-3 py-5 text-center shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="flex min-h-[115px] flex-col items-center justify-center rounded-2xl border border-[#E7E1D5] bg-[#FBFAF7] px-2 py-3 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md md:min-h-[155px] md:px-3 md:py-4"
             >
-              <div className="mb-2 text-4xl">
+              <div className="mb-1 text-2xl md:text-3xl">
                 {statistic.icon}
               </div>
 
-              <p className="text-3xl font-black text-[#B8860B] md:text-4xl">
+              <p className="text-2xl font-black text-black md:text-4xl">
                 {statistic.value}
               </p>
 
-              <p className="mt-1 text-sm font-medium text-gray-700 md:text-base">
+              <p className="mt-1 text-xs font-medium leading-4 text-gray-700 md:text-base">
                 {statistic.label}
               </p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

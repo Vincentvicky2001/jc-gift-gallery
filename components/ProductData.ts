@@ -196,15 +196,7 @@ export const products = [
   offer: "42% OFF",
   image: "/images/anniversary/anniversary-3.jpg",
 },
-{
-  slug: "anniversary-acrylic-photo-frame",
-  name: "Acrylic Photo Frame",
-  category: "anniversary",
-  price: "₹799",
-  oldPrice: "₹1299",
-  offer: "38% OFF",
-  image: "/images/anniversary/anniversary-4.jpg",
-},
+
 {
   slug: "anniversary-photo-wall-collage",
   name: "Photo Wall Collage",
@@ -288,15 +280,7 @@ export const products = [
     offer: "40% OFF",
     image: "/images/couple/couple-4.jpg",
   },
-  {
-    slug: "couple-acrylic-photo-frame",
-    name: "Acrylic Photo Frame",
-    category: "couple",
-    price: "₹799",
-    oldPrice: "₹1299",
-    offer: "38% OFF",
-    image: "/images/couple/couple-5.jpg",
-  },
+  
   {
     slug: "couple-collage-photo-frame",
     name: "Collage Photo Frame",
@@ -620,15 +604,7 @@ export const products = [
     offer: "38% OFF",
     image: "/images/frames/frames-10.jpg",
   },
-  {
-    slug: "frames-acrylic-photo-frame",
-    name: "Acrylic Photo Frame",
-    category: "frames",
-    price: "₹999",
-    oldPrice: "₹1699",
-    offer: "41% OFF",
-    image: "/images/frames/frames-11.jpg",
-  },
+ 
 
   // KEYCHAINS
   {

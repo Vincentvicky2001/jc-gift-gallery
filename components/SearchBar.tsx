@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { products } from "./ProductData";
 
@@ -11,20 +11,52 @@ export default function SearchBar() {
   const [searchText, setSearchText] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const filteredProducts = products
-    .filter((product) => {
-      const query = searchText.trim().toLowerCase();
+  // Remove products that use placeholder images
+  // and remove repeated product names from search.
+  const searchableProducts = useMemo(() => {
+    const uniqueProducts = new Map<
+      string,
+      (typeof products)[number]
+    >();
 
-      if (!query) {
-        return false;
-      }
+    products
+      .filter((product) => {
+        const imagePath = product.image.trim().toLowerCase();
 
-      return (
-        product.name.toLowerCase().includes(query) ||
-        product.category.toLowerCase().includes(query)
-      );
-    })
-    .slice(0, 6);
+        return (
+          imagePath !== "" &&
+          !imagePath.includes("placeholder")
+        );
+      })
+      .forEach((product) => {
+        const productName = product.name.trim().toLowerCase();
+
+        if (!uniqueProducts.has(productName)) {
+          uniqueProducts.set(productName, product);
+        }
+      });
+
+    return Array.from(uniqueProducts.values());
+  }, []);
+
+  // Search by product name, category, or price.
+  const filteredProducts = useMemo(() => {
+    const query = searchText.trim().toLowerCase();
+
+    if (!query) {
+      return [];
+    }
+
+    return searchableProducts
+      .filter((product) => {
+        return (
+          product.name.toLowerCase().includes(query) ||
+          product.category.toLowerCase().includes(query) ||
+          product.price.toLowerCase().includes(query)
+        );
+      })
+      .slice(0, 6);
+  }, [searchText, searchableProducts]);
 
   useEffect(() => {
     const closeSuggestions = (event: MouseEvent) => {
@@ -39,10 +71,7 @@ export default function SearchBar() {
     document.addEventListener("mousedown", closeSuggestions);
 
     return () => {
-      document.removeEventListener(
-        "mousedown",
-        closeSuggestions
-      );
+      document.removeEventListener("mousedown", closeSuggestions);
     };
   }, []);
 
@@ -94,7 +123,7 @@ export default function SearchBar() {
           type="button"
           onClick={handleSearch}
           aria-label="Search products"
-          className="bg-gradient-to-r from-[#D4A017] to-[#B8860B] px-5 font-bold text-white md:px-7"
+          className="bg-gradient-to-r from-[#D4A017] to-[#B8860B] px-5 font-bold text-white transition hover:opacity-90 md:px-7"
         >
           🔍
         </button>
@@ -113,7 +142,10 @@ export default function SearchBar() {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="h-16 w-16 rounded-xl object-cover"
+                  className="h-16 w-16 flex-shrink-0 rounded-xl object-cover"
+                  onError={(event) => {
+                    event.currentTarget.style.display = "none";
+                  }}
                 />
 
                 <div className="min-w-0 flex-1">
@@ -121,8 +153,8 @@ export default function SearchBar() {
                     {product.name}
                   </h3>
 
-                  <p className="text-sm text-gray-500">
-                    {product.category}
+                  <p className="text-sm capitalize text-gray-500">
+                    {product.category.replaceAll("-", " ")}
                   </p>
 
                   <p className="font-bold text-[#B8860B]">
@@ -142,8 +174,7 @@ export default function SearchBar() {
               </p>
 
               <p className="mt-1 text-sm text-gray-500">
-                Try searching for frame, mug, birthday or
-                keychain.
+                Try searching for frame, mug, birthday or keychain.
               </p>
             </div>
           )}
