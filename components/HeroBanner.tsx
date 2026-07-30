@@ -6,6 +6,7 @@ const banners = [
   "/images/banner/banner1.jpg",
   "/images/banner/banner2.jpg",
   "/images/banner/banner3.jpg",
+  "/images/banner/banner4.jpg",
 ];
 
 const features = [
@@ -90,28 +91,26 @@ export default function HeroBanner() {
       <div className="mx-auto max-w-7xl">
 
         {/* Banner Slider */}
-        <div className="relative overflow-hidden rounded-[20px] border border-[#E9E3D6] bg-[#FCFBF8] shadow-md md:rounded-[30px]">
-          <div className="relative h-[220px] w-full sm:h-[360px] md:h-[520px] lg:h-[600px]">
+        <div className="relative overflow-hidden rounded-[20px] border border-[#E9E3D6] bg-[#F7F3EA] shadow-md md:rounded-[30px]">
+          <div className="relative h-[230px] sm:h-[360px] md:h-[480px] lg:h-[560px] w-full">
             {banners.map((banner, index) => (
               <img
                 key={banner}
                 src={banner}
                 alt={`JC Gift Gallery Banner ${index + 1}`}
-                className={`absolute inset-0 h-full w-full object-cover transition-all duration-1000 ${
+                className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ${
                   currentBanner === index
-                    ? "scale-100 opacity-100"
-                    : "scale-105 opacity-0"
+                    ? "opacity-100"
+                    : "pointer-events-none opacity-0"
                 }`}
               />
             ))}
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
 
             <button
               type="button"
               onClick={showPreviousBanner}
               aria-label="Previous banner"
-              className="absolute left-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl font-bold text-black shadow-md transition hover:bg-white md:left-5 md:h-14 md:w-14 md:text-3xl"
+              className="absolute left-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl font-bold text-black shadow-md transition hover:bg-white md:left-5 md:h-14 md:w-14 md:text-3xl"
             >
               ‹
             </button>
@@ -120,12 +119,12 @@ export default function HeroBanner() {
               type="button"
               onClick={showNextBanner}
               aria-label="Next banner"
-              className="absolute right-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl font-bold text-black shadow-md transition hover:bg-white md:right-5 md:h-14 md:w-14 md:text-3xl"
+              className="absolute right-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl font-bold text-black shadow-md transition hover:bg-white md:right-5 md:h-14 md:w-14 md:text-3xl"
             >
               ›
             </button>
 
-            <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2 md:bottom-4">
+            <div className="absolute bottom-3 left-0 right-0 z-10 flex justify-center gap-2 md:bottom-4">
               {banners.map((_, index) => (
                 <button
                   key={index}
@@ -135,7 +134,7 @@ export default function HeroBanner() {
                   className={`h-2.5 rounded-full transition-all duration-300 md:h-3 ${
                     currentBanner === index
                       ? "w-7 bg-[#D4A017] md:w-8"
-                      : "w-2.5 bg-white/80 md:w-3"
+                      : "w-2.5 bg-white/90 shadow md:w-3"
                   }`}
                 />
               ))}

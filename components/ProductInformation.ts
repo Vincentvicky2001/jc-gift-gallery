@@ -661,4 +661,69 @@ export const productInformation: Record<string, ProductInformation> = {
     "Required quantity",
   ],
 },
+"customized-photo-collage": {
+  description:
+    "Turn your favorite memories into a stunning personalized photo collage frame. Carefully designed with your cherished moments, this frame is perfect for birthdays, anniversaries, weddings, and special occasions.",
+  requirementTitle: "Photos Required",
+  requirements: ["15–30 High-Quality Photos"],
+},
+
+"google-collage-frame": {
+  description:
+    "Make your memories unforgettable with our unique Google Search-style photo collage frame. Personalize it with your favorite pictures and custom text.",
+  requirementTitle: "Photos Required",
+  requirements: ["8–15 High-Quality Photos"],
+},
+
+"spotify-photo-frame": {
+  description:
+    "Celebrate your favorite song and special memories in one beautiful frame.",
+  requirementTitle: "Required Details",
+  requirements: [
+    "1 High-Quality Photo",
+    "Song Name",
+    "Artist Name",
+    "Spotify Link/QR Code (Optional)",
+  ],
+},
+
+"moon-shape-photo-frame": {
+  description:
+    "Capture your special moments with a personalized moon-shaped photo frame.",
+  requirementTitle: "Required Details",
+  requirements: [
+    "12–20 High-Quality Photos",
+    "Special Date",
+    "Custom Message",
+  ],
+},
+
+"photo-clip-string-light": {
+  description:
+    "Light up your memories with decorative LED photo clip string lights.",
+  requirementTitle: "Photos Required",
+  requirements: ["10–30 High-Quality Photos"],
+},
+
+"customized-photo-prints": {
+  description:
+    "Print your favorite memories on premium-quality photo paper.",
+  requirementTitle: "Photos Required",
+  requirements: ["10–100 High-Quality Photos"],
+},
+
+"custom-photo-collage": {
+  description:
+    "Create a beautiful personalized collage frame with your favorite memories.",
+  requirementTitle: "Photos Required",
+  requirements: ["15–30 High-Quality Photos"],
+},
+
+"students-teacher-photo-frame": {
+  description:
+    "Celebrate the bond between students and teachers with a customized photo frame.",
+  requirementTitle: "Photos Required",
+  requirements: ["20–50 High-Quality Photos"],
+},
 };
+

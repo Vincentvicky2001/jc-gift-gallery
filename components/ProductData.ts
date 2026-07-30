@@ -15,85 +15,112 @@ export const categories = [
 
 export const products = [
 
-  {
-    slug: "customized-photo-collage",
-    name: "Customized Photo Collage",
-    category: "featured",
-    price: "₹499",
-    oldPrice: "₹899",
-    offer: "45% OFF",
-    image: "/images/best1.jpg",
-  },
+ {
+  slug: "customized-photo-collage",
+  name: "Customized Photo Collage Frame",
+  category: "featured",
+  price: "₹499",
+  oldPrice: "₹899",
+  offer: "45% OFF",
+  image: "/images/best1.jpg",
+  description:
+    "Turn your favorite memories into a stunning personalized photo collage frame. Carefully designed with your cherished moments, this frame is perfect for birthdays, anniversaries, weddings, and special occasions. Crafted with premium-quality materials to make every memory last forever.",
+  requiredPhotos: "15–30 High-Quality Photos",
+},
 
-  {
-    slug: "google-collage-frame",
-    name: "Google Collage Frame",
-    category: "featured",
-    price: "₹599",
-    oldPrice: "₹999",
-    offer: "40% OFF",
-    image: "/images/best2.jpg",
-  },
+{
+  slug: "google-collage-frame",
+  name: "Google Collage Frame",
+  category: "featured",
+  price: "₹599",
+  oldPrice: "₹999",
+  offer: "40% OFF",
+  image: "/images/best2.jpg",
+  description:
+    "Make your memories unforgettable with our unique Google Search-style photo collage frame. Personalize it with your favorite pictures and custom text to create a fun and creative gift for your loved ones.",
+  requiredPhotos: "8–15 High-Quality Photos",
+},
 
-  {
-    slug: "spotify-photo-frame",
-    name: "Spotify Photo Frame",
-    category: "featured",
-    price: "₹399",
-    oldPrice: "₹699",
-    offer: "42% OFF",
-    image: "/images/best3.jpg",
-  },
+{
+  slug: "spotify-photo-frame",
+  name: "Spotify Photo Frame",
+  category: "featured",
+  price: "₹399",
+  oldPrice: "₹699",
+  offer: "42% OFF",
+  image: "/images/best3.jpg",
+  description:
+    "Celebrate your favorite song and special memories in one beautiful frame. Personalize it with your photo, song title, artist name, and optional Spotify QR code for a meaningful keepsake.",
+  requiredPhotos: "1 High-Quality Photo",
+  requiredDetails:
+    "Song Name, Artist Name and Spotify Link/QR Code (Optional)",
+},
 
-  {
-    slug: "moon-shape-photo-frame",
-    name: "Moon Shape Photo Frame",
-    category: "featured",
-    price: "₹799",
-    oldPrice: "₹1299",
-    offer: "38% OFF",
-    image: "/images/best4.jpg",
-  },
+{
+  slug: "moon-shape-photo-frame",
+  name: "Moon Shape Photo Frame",
+  category: "featured",
+  price: "₹799",
+  oldPrice: "₹1299",
+  offer: "38% OFF",
+  image: "/images/best4.jpg",
+  description:
+    "Capture your special moments with a personalized moon-shaped photo frame featuring your favorite photos, memorable date, and heartfelt message. A perfect gift for birthdays, anniversaries, and loved ones.",
+  requiredPhotos: "12–20 High-Quality Photos",
+  requiredDetails: "Special Date and Custom Message",
+},
 
-  {
-    slug: "photo-clip-string-light",
-    name: "Photo Clip String Light",
-    category: "featured",
-    price: "₹349",
-    oldPrice: "₹699",
-    offer: "50% OFF",
-    image: "/images/new1.jpg",
-  },
+{
+  slug: "photo-clip-string-light",
+  name: "Photo Clip String Light",
+  category: "featured",
+  price: "₹349",
+  oldPrice: "₹699",
+  offer: "50% OFF",
+  image: "/images/new1.jpg",
+  description:
+    "Light up your memories with our decorative LED photo clip string lights. Display your favorite pictures beautifully and add a warm, cozy touch to any room.",
+  requiredPhotos: "10–30 High-Quality Photos",
+},
 
-  {
-    slug: "customized-photo-prints",
-    name: "Customized Photo Prints",
-    category: "featured",
-    price: "₹299",
-    oldPrice: "₹599",
-    offer: "50% OFF",
-    image: "/images/new2.jpg",
-  },
+{
+  slug: "customized-photo-prints",
+  name: "Customized Photo Prints",
+  category: "featured",
+  price: "₹299",
+  oldPrice: "₹599",
+  offer: "50% OFF",
+  image: "/images/new2.jpg",
+  description:
+    "Print your favorite memories on premium-quality photo paper with vibrant colors and a long-lasting finish. Perfect for albums, scrapbooks, room decoration, and gifting.",
+  requiredPhotos: "10–100 High-Quality Photos",
+},
 
-  {
-    slug: "custom-photo-collage",
-    name: "Custom Photo Collage",
-    category: "featured",
-    price: "₹449",
-    oldPrice: "₹899",
-    offer: "50% OFF",
-    image: "/images/new3.jpg",
-  },
+{
+  slug: "custom-photo-collage",
+  name: "Custom Photo Collage",
+  category: "featured",
+  price: "₹449",
+  oldPrice: "₹899",
+  offer: "50% OFF",
+  image: "/images/new3.jpg",
+  description:
+    "Create a beautiful personalized collage frame with your favorite memories. A perfect gift for birthdays, anniversaries, and special occasions.",
+  requiredPhotos: "15–30 High-Quality Photos",
+},
 
-  {
-    slug: "students-teacher-photo-frame",
-    name: "Students & Teacher Photo Frame",
-    category: "featured",
-    price: "₹599",
-    oldPrice: "₹999",
-    offer: "40% OFF",
-    image: "/images/new4.jpg",
-  },
+{
+  slug: "students-teacher-photo-frame",
+  name: "Students & Teacher Photo Frame",
+  category: "featured",
+  price: "₹599",
+  oldPrice: "₹999",
+  offer: "40% OFF",
+  image: "/images/new4.jpg",
+  description:
+    "Celebrate the special bond between students and teachers with a customized photo frame. It is perfect for farewell events, graduation celebrations, Teacher's Day, and meaningful appreciation gifts.",
+  requiredPhotos: "20–50 High-Quality Photos",
+},
   // BIRTHDAY
   {
     slug: "birthday-customized-photo-frame",
