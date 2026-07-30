@@ -21,7 +21,7 @@ export const products = [
   category: "featured",
   price: "₹499",
   oldPrice: "₹899",
-  offer: "45% OFF",
+  offer: "50% OFF",
   image: "/images/best1.jpg",
   description:
     "Turn your favorite memories into a stunning personalized photo collage frame. Carefully designed with your cherished moments, this frame is perfect for birthdays, anniversaries, weddings, and special occasions. Crafted with premium-quality materials to make every memory last forever.",
@@ -34,7 +34,7 @@ export const products = [
   category: "featured",
   price: "₹599",
   oldPrice: "₹999",
-  offer: "40% OFF",
+  offer: "50% OFF",
   image: "/images/best2.jpg",
   description:
     "Make your memories unforgettable with our unique Google Search-style photo collage frame. Personalize it with your favorite pictures and custom text to create a fun and creative gift for your loved ones.",
@@ -47,7 +47,7 @@ export const products = [
   category: "featured",
   price: "₹399",
   oldPrice: "₹699",
-  offer: "42% OFF",
+  offer: "50% OFF",
   image: "/images/best3.jpg",
   description:
     "Celebrate your favorite song and special memories in one beautiful frame. Personalize it with your photo, song title, artist name, and optional Spotify QR code for a meaningful keepsake.",
@@ -62,7 +62,7 @@ export const products = [
   category: "featured",
   price: "₹799",
   oldPrice: "₹1299",
-  offer: "38% OFF",
+  offer: "50% OFF",
   image: "/images/best4.jpg",
   description:
     "Capture your special moments with a personalized moon-shaped photo frame featuring your favorite photos, memorable date, and heartfelt message. A perfect gift for birthdays, anniversaries, and loved ones.",
@@ -115,7 +115,7 @@ export const products = [
   category: "featured",
   price: "₹599",
   oldPrice: "₹999",
-  offer: "40% OFF",
+  offer: "50% OFF",
   image: "/images/new4.jpg",
   description:
     "Celebrate the special bond between students and teachers with a customized photo frame. It is perfect for farewell events, graduation celebrations, Teacher's Day, and meaningful appreciation gifts.",
@@ -128,7 +128,7 @@ export const products = [
     category: "birthday",
     price: "₹499",
     oldPrice: "₹899",
-    offer: "45% OFF",
+    offer: "50% OFF",
     image: "/images/birthday/birthday-sample-1.jpg",
   },
   {
@@ -137,7 +137,7 @@ export const products = [
     category: "birthday",
     price: "₹599",
     oldPrice: "₹999",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/birthday/birthday-sample-2.jpg",
   },
   {
@@ -164,7 +164,7 @@ export const products = [
     category: "birthday",
     price: "₹299",
     oldPrice: "₹499",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/birthday/birthday-sample-6.jpg",
   },
   {
@@ -173,7 +173,7 @@ export const products = [
     category: "birthday",
     price: "₹180",
     oldPrice: "₹399",
-    offer: "55% OFF",
+    offer: "50% OFF",
     image: "/images/birthday/birthday-sample-7.jpg",
   },
   {
@@ -182,7 +182,7 @@ export const products = [
     category: "birthday",
     price: "₹650",
     oldPrice: "₹999",
-    offer: "35% OFF",
+    offer: "50% OFF",
     image: "/images/birthday/birthday-sample-8.jpg",
   },
   {
@@ -191,7 +191,7 @@ export const products = [
     category: "birthday",
     price: "₹999",
     oldPrice: "₹1599",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/birthday/birthday-sample-9.jpg",
   },
 
@@ -202,7 +202,7 @@ export const products = [
   category: "anniversary",
   price: "₹499",
   oldPrice: "₹899",
-  offer: "45% OFF",
+  offer: "50% OFF",
   image: "/images/anniversary/anniversary-1.jpg",
 },
 {
@@ -211,7 +211,7 @@ export const products = [
   category: "anniversary",
   price: "₹599",
   oldPrice: "₹999",
-  offer: "40% OFF",
+  offer: "50% OFF",
   image: "/images/anniversary/anniversary-2.jpg",
 },
 {
@@ -220,7 +220,7 @@ export const products = [
   category: "anniversary",
   price: "₹699",
   oldPrice: "₹1199",
-  offer: "42% OFF",
+  offer: "50% OFF",
   image: "/images/anniversary/anniversary-3.jpg",
 },
 
@@ -230,7 +230,7 @@ export const products = [
   category: "anniversary",
   price: "₹899",
   oldPrice: "₹1499",
-  offer: "40% OFF",
+  offer: "50% OFF",
   image: "/images/anniversary/anniversary-5.jpg",
 },
 {
@@ -239,7 +239,7 @@ export const products = [
   category: "anniversary",
   price: "₹350",
   oldPrice: "₹599",
-  offer: "42% OFF",
+  offer: "50% OFF",
   image: "/images/anniversary/anniversary-6.jpg",
 },
 {
@@ -248,7 +248,7 @@ export const products = [
   category: "anniversary",
   price: "₹180",
   oldPrice: "₹399",
-  offer: "55% OFF",
+  offer: "50% OFF",
   image: "/images/anniversary/anniversary-7.jpg",
 },
 {
@@ -257,7 +257,7 @@ export const products = [
   category: "anniversary",
   price: "₹999",
   oldPrice: "₹1599",
-  offer: "38% OFF",
+  offer: "50% OFF",
   image: "/images/anniversary/anniversary-8.jpg",
 },
 {
@@ -266,7 +266,7 @@ export const products = [
   category: "anniversary",
   price: "₹499",
   oldPrice: "₹899",
-  offer: "45% OFF",
+  offer: "50% OFF",
   image: "/images/anniversary/anniversary-9.jpg",
 },
 
@@ -277,7 +277,7 @@ export const products = [
     category: "couple",
     price: "₹499",
     oldPrice: "₹899",
-    offer: "45% OFF",
+    offer: "50% OFF",
     image: "/images/couple/couple-1.jpg",
   },
   {
@@ -286,7 +286,7 @@ export const products = [
     category: "couple",
     price: "₹350",
     oldPrice: "₹599",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/couple/couple-2.jpg",
   },
   {
@@ -295,7 +295,7 @@ export const products = [
     category: "couple",
     price: "₹180",
     oldPrice: "₹399",
-    offer: "55% OFF",
+    offer: "50% OFF",
     image: "/images/couple/couple-3.jpg",
   },
   {
@@ -304,7 +304,7 @@ export const products = [
     category: "couple",
     price: "₹599",
     oldPrice: "₹999",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/couple/couple-4.jpg",
   },
   
@@ -314,7 +314,7 @@ export const products = [
     category: "couple",
     price: "₹699",
     oldPrice: "₹1199",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/couple/couple-6.jpg",
   },
   {
@@ -323,7 +323,7 @@ export const products = [
     category: "couple",
     price: "₹899",
     oldPrice: "₹1499",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/couple/couple-7.jpg",
   },
   {
@@ -332,7 +332,7 @@ export const products = [
     category: "couple",
     price: "₹999",
     oldPrice: "₹1599",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/couple/couple-8.jpg",
   },
   {
@@ -341,7 +341,7 @@ export const products = [
     category: "couple",
     price: "₹1199",
     oldPrice: "₹1999",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/couple/couple-9.jpg",
   },
   {
@@ -350,7 +350,7 @@ export const products = [
     category: "couple",
     price: "₹650",
     oldPrice: "₹999",
-    offer: "35% OFF",
+    offer: "50% OFF",
     image: "/images/couple/couple-10.jpg",
   },
 
@@ -361,7 +361,7 @@ export const products = [
     category: "corporate",
     price: "₹350",
     oldPrice: "₹599",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/corporate/corporate-1.jpg",
   },
   {
@@ -370,7 +370,7 @@ export const products = [
     category: "corporate",
     price: "₹180",
     oldPrice: "₹399",
-    offer: "55% OFF",
+    offer: "50% OFF",
     image: "/images/corporate/corporate-2.jpg",
   },
   {
@@ -379,7 +379,7 @@ export const products = [
     category: "corporate",
     price: "₹499",
     oldPrice: "₹899",
-    offer: "45% OFF",
+    offer: "50% OFF",
     image: "/images/corporate/corporate-3.jpg",
   },
   {
@@ -388,7 +388,7 @@ export const products = [
     category: "corporate",
     price: "₹599",
     oldPrice: "₹999",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/corporate/corporate-4.jpg",
   },
   {
@@ -406,7 +406,7 @@ export const products = [
     category: "corporate",
     price: "₹399",
     oldPrice: "₹699",
-    offer: "43% OFF",
+    offer: "50% OFF",
     image: "/images/corporate/corporate-6.jpg",
   },
   {
@@ -415,7 +415,7 @@ export const products = [
     category: "corporate",
     price: "₹699",
     oldPrice: "₹1199",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/corporate/corporate-8.jpg",
   },
   {
@@ -424,7 +424,7 @@ export const products = [
     category: "corporate",
     price: "₹999",
     oldPrice: "₹1599",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/corporate/corporate-9.jpg",
   },
 
@@ -435,7 +435,7 @@ export const products = [
     category: "combo",
     price: "₹699",
     oldPrice: "₹1199",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/combo/combo-1.jpg",
   },
   {
@@ -444,7 +444,7 @@ export const products = [
     category: "combo",
     price: "₹499",
     oldPrice: "₹899",
-    offer: "45% OFF",
+    offer: "50% OFF",
     image: "/images/combo/combo-2.jpg",
   },
   {
@@ -453,7 +453,7 @@ export const products = [
     category: "combo",
     price: "₹599",
     oldPrice: "₹999",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/combo/combo-3.jpg",
   },
   {
@@ -462,7 +462,7 @@ export const products = [
     category: "combo",
     price: "₹350",
     oldPrice: "₹599",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/combo/combo-4.jpg",
   },
 
@@ -482,7 +482,7 @@ export const products = [
     category: "mugs",
     price: "₹299",
     oldPrice: "₹499",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/mugs/mugs-2.jpg",
   },
   {
@@ -491,7 +491,7 @@ export const products = [
     category: "mugs",
     price: "₹350",
     oldPrice: "₹599",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/mugs/mugs-3.jpg",
   },
   {
@@ -509,7 +509,7 @@ export const products = [
     category: "mugs",
     price: "₹299",
     oldPrice: "₹499",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/mugs/mugs-5.jpg",
   },
   {
@@ -518,7 +518,7 @@ export const products = [
     category: "mugs",
     price: "₹299",
     oldPrice: "₹499",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/mugs/mugs-6.jpg",
   },
   {
@@ -527,7 +527,7 @@ export const products = [
     category: "mugs",
     price: "₹350",
     oldPrice: "₹599",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/mugs/mugs-7.jpg",
   },
   {
@@ -536,7 +536,7 @@ export const products = [
     category: "mugs",
     price: "₹799",
     oldPrice: "₹1299",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/mugs/mugs-8.jpg",
   },
 
@@ -547,7 +547,7 @@ export const products = [
     category: "frames",
     price: "₹499",
     oldPrice: "₹899",
-    offer: "45% OFF",
+    offer: "50% OFF",
     image: "/images/frames/frames-1.jpg",
   },
   {
@@ -556,7 +556,7 @@ export const products = [
     category: "frames",
     price: "₹350",
     oldPrice: "₹599",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/frames/frames-2.jpg",
   },
   {
@@ -565,7 +565,7 @@ export const products = [
     category: "frames",
     price: "₹599",
     oldPrice: "₹999",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/frames/frames-3.jpg",
   },
   {
@@ -574,7 +574,7 @@ export const products = [
     category: "frames",
     price: "₹699",
     oldPrice: "₹1199",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/frames/frames-4.jpg",
   },
   {
@@ -583,7 +583,7 @@ export const products = [
     category: "frames",
     price: "₹499",
     oldPrice: "₹899",
-    offer: "45% OFF",
+    offer: "50% OFF",
     image: "/images/frames/frames-5.jpg",
   },
   {
@@ -592,7 +592,7 @@ export const products = [
     category: "frames",
     price: "₹599",
     oldPrice: "₹999",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/frames/frames-6.jpg",
   },
   {
@@ -601,7 +601,7 @@ export const products = [
     category: "frames",
     price: "₹699",
     oldPrice: "₹1199",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/frames/frames-7.jpg",
   },
   {
@@ -610,7 +610,7 @@ export const products = [
     category: "frames",
     price: "₹799",
     oldPrice: "₹1299",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/frames/frames-8.jpg",
   },
   {
@@ -619,7 +619,7 @@ export const products = [
     category: "frames",
     price: "₹899",
     oldPrice: "₹1499",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/frames/frames-9.jpg",
   },
   {
@@ -628,7 +628,7 @@ export const products = [
     category: "frames",
     price: "₹999",
     oldPrice: "₹1599",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/frames/frames-10.jpg",
   },
  
@@ -640,7 +640,7 @@ export const products = [
     category: "keychains",
     price: "₹180",
     oldPrice: "₹399",
-    offer: "55% OFF",
+    offer: "50% OFF",
     image: "/images/keychains/keychain-1.jpg",
   },
   {
@@ -649,7 +649,7 @@ export const products = [
     category: "keychains",
     price: "₹180",
     oldPrice: "₹399",
-    offer: "55% OFF",
+    offer: "50% OFF",
     image: "/images/keychains/keychain-2.jpg",
   },
   {
@@ -667,7 +667,7 @@ export const products = [
     category: "keychains",
     price: "₹299",
     oldPrice: "₹499",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/keychains/keychain-4.jpg",
   },
   {
@@ -676,7 +676,7 @@ export const products = [
     category: "keychains",
     price: "₹350",
     oldPrice: "₹599",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/keychains/keychain-5.jpg",
   },
 
@@ -687,7 +687,7 @@ export const products = [
     category: "customized-t-shirt",
     price: "₹499",
     oldPrice: "₹899",
-    offer: "45% OFF",
+    offer: "50% OFF",
     image: "/images/tshirts/tshirts-1.jpg",
   },
   {
@@ -696,7 +696,7 @@ export const products = [
     category: "customized-t-shirt",
     price: "₹499",
     oldPrice: "₹899",
-    offer: "45% OFF",
+    offer: "50% OFF",
     image: "/images/tshirts/tshirts-2.jpg",
   },
   {
@@ -705,7 +705,7 @@ export const products = [
     category: "customized-t-shirt",
     price: "₹799",
     oldPrice: "₹1299",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/tshirts/tshirts-3.jpg",
   },
   {
@@ -714,7 +714,7 @@ export const products = [
     category: "customized-t-shirt",
     price: "₹599",
     oldPrice: "₹999",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/tshirts/tshirts-4.jpg",
   },
   {
@@ -723,7 +723,7 @@ export const products = [
     category: "customized-t-shirt",
     price: "₹999",
     oldPrice: "₹1599",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/tshirts/tshirts-5.jpg",
   },
   {
@@ -732,7 +732,7 @@ export const products = [
     category: "customized-t-shirt",
     price: "₹699",
     oldPrice: "₹1199",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/tshirts/tshirts-6.jpg",
   },
 
@@ -743,7 +743,7 @@ export const products = [
     category: "acrylic-frames",
     price: "₹799",
     oldPrice: "₹1299",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/placeholder.jpg",
   },
   {
@@ -752,7 +752,7 @@ export const products = [
     category: "acrylic-frames",
     price: "₹799",
     oldPrice: "₹1299",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/placeholder.jpg",
   },
   {
@@ -761,7 +761,7 @@ export const products = [
     category: "acrylic-frames",
     price: "₹899",
     oldPrice: "₹1499",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/placeholder.jpg",
   },
   {
@@ -770,7 +770,7 @@ export const products = [
     category: "acrylic-frames",
     price: "₹899",
     oldPrice: "₹1499",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/placeholder.jpg",
   },
   {
@@ -779,7 +779,7 @@ export const products = [
     category: "acrylic-frames",
     price: "₹999",
     oldPrice: "₹1599",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/placeholder.jpg",
   },
   {
@@ -788,7 +788,7 @@ export const products = [
     category: "acrylic-frames",
     price: "₹799",
     oldPrice: "₹1299",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/placeholder.jpg",
   },
 
@@ -799,7 +799,7 @@ export const products = [
     category: "stickers-and-labels",
     price: "₹180",
     oldPrice: "₹399",
-    offer: "55% OFF",
+    offer: "50% OFF",
     image: "/images/stickers/stickers-1.jpg",
   },
   {
@@ -826,7 +826,7 @@ export const products = [
     category: "stickers-and-labels",
     price: "₹350",
     oldPrice: "₹599",
-    offer: "42% OFF",
+    offer: "50% OFF",
     image: "/images/stickers/stickers-4.jpg",
   },
   {
@@ -844,7 +844,7 @@ export const products = [
     category: "stickers-and-labels",
     price: "₹299",
     oldPrice: "₹499",
-    offer: "40% OFF",
+    offer: "50% OFF",
     image: "/images/stickers/stickers-6.jpg",
   },
   {
@@ -862,7 +862,7 @@ export const products = [
     category: "stickers-and-labels",
     price: "₹399",
     oldPrice: "₹699",
-    offer: "43% OFF",
+    offer: "50% OFF",
     image: "/images/stickers/stickers-8.jpg",
   },
 
@@ -873,7 +873,7 @@ export const products = [
     category: "resin-art",
     price: "₹999",
     oldPrice: "₹1599",
-    offer: "38% OFF",
+    offer: "50% OFF",
     image: "/images/placeholder.jpg",
   },
 ];
