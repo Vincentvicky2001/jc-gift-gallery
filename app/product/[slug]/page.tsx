@@ -185,23 +185,53 @@ useEffect(() => {
 const isPhotoFrame = product.name
   .toLowerCase()
   .includes("photo frame");
+const removeSmallSizes = [
+  "birthday-customized-photo-frame",
+  "birthday-collage-photo-frame",
+  "anniversary-photo-frame",
+  "anniversary-collage-photo-frame",
+  "couple-photo-frame",
+  "love-message-photo-frame",
+  "couple-collage-photo-frame",
+  "couple-mosaic-photo-frame",
+  "frames-customized-photo-frame",
+  "frames-couple-photo-frame",
+  "family-photo-frame",
+  "friendship-photo-frame",
+  "birthday-photo-frame",
+  "frames-anniversary-photo-frame",
+  "frames-collage-photo-frame",
+  "frames-mosaic-photo-frame",
+  "motivational-photo-frame",
+  "photo-frame-mug-combo",
+  "photo-frame-keychains-combo",
+];
 
 const [activeOption, setActiveOption] =
   useState<"sizes" | "types">("sizes");
 
+const defaultSize = removeSmallSizes.includes(product.slug)
+  ? "6x8 Inche (A5 Size)"
+  : "4x6 Inche";
 const [selectedSize, setSelectedSize] =
-  useState("4x6 Inche");
+  useState(defaultSize);
 
 const [selectedFinish, setSelectedFinish] =
   useState("Glossy Finish");
 
-const sizeOptions = [
-  { size: "4x6 Inche", price: "₹149" },
-  { size: "5x7 Inche", price: "₹149" },
-  { size: "6x8 Inche (A5 Size)", price: "₹199" },
-  { size: "8x12 Inche (A4 Size)", price: "₹299" },
-  { size: "12x18 Inche (A3 Size)", price: "₹799" },
-];
+const sizeOptions = removeSmallSizes.includes(product.slug)
+  ? [
+      { size: "6x8 Inche (A5 Size)", price: "₹199" },
+      { size: "8x12 Inche (A4 Size)", price: "₹299" },
+      { size: "12x18 Inche (A3 Size)", price: "₹799" },
+    ]
+  : [
+      { size: "4x6 Inche", price: "₹149" },
+      { size: "5x7 Inche", price: "₹149" },
+      { size: "6x8 Inche (A5 Size)", price: "₹199" },
+      { size: "8x12 Inche (A4 Size)", price: "₹299" },
+      { size: "12x18 Inche (A3 Size)", price: "₹799" },
+    ];
 
 const finishOptions = [
   "Glossy Finish",
