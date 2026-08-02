@@ -182,9 +182,11 @@ useEffect(() => {
   const [customOccasion, setCustomOccasion] = useState("");
   const [customPrintText, setCustomPrintText] = useState("");
   const [customDetails, setCustomDetails] = useState("");
-const isPhotoFrame = product.name
-  .toLowerCase()
-  .includes("photo frame");
+const isPhotoFrame = product
+  ? product.name.toLowerCase().includes("photo frame") ||
+    product.slug === "birthday-custom-photo-book" ||
+    product.slug === "birthday-magazines"
+  : false;
 const removeSmallSizes = [
   "birthday-customized-photo-frame",
   "birthday-collage-photo-frame",
@@ -205,6 +207,8 @@ const removeSmallSizes = [
   "motivational-photo-frame",
   "photo-frame-mug-combo",
   "photo-frame-keychains-combo",
+  "birthday-custom-photo-book",
+"birthday-magazines",
 ];
 
 const [activeOption, setActiveOption] =
