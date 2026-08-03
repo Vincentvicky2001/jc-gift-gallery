@@ -1,4 +1,4 @@
-import { products } from "../../../components/ProductData";
+import { products } from "@/components/products";
 
 type Props = {
   params: Promise<{
@@ -13,6 +13,7 @@ export default async function CategoryPage({ params }: Props) {
 
   const normalizedCategory = selectedCategory
     .toLowerCase()
+    .trim()
     .replaceAll(" ", "-");
 
   const categoryAlias: Record<string, string> = {
@@ -50,6 +51,14 @@ export default async function CategoryPage({ params }: Props) {
 
     "acrylic-frame": "acrylic-frames",
     "acrylic-frames": "acrylic-frames",
+
+    featured: "featured",
+    birthday: "birthday",
+    anniversary: "anniversary",
+    couple: "couple",
+    corporate: "corporate",
+    combo: "combo",
+    "resin-art": "resin-art",
   };
 
   const finalCategory =
@@ -57,10 +66,8 @@ export default async function CategoryPage({ params }: Props) {
 
   const filteredProducts = products.filter(
     (product) =>
-      product.category.toLowerCase().replaceAll(" ", "-") === finalCategory
+      product.category.trim().toLowerCase() === finalCategory
   );
-
-  const isComingSoonCategory = finalCategory === "acrylic-frames";
 
   const title = finalCategory
     .replaceAll("-", " ")
@@ -72,7 +79,7 @@ export default async function CategoryPage({ params }: Props) {
         {title} Gifts
       </h1>
 
-      {isComingSoonCategory || filteredProducts.length === 0 ? (
+      {filteredProducts.length === 0 ? (
         <div className="bg-white rounded-3xl p-8 text-center shadow">
           <h2 className="text-xl font-bold text-black">
             Products Coming Soon
@@ -86,8 +93,8 @@ export default async function CategoryPage({ params }: Props) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {filteredProducts.map((product) => (
             <a
-              href={`/product/${product.slug}`}
               key={product.slug}
+              href={`/products/${product.slug}`}
               className="bg-white rounded-2xl shadow overflow-hidden hover:shadow-lg transition"
             >
               <img
@@ -103,7 +110,7 @@ export default async function CategoryPage({ params }: Props) {
 
                 <div className="flex items-center gap-2 mt-2 flex-wrap">
                   <p className="text-[#B8860B] font-bold">
-                    {product.price}
+                    {product.price || "Price Coming Soon"}
                   </p>
 
                   {product.oldPrice && (

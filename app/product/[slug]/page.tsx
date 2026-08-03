@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { products } from "../../../components/ProductData";
+import { products } from "@/components/products";
 import { productInformation } from "../../../components/ProductInformation";
 import ProductReviews from "../../../components/ProductReviews";
 import RelatedProducts from "../../../components/RelatedProducts";
@@ -11,13 +11,24 @@ import RecentlyViewed from "../../../components/RecentlyViewed";
 
 export default function ProductPage() {
   const params = useParams();
-  const slug = params.slug as string;
-  const product = products.find((p) => p.slug === slug);
+ const slug = typeof params.slug === "string"
+    ? params.slug
+    : Array.isArray(params.slug)
+    ? params.slug[0]
+    : "";
+
+const product = products.find(
+  (item) => item.slug === slug
+);
   const details = productInformation[slug];
 
-  if (!product) {
-    return <div className="p-10 text-center text-2xl font-bold">Product Not Found</div>;
-  }
+ if (!product) {
+  return (
+    <div className="p-10 text-center text-2xl font-bold">
+      Product Not Found
+    </div>
+  );
+}
 
   const imageMap: Record<string, string[]> = {
     "birthday-customized-photo-frame": ["/images/birthday/birthday-sample-1.jpg", "/images/birthday/birthday-sample-1-2.jpg"],
@@ -226,15 +237,15 @@ const [selectedFinish, setSelectedFinish] =
 const sizeOptions = removeSmallSizes.includes(product.slug)
   ? [
       { size: "6x8 Inche (A5 Size)", price: "₹199" },
-      { size: "8x12 Inche (A4 Size)", price: "₹299" },
-      { size: "12x18 Inche (A3 Size)", price: "₹799" },
+      { size: "8x12 Inche (A4 Size)", price: "₹349" },
+      { size: "12x18 Inche (A3 Size)", price: "₹699" },
     ]
   : [
       { size: "4x6 Inche", price: "₹149" },
       { size: "5x7 Inche", price: "₹149" },
       { size: "6x8 Inche (A5 Size)", price: "₹199" },
-      { size: "8x12 Inche (A4 Size)", price: "₹299" },
-      { size: "12x18 Inche (A3 Size)", price: "₹799" },
+      { size: "8x12 Inche (A4 Size)", price: "₹349" },
+      { size: "12x18 Inche (A3 Size)", price: "₹699" },
     ];
 
 const finishOptions = [

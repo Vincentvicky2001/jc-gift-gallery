@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { products } from "./ProductData";
+import { products } from "./products";
 
 export default function SearchBar() {
   const router = useRouter();
@@ -78,7 +78,8 @@ export default function SearchBar() {
   const openProduct = (slug: string) => {
     setSearchText("");
     setShowSuggestions(false);
-    router.push(`/product/${slug}`);
+
+    router.push(`/products/${slug}`);
   };
 
   const handleSearch = () => {

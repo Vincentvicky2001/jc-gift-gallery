@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { products } from "./ProductData";
+import { products } from "./products";
 
 type Props = {
   title: string;
@@ -171,7 +171,7 @@ export default function ProductSection({ title }: Props) {
             >
               <div className="relative">
                 <a
-                  href={`/product/${product.slug}`}
+                  href={`/products/${product.slug}`}
                   className="group relative block overflow-hidden"
                 >
                   <img
@@ -234,7 +234,7 @@ export default function ProductSection({ title }: Props) {
 
               <div className="space-y-3 p-4">
                 <a
-                  href={`/product/${product.slug}`}
+                  href={`/products/${product.slug}`}
                 >
                   <h3 className="text-lg font-black leading-snug text-black transition hover:text-[#B8860B]">
                     {product.name}

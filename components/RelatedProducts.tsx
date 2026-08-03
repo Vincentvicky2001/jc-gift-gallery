@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { products } from "./ProductData";
+import { products } from "./products";
 
 type RelatedProductsProps = {
   currentSlug: string;
@@ -128,8 +128,8 @@ export default function RelatedProducts({
             <article
               key={product.slug}
               onClick={() =>
-                router.push(`/product/${product.slug}`)
-              }
+  router.push(`/products/${product.slug}`)
+}
               className="group cursor-pointer overflow-hidden rounded-3xl border border-[#E8E1D6] bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
               <div className="relative overflow-hidden">
@@ -212,8 +212,8 @@ export default function RelatedProducts({
                   onClick={(event) => {
                     event.stopPropagation();
                     router.push(
-                      `/product/${product.slug}`
-                    );
+  `/products/${product.slug}`
+);
                   }}
                   className="mt-4 w-full rounded-2xl bg-gradient-to-r from-[#D4A017] to-[#B8860B] py-3 text-sm font-black text-white shadow-lg transition hover:scale-[1.02]"
                 >

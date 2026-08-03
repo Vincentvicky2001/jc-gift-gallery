@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { products } from "../../components/ProductData";
+import { products } from "@/components/products";
 
 export default function SearchPage() {
   const [search, setSearch] = useState("");
@@ -58,7 +58,7 @@ export default function SearchPage() {
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <a
-              href={`/product/${product.slug}`}
+              href={`/products/${product.slug}`}
               key={product.slug}
               className="bg-white rounded-2xl shadow overflow-hidden hover:shadow-lg transition"
             >

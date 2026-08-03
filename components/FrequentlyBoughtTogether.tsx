@@ -1,6 +1,6 @@
 "use client";
 
-import { products } from "./ProductData";
+import { products } from "./products";
 
 type Props = {
   currentSlug: string;
