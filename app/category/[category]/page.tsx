@@ -72,7 +72,9 @@ export default async function CategoryPage({ params }: Props) {
   const title = finalCategory
     .replaceAll("-", " ")
     .replace(/\b\w/g, (char) => char.toUpperCase());
-
+console.log("Final Category:", finalCategory);
+console.log("Total Products:", products.length);
+console.log("Filtered Products:", filteredProducts.length);
   return (
     <main className="min-h-screen bg-[#FAF7F0] p-6 pb-28">
       <h1 className="text-3xl font-bold text-[#B8860B] mb-6">
@@ -93,10 +95,10 @@ export default async function CategoryPage({ params }: Props) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {filteredProducts.map((product) => (
             <a
-              key={product.slug}
-              href={`/products/${product.slug}`}
-              className="bg-white rounded-2xl shadow overflow-hidden hover:shadow-lg transition"
-            >
+  key={product.slug}
+  href={`/product/${product.slug}`}
+  className="bg-white rounded-2xl shadow overflow-hidden hover:shadow-lg transition"
+>
               <img
                 src={product.image}
                 alt={product.name}
