@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { products } from "@/components/products";
 
 type Props = {
@@ -7,14 +8,13 @@ type Props = {
 };
 
 export default async function CategoryPage({ params }: Props) {
+  // Next.js 16: params is a Promise
   const { category } = await params;
 
-  const selectedCategory = decodeURIComponent(category);
-
-  const normalizedCategory = selectedCategory
+  const normalizedCategory = decodeURIComponent(category)
     .toLowerCase()
     .trim()
-    .replaceAll(" ", "-");
+    .replace(/\s+/g, "-");
 
   const categoryAlias: Record<string, string> = {
     frame: "frames",
@@ -40,10 +40,12 @@ export default async function CategoryPage({ params }: Props) {
     label: "stickers-and-labels",
     labels: "stickers-and-labels",
     lables: "stickers-and-labels",
+
     "sticker-and-label": "stickers-and-labels",
     "sticker-and-lable": "stickers-and-labels",
     "sticker-and-labels": "stickers-and-labels",
     "sticker-and-lables": "stickers-and-labels",
+
     "stickers-and-label": "stickers-and-labels",
     "stickers-and-lable": "stickers-and-labels",
     "stickers-and-labels": "stickers-and-labels",
@@ -64,17 +66,19 @@ export default async function CategoryPage({ params }: Props) {
   const finalCategory =
     categoryAlias[normalizedCategory] || normalizedCategory;
 
-  const filteredProducts = products.filter(
-    (product) =>
-      product.category.trim().toLowerCase() === finalCategory
-  );
+  const filteredProducts = products.filter((product) => {
+    const productCategory = product.category
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, "-");
+
+    return productCategory === finalCategory;
+  });
 
   const title = finalCategory
-    .replaceAll("-", " ")
-    .replace(/\b\w/g, (char) => char.toUpperCase());
-console.log("Final Category:", finalCategory);
-console.log("Total Products:", products.length);
-console.log("Filtered Products:", filteredProducts.length);
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+
   return (
     <main className="min-h-screen bg-[#FAF7F0] p-6 pb-28">
       <h1 className="text-3xl font-bold text-[#B8860B] mb-6">
@@ -90,45 +94,49 @@ console.log("Filtered Products:", filteredProducts.length);
           <p className="text-gray-600 mt-2">
             Images and prices will be updated soon.
           </p>
+
+          <p className="text-xs text-gray-400 mt-4">
+            Category: {finalCategory}
+          </p>
         </div>
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {filteredProducts.map((product) => (
-            <a
-  key={product.slug}
-  href={`/product/${product.slug}`}
-  className="bg-white rounded-2xl shadow overflow-hidden hover:shadow-lg transition"
->
+            <Link
+              key={product.slug}
+              href={`/product/${product.slug}`}
+              className="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden"
+            >
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-44 object-cover"
+                className="w-full h-48 object-cover"
               />
 
               <div className="p-3">
-                <h2 className="font-semibold text-sm text-black">
+                <h2 className="font-semibold text-black text-sm line-clamp-2">
                   {product.name}
                 </h2>
 
                 <div className="flex items-center gap-2 mt-2 flex-wrap">
-                  <p className="text-[#B8860B] font-bold">
-                    {product.price || "Price Coming Soon"}
-                  </p>
+                  <span className="font-bold text-[#B8860B]">
+                    {product.price}
+                  </span>
 
                   {product.oldPrice && (
-                    <p className="text-gray-400 line-through text-xs">
+                    <span className="text-gray-400 line-through text-xs">
                       {product.oldPrice}
-                    </p>
+                    </span>
                   )}
                 </div>
 
                 {product.offer && (
-                  <p className="text-green-600 text-xs font-bold mt-1">
+                  <p className="text-green-600 text-xs font-semibold mt-1">
                     {product.offer}
                   </p>
                 )}
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       )}

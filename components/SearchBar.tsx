@@ -79,7 +79,7 @@ export default function SearchBar() {
     setSearchText("");
     setShowSuggestions(false);
 
-    router.push(`/products/${slug}`);
+    router.push(`/product/${slug}`);
   };
 
   const handleSearch = () => {
