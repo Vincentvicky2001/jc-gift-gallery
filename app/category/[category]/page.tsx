@@ -120,7 +120,7 @@ export default async function CategoryPage({ params }: Props) {
 
                 <div className="flex items-center gap-2 mt-2 flex-wrap">
                   <span className="font-bold text-[#B8860B]">
-                    {product.price}
+                    {product.price} {product.unit && ` / ${product.unit}`}
                   </span>
 
                   {product.oldPrice && (

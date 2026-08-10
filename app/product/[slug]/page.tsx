@@ -102,8 +102,16 @@ const product = products.find(
     "business-branding-labels": ["/images/stickers/stickers-4.jpg", "/images/stickers/stickers-4-2.jpg"],
     "gift-stickers": ["/images/stickers/stickers-5.jpg", "/images/stickers/stickers-5-2.jpg"],
     "event-stickers": ["/images/stickers/stickers-6.jpg", "/images/stickers/stickers-6-2.jpg"],
-    "home-personal-label": ["/images/stickers/stickers-7.jpg", "/images/stickers/stickers-7-2.jpg"],
-    "packaging-labels": ["/images/stickers/stickers-8.jpg", "/images/stickers/stickers-8-2.jpg"],
+   
+    "home-personal-label": [
+  "/images/stickers/stickers-7-2.jpg",
+  "/images/stickers/stickers-7.jpg"
+],
+
+"packaging-labels": [
+  "/images/stickers/stickers-8-2.jpg",
+  "/images/stickers/stickers-8.jpg"
+],
 
     "corporate-customized-mug": ["/images/corporate/corporate-1.jpg", "/images/corporate/corporate-1-2.jpg"],
     "corporate-customized-keychains": ["/images/corporate/corporate-2.jpg", "/images/corporate/corporate-2-2.jpg"],
@@ -160,9 +168,13 @@ const product = products.find(
 
 };
 
+const images = imageMap[product.slug] || [product.image];
 
-  const images = imageMap[product.slug] || [product.image];
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+const [selectedImage, setSelectedImage] = useState(images[0]);
+
+useEffect(() => {
+  setSelectedImage(imageMap[product.slug]?.[0] || product.image);
+}, [product.slug, product.image]);
 
   const [isWishlisted, setIsWishlisted] = useState(false);
 
@@ -193,17 +205,17 @@ useEffect(() => {
   const [customOccasion, setCustomOccasion] = useState("");
   const [customPrintText, setCustomPrintText] = useState("");
   const [customDetails, setCustomDetails] = useState("");
-const isPhotoFrame = product
-  ? product.name.toLowerCase().includes("photo frame") ||
-    product.slug === "birthday-custom-photo-book" ||
-    product.slug === "birthday-magazines"
-  : false;
+const isPhotoFrame =
+  product?.category === "frames" ||
+  product?.category === "photo-frames" ||
+  product?.slug === "love-message-frame";
 const removeSmallSizes = [
   "birthday-customized-photo-frame",
   "birthday-collage-photo-frame",
   "anniversary-photo-frame",
   "anniversary-collage-photo-frame",
   "couple-photo-frame",
+  "love-message-frame",
   "love-message-photo-frame",
   "couple-collage-photo-frame",
   "couple-mosaic-photo-frame",

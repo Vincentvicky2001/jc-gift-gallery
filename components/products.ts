@@ -19,6 +19,7 @@ export type Product = {
   price: string;
   oldPrice?: string;
   offer?: string;
+  unit?: string;
   image: string;
   description: string;
   requiredPhotos?: string;
@@ -164,8 +165,8 @@ export const products: Product[] = [
     slug: "birthday-photo-clock",
     name: "Photo Clock",
     category: "birthday",
-    price: "₹350",
-    oldPrice: "₹700",
+    price: "₹349",
+    oldPrice: "₹698",
     offer: "50% OFF",
     image: "/images/birthday/birthday-sample-4.jpg",
     description: "Custom wall clock featuring birthday photo prints for a memorable utility gift.",
@@ -177,8 +178,8 @@ export const products: Product[] = [
     slug: "birthday-photo-calendar",
     name: "Photo Calendar",
     category: "birthday",
-    price: "₹250",
-    oldPrice: "₹500",
+    price: "₹249",
+    oldPrice: "₹498",
     offer: "50% OFF",
     image: "/images/birthday/birthday-sample-5.jpg",
     description: "Personalized birthday photo calendar to cherish memories month by month.",
@@ -575,8 +576,8 @@ export const products: Product[] = [
     slug: "photo-frame-mug-combo",
     name: "Photo Frame + Mug",
     category: "combo",
-    price: "₹429",
-    oldPrice: "₹858",
+    price: "₹529",
+    oldPrice: "₹1058",
     offer: "50% OFF",
     image: "/images/combo/combo-1.jpg",
     description: "Perfect gifting set containing a personalized frame and matching ceramic mug.",
@@ -1009,34 +1010,6 @@ export const products: Product[] = [
     photoSize: "",
   },
 
-  /* ---------------- ACRYLIC FRAMES ---------------- */
-  {
-    slug: "customized-acrylic-frame",
-    name: "Customized Acrylic Frame",
-    category: "acrylic-frames",
-    price: "₹349",
-    oldPrice: "₹698",
-    offer: "50% OFF",
-    image: "/images/placeholder.jpg",
-    description: "Sleek glass-like acrylic photo frame with vibrant direct UV printing.",
-    requiredPhotos: "1 High-Quality Photo",
-    requiredDetails: "",
-    photoSize: "",
-  },
-  {
-    slug: "birthday-acrylic-frame",
-    name: "Birthday Acrylic Frame",
-    category: "acrylic-frames",
-    price: "₹349",
-    oldPrice: "₹698",
-    offer: "50% OFF",
-    image: "/images/placeholder.jpg",
-    description: "Vibrant birthday themed acrylic frame display.",
-    requiredPhotos: "1–3 High-Quality Photos",
-    requiredDetails: "Name / Birth Date",
-    photoSize: "",
-  },
-
   /* ---------------- STICKERS & LABELS ---------------- */
  {
   slug: "custom-sticker",
@@ -1058,10 +1031,11 @@ export const products: Product[] = [
   price: "₹20",
   oldPrice: "₹40",
   offer: "50% OFF",
+  unit: "per piece",
   image: "/images/stickers/stickers-2.jpg",
   description: "Custom printed wrapper chocolates per piece.",
   requiredPhotos: "Optional",
-  requiredDetails: "Custom Text / Photo",
+  requiredDetails: "",
   photoSize: "",
 },
 {
@@ -1110,6 +1084,7 @@ export const products: Product[] = [
   price: "₹25",
   oldPrice: "₹50",
   offer: "50% OFF",
+  unit: "per sheet",
   image: "/images/stickers/stickers-1-2.jpg",
   description: "Custom event labels and stickers per sheet.",
   requiredPhotos: "Optional",
@@ -1123,7 +1098,7 @@ export const products: Product[] = [
   price: "₹25",
   oldPrice: "₹50",
   offer: "50% OFF",
-  image: "/images/stickers/stickers-4-2.jpg",
+  image: "/images/stickers/stickers-7.jpg",
   description: "Personalized labeling per sheet for home items.",
   requiredPhotos: "Optional",
   requiredDetails: "",
@@ -1136,7 +1111,7 @@ export const products: Product[] = [
   price: "₹25",
   oldPrice: "₹50",
   offer: "50% OFF",
-  image: "/images/stickers/stickers-5-2.jpg",
+ image: "/images/stickers/stickers-8.jpg",
   description: "Custom packaging labels per sheet.",
   requiredPhotos: "1 Logo File",
   requiredDetails: "",

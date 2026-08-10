@@ -171,7 +171,7 @@ export default function ProductSection({ title }: Props) {
             >
               <div className="relative">
                 <a
-                  href={`/products/${product.slug}`}
+                  href={`/product/${product.slug}`}
                   className="group relative block overflow-hidden"
                 >
                   <img
@@ -234,7 +234,7 @@ export default function ProductSection({ title }: Props) {
 
               <div className="space-y-3 p-4">
                 <a
-                  href={`/products/${product.slug}`}
+                  href={`/product/${product.slug}`}
                 >
                   <h3 className="text-lg font-black leading-snug text-black transition hover:text-[#B8860B]">
                     {product.name}
@@ -250,7 +250,7 @@ export default function ProductSection({ title }: Props) {
 
                 <div className="flex flex-wrap items-center gap-2">
                   <p className="text-2xl font-black text-black">
-                    {product.price}
+                    {product.price} {product.unit && ` / ${product.unit}`}
                   </p>
 
                   {product.oldPrice && (
