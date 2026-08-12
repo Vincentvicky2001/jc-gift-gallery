@@ -274,6 +274,18 @@ const displayPrice = isPhotoFrame
   ? selectedSizePrice
   : product.price;
 
+// Calculate original price as exactly 2 × the selected sale price
+const displayOldPrice = isPhotoFrame
+  ? (() => {
+      const salePriceNumber =
+        Number(String(selectedSizePrice).replace(/[^0-9.]/g, "")) || 0;
+
+      return salePriceNumber > 0
+        ? `₹${(salePriceNumber * 2).toLocaleString("en-IN")}`
+        : product.oldPrice;
+    })()
+  : product.oldPrice;
+
 useEffect(() => {
   try {
     const savedProducts = JSON.parse(
@@ -291,7 +303,7 @@ useEffect(() => {
       price: displayPrice,
       image: selectedImage,
       category: product.category,
-      oldPrice: product.oldPrice,
+      oldPrice: displayOldPrice,
       offer: product.offer,
     };
 
@@ -501,12 +513,11 @@ return (
   {displayPrice}
 </p>
 
-  {product.oldPrice && (
-    <p className="line-through text-gray-400">
-      {product.oldPrice}
-    </p>
-  )}
-
+{displayOldPrice && (
+  <p className="line-through text-gray-400">
+    {displayOldPrice}
+  </p>
+)}
   {product.offer && (
     <span className="bg-green-600 text-white px-3 py-1 rounded-lg text-sm font-bold">
       {product.offer}
