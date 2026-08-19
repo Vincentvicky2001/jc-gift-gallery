@@ -206,59 +206,32 @@ useEffect(() => {
   const [customPrintText, setCustomPrintText] = useState("");
   const [customDetails, setCustomDetails] = useState("");
 const isPhotoFrame =
-  product?.category === "frames" ||
-  product?.category === "photo-frames" ||
+  product?.name?.trim().toLowerCase().endsWith("photo frame") ||
   product?.slug === "love-message-frame";
-const removeSmallSizes = [
-  "birthday-customized-photo-frame",
-  "birthday-collage-photo-frame",
-  "anniversary-photo-frame",
-  "anniversary-collage-photo-frame",
-  "couple-photo-frame",
-  "love-message-frame",
-  "love-message-photo-frame",
-  "couple-collage-photo-frame",
-  "couple-mosaic-photo-frame",
-  "frames-customized-photo-frame",
-  "frames-couple-photo-frame",
-  "family-photo-frame",
-  "friendship-photo-frame",
-  "birthday-photo-frame",
-  "frames-anniversary-photo-frame",
-  "frames-collage-photo-frame",
-  "frames-mosaic-photo-frame",
-  "motivational-photo-frame",
-  "photo-frame-mug-combo",
-  "photo-frame-keychains-combo",
-  "birthday-custom-photo-book",
-"birthday-magazines",
-];
 
 const [activeOption, setActiveOption] =
   useState<"sizes" | "types">("sizes");
 
-const defaultSize = removeSmallSizes.includes(product.slug)
-  ? "6x8 Inche (A5 Size)"
-  : "4x6 Inche";
 const [selectedSize, setSelectedSize] =
-  useState(defaultSize);
+  useState("6x8 Inche (A5 Size)");
 
 const [selectedFinish, setSelectedFinish] =
   useState("Glossy Finish");
 
-const sizeOptions = removeSmallSizes.includes(product.slug)
-  ? [
-      { size: "6x8 Inche (A5 Size)", price: "₹199" },
-      { size: "8x12 Inche (A4 Size)", price: "₹349" },
-      { size: "12x18 Inche (A3 Size)", price: "₹699" },
-    ]
-  : [
-      { size: "4x6 Inche", price: "₹149" },
-      { size: "5x7 Inche", price: "₹149" },
-      { size: "6x8 Inche (A5 Size)", price: "₹199" },
-      { size: "8x12 Inche (A4 Size)", price: "₹349" },
-      { size: "12x18 Inche (A3 Size)", price: "₹699" },
-    ];
+const sizeOptions = [
+  {
+    size: "6x8 Inche (A5 Size)",
+    price: "₹199",
+  },
+  {
+    size: "8x12 Inche (A4 Size)",
+    price: "₹349",
+  },
+  {
+    size: "12x18 Inche (A3 Size)",
+    price: "₹699",
+  },
+];
 
 const finishOptions = [
   "Glossy Finish",
@@ -267,21 +240,30 @@ const finishOptions = [
 ];
 
 const selectedSizePrice =
-  sizeOptions.find((item) => item.size === selectedSize)?.price ||
-  product.price;
+  sizeOptions.find(
+    (item) => item.size === selectedSize
+  )?.price || product.price;
 
 const displayPrice = isPhotoFrame
   ? selectedSizePrice
   : product.price;
 
-// Calculate original price as exactly 2 × the selected sale price
+// For every photo frame, original price is exactly
+// double the selected sale price.
 const displayOldPrice = isPhotoFrame
   ? (() => {
       const salePriceNumber =
-        Number(String(selectedSizePrice).replace(/[^0-9.]/g, "")) || 0;
+        Number(
+          String(selectedSizePrice).replace(
+            /[^0-9.]/g,
+            ""
+          )
+        ) || 0;
 
       return salePriceNumber > 0
-        ? `₹${(salePriceNumber * 2).toLocaleString("en-IN")}`
+        ? `₹${(
+            salePriceNumber * 2
+          ).toLocaleString("en-IN")}`
         : product.oldPrice;
     })()
   : product.oldPrice;
